@@ -1,0 +1,41 @@
+/* =========================================================== */
+/* ========================= BASE CSS ======================== */
+/* =========================================================== */
+
+/* ########## ALL ELEMENTS ########## */
+/* Gives everything a 0 default and sets all font the same */
+* {margin:0; padding:0; font-family: 'Bitter', serif;}
+
+/* Hides the display on desktop/tablet */
+.mobile {display:none;}
+
+/* ########## NAVIGATION ########## */
+nav {
+  width:100%;
+  background-color:#f47a5d;
+  display:inline-block;
+}
+
+nav ul {
+  list-style-type: none;
+  overflow:hidden;
+  text-align: right;
+}
+
+.nav-titles {display:inline; margin:0 50px 0 0;}
+.nav-menu {display:inline-block; font-size:20px;}
+.nav-menu a {
+  color:#f9f8f0;
+  text-decoration:none;
+  display:block;
+  padding:27px;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  font-size:26px;
+}
+
+.nav-menu a:hover {
+  color:#f47a5d;
+  background:#f9f8f0;
+  transition:.7s;
+}
