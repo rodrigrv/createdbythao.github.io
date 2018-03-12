@@ -16,6 +16,13 @@ body {
   min-height: 100%;
 }
 
+.orange {color:#f47a5d;}
+.creme {color:#f3ecd8;}
+.grey {color:#4f424b;}
+p {color:#4f424b;}
+.font-serif {font-family: 'Bitter';}
+.font-sans {font-family: 'Nunito'; font-weight: bold;}
+
 .body-wrapper {
   margin:0 auto -63px;
   max-width:1600px;
@@ -24,11 +31,17 @@ body {
   width:90%;
 }
 
-/* Hides the display on desktop/tablet */
-/* .mobile {display:none;} */
+.content-wrap {margin:0 auto 5rem; z-index: 1;}
+.mobile {display:none;}
+.dt {display: block;}
+.lb3 {display: none;}
+.lb2 {display: block;}
 
 /* ########## NAVIGATION ########## */
+.nav-toggle {display: none;}
+
 nav {
+  display: block;
   font: 600 1rem 'Nunito';
   font-family: 'Nunito', sans-serif;
   margin:2rem auto 0;
@@ -81,11 +94,44 @@ nav li a:hover {
 .dropdown:hover .subnav {
   display: block;
   margin: 0 0 0 3rem;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 nav li a.active {color:#f47a5d;}
 
-/* ########## Main Body ########## */
+/* ########## Footer ########## */
+footer {
+  background:#f3ecd8;
+  height:55px;
+  padding:.5rem 0 0;
+  width:100%;
+}
+
+.footer-img-wrap {
+  margin: 0 auto;
+  max-width:2000px;
+}
+
+.footer-left {
+  float:left;
+  margin:0 0 0 3rem;
+}
+
+.footer-right {
+  float:right;
+  margin: 0 3rem 0 0;
+}
+
+.footer-right a {display: inline-block;}
+.footer-left img {
+  padding:.5rem 0 0;
+  width:25%;
+}
+
+/* =========================================================== */
+/* ========================= HOMEPAGE ======================== */
+/* =========================================================== */
 .grid-wrap {
   display: grid;
   grid-gap: 4rem 4rem;
@@ -134,81 +180,313 @@ nav li a.active {color:#f47a5d;}
 .project-img-wrap:hover .project-overlay {
   background: rgba(0, 0, 0, .7);
   display: block;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 5s;
+  transition: 5s;
 }
 
 h2 {
   color:#f47a5d;
-  font:300 5rem 'Bitter';
+  font:300 4rem/1.3 'Bitter';
+  margin:0 auto 2rem;
 }
+
+/* .header-wrap {
+  margin:1rem auto;
+} */
 
 .header-color-block {
   background: #f3ecd8;
-  width: 4rem;
-  height: 15px;
   display: inline-block;
-  margin: 0 1rem 0 0;
+  height: 15px;
+  margin: 0.3rem 1rem 0 0;
+  vertical-align: top;
+  width: 4rem;
 }
 
-.header-copy {display: inline;}
+.header-copy {
+  display: inline-block;
+  font: bold 1.1rem 'Nunito';
+  width:80%;
+}
 
-/* ########## Footer ########## */
-footer {
-  background:#f3ecd8;
-  height:55px;
-  padding:.5rem 0 0;
+/* =========================================================== */
+/* ======================== ABOUT PAGE ======================= */
+/* =========================================================== */
+.about-wrapper {position: relative; z-index: 1;}
+.about-bubble {
+  display: block;
+  position: relative;
+}
+
+.about-bubble h2 {
+  left:100px;
+  position: absolute;
+  top:100px;
+}
+
+.about-bubble.about h2 {font-size: 5rem;}
+
+.about-copy-wrap {
+  display: block;
+  margin:-1rem auto 0 30rem;
+  text-align: left;
+}
+
+.about-lights img {width:auto;}
+
+.about-blurb p {
+  font: bold 1.2rem/1.5 'Nunito';
+  margin:2rem auto 0;
+}
+
+.about-blurb span,
+.about-blurb a {
+  color:#f47a5d;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================== */
+/* ======================= CONTACT PAGE ====================== */
+/* =========================================================== */
+.header-copy.contact {width:50%;}
+.header-wrap.contact h2 {margin:0 auto 1rem;}
+.content-wrap.contact {margin:3rem auto 5rem;}
+.contact-form-wrap {
+  margin:2rem auto 0 5rem;
+  width:50%;
+}
+input[type=text],
+input[type=email],
+textarea {
+  border:2px solid #000;
+  display: block;
+  font:bold 1.2rem 'Nunito';
+  margin:0 0 1rem;
+  padding:.5rem 0 .5rem 1rem;
+  width:96%;
+}
+
+input[type=text].contact-inline {
+  display: inline-block;
+  margin:0 2% 1rem 0;
+  width:35%;
+}
+
+input[type=email].contact-inline {
+  display: inline-block;
+  margin:0 0 1rem 0;
+  width:54%;
+}
+
+input[type=submit] {
+  background:#f47a5d;
+  color:#fff;
+  display: block;
+  font:bold 1rem 'Nunito';
+  margin:0 .7rem 0 auto;
+  padding:.3rem .7rem;
+}
+
+.contact-image {
+  bottom:10%;
+  position: absolute;
+  right:0;
+  z-index: -1;
+}
+
+/* =========================================================== */
+/* ======================= CONTENT PAGES ===================== */
+/* =========================================================== */
+
+.content-left-wrap {
+  float:left;
+  margin:3rem 0 0;
+  width:50%;
+}
+
+.content-right-wrap {
+  float:right;
+  margin:3rem 0 0;
+  width:50%;
+}
+
+.content-right-wrap img {
   width:100%;
 }
 
-.footer-img-wrap {
+.content-right-wrap.expanse img:first-child,
+.content-right-wrap.expanse .mobile,
+.content-right-wrap.gardens img {margin:0 0 3rem;}
+
+.header-color-block.projects {width:2rem;}
+.header-copy .content-link {text-decoration: none;}
+.content-logo-type-wrap {margin:5rem auto 0 3.5rem;}
+.content-logo-type-wrap.sml-margin {margin:0 auto 0 3.5rem;}
+.content-logo-type-wrap > div {
+  margin:4rem auto 0 0;
+  width:85%;
+}
+
+.content-logo-type-wrap em {
+  color:#757575;
+  display: block;
+  font:italic 1rem 'Bitter';
+  margin:1rem auto;
+}
+
+.content-logo.half-width {
+  display: inline-block;
+  width:45%;
+  margin:4rem 2rem 0 0;
+}
+
+.content-logo.half-width:nth-of-type(2) {margin:4rem auto 0;}
+.content-logo.half-width .content-logo-svg {
+  margin:0;
+  width:70%;
+}
+
+.content-logo.half-width .content-logo-svg.alpha {width:auto;}
+.content-logo.half-width .content-logo-png.alpha {width:70px;}
+.content-logo.half-width .content-logo-png {
+  margin:0;
+  width:auto;
+}
+
+.content-logo img {
+  display: block;
   margin: 0 auto;
-  max-width:2000px;
 }
 
-.footer-left {
-  float:left;
-  margin:0 0 0 3rem;
+.content-logo.trinket img {
+  margin:0;
+  width:300px;
 }
 
-.footer-right {
-  float:right;
-  margin: 0 3rem 0 0;
+.content-type img {
+  width:90%;
 }
 
-.footer-left img {
-  padding:.5rem 0 0;
-  width:25%;
+.content-colors.v-day span:nth-child(2) {background:#c12428;}
+.content-colors.v-day span:nth-child(3) {background:#ee7586;}
+.content-colors.v-day span:nth-child(4) {background:#f7dcd7;}
+.content-colors.jardin span:nth-child(2) {background:#37b34a;}
+.content-colors.jardin span:nth-child(3) {background:#f05d16;}
+.content-colors.jardin span:nth-child(4) {background:#a2a2a4;}
+.content-colors.expanse span:nth-child(2) {background:#4d6476;}
+.content-colors.expanse span:nth-child(3) {background:#aeafb0;}
+.content-colors.expanse span:nth-child(4) {background:#e9eef2;}
+.content-colors.gardens span:nth-child(2) {background:#f7911e;}
+.content-colors.gardens span:nth-child(3) {background:#00aedb;}
+.content-colors.alpha span:nth-child(2) {background:#25a9e0;}
+.content-colors.alpha span:nth-child(3) {background:#f1ea41;}
+.content-colors.alpha span:nth-child(4) {background:#f26422;}
+.content-colors.alpha span:nth-child(5) {background:#606060;}
+.content-colors.trinket span:nth-child(2) {background:#db7d56;}
+.content-colors.trinket span:nth-child(3) {background:#edb89f;}
+
+.content-colors span {
+  display: inline-block;
+  height:80px;
+  margin:.5rem .5rem 0 0;
+  width:80px;
 }
 
+.btt-arrow {
+  cursor:pointer;
+  display: block;
+  margin:5rem 0 7rem auto;
+}
+
+/* =========================================================== */
+/* ======================= MEDIA QUERIES ===================== */
+/* =========================================================== */
+
+@media screen and (min-width:1215px) {
+  input[type=email].contact-inline {width:55%;}
+}
+
+@media screen and (min-width:1400px) {
+  input[type=email].contact-inline {width:56%;}
+}
+
+@media screen and (max-width:1130px) {
+  .lb2 {display: none;}
+  .about-bubble.about h2 {
+    font-size: 8vw;
+    left:11%;
+    top:25%;
+  }
+  .about-bubble img {width:40%;}
+  .about-lights img {width:100%;}
+  .about-copy-wrap {margin:-1rem auto 0 42vw;}
+  .content-logo-type-wrap > div {width:100%;}
+  .content-logo.half-width .content-logo-svg {width:100%;}
+  .content-logo.half-width .content-logo-svg.alpha {width:110%;}
+
+  /* ########## Contact Page ########## */
+  .dt.contact-image {display: none;}
+  .mobile.contact-image {display: block;}
+  input[type=submit] {margin:0 0 0 auto;}
+  input[type=text].contact-inline,
+  input[type=email].contact-inline {
+    display: block;
+    margin:0 0 1rem;
+    width:96%;
+  }
+}
 
 @media screen and (max-width:960px) {
-  .content-wrap {margin:0 auto 5rem;}
+  .content-wrap {margin:0 auto 5rem; z-index: 1;}
   .grid-wrap {grid-template-columns: auto auto;}
-
+  .header-wrap h2 {font-size: 7vw;}
+  .header-wrap.expanse h2 {font-size: 6vw;}
+  .header-copy {width:70%;}
+  .content-logo.trinket img {width:60%;}
+  .content-logo.half-width {margin:4rem 1rem 0 0;}
+  .content-logo.half-width .content-logo-png.alpha {width:22%;}
+  .content-right-wrap.jardin .dt,
+  .content-right-wrap.expanse .dt,
+  .content-right-wrap.alpha .dt {display: none;}
+  .content-right-wrap.jardin .mobile,
+  .content-right-wrap.expanse .mobile,
+  .content-right-wrap.alpha .mobile {display: block;}
+  .content-right-wrap.expanse .mobile {margin: 0 auto 3rem; width:75%;}
 }
 
 @media screen and (max-width:650px) {
+  .mobile {display: block;}
+  .dt {display: none;}
+  .lb3 {display: block;}
+  .lb2 {display: none;}
   /* ########## Nav ########## */
   nav {
-    margin:1rem auto 3rem;
+    margin:0;
     position: relative;
   }
   .nav-toggle {
-    line-height: 0.5;
+    display: block;
+    line-height: .9;
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 10;
   }
-  .nav-toggle:before {
+
+  .nav-toggle .open,
+  .nav-toggle .close {
     color:#4f424b;
-    content:"\2261";
-    font: bold 5rem/.5 'Nunito';
+    font-family: "Nunito";
+    font-size: 4rem;
   }
+
   .mainnav {
     background: #f3ecd8;
     display: none;
     text-align: left;
+    margin:0 auto 4rem;
   }
 
   .mainnav li {display: block;}
@@ -229,16 +507,51 @@ footer {
   .subnav li {border:none;}
   .dropdown:hover .subnav {margin:0 auto;}
 
-  .header-wrap h2 {font-size: 12vw;}
+  .header-wrap h2 {font-size: 12vw; margin:-3rem auto 1rem;}
+  .header-wrap.homepage {margin:0 auto;}
+  .header-wrap.homepage h2 {margin:0 auto 1rem;}
+  .header-copy {width:80%;}
   .header-color-block {width:10vw;}
   .grid-wrap {grid-template-columns: auto;}
   .project-img-wrap,
   .project-img-wrap img {max-width:none;}
-  .mobile {visibility: hidden;}
+
+  /* ########## About Page ########## */
+  .about-bubble img:nth-child(2) {width:100%;}
+  .about-bubble.about h2 {font-size: 10vw; left:15%; top:24%;}
+  .about-copy-wrap {margin:1rem 1.5rem 0;}
+
+  /* ########## Contact Page ########## */
+  .content-wrap.contact {margin:0 auto 15rem;}
+  .header-copy.contact {width:80%;}
+  .contact-form-wrap {margin:2rem 0; width:97%;}
+  .contact-image {bottom:0;}
+  input[type=submit] {margin:0 auto 0 0;}
+
+  /* ########## Content Pages ########## */
+  .header-wrap.expanse h2 {font-size: 12vw;}
+  .content-logo-type-wrap {margin:5rem auto 0;}
+  .content-logo-type-wrap.sml-margin {margin:0;}
+  .content-left-wrap,
+  .content-right-wrap {
+    float:none;
+    width:100%;
+  }
+
+  .content-type img {width:auto;}
+  .content-logo.trinket img {width:40%;}
+  .content-logo.half-width:nth-of-type(2) em {text-align: right;}
+  .content-logo.half-width .content-logo-png {margin:0 0 0 auto;}
+  .content-right-wrap.expanse .mobile {width:100%;}
+  .content-logo.half-width .content-logo-svg.alpha {width:140%;}
+  .content-logo.half-width .content-logo-png.alpha {width:30%;}
 }
 
 @media screen and (max-width:450px) {
+  .nav-toggle .open,
+  .nav-toggle .close {font-size: 14vw;}
   .nav-item {padding:.5rem 0;}
   .footer-left {margin:0 0 0 1rem;}
   .footer-right {margin:0 1rem 0 0;}
+  .content-logo.trinket img {width:70%;}
 }

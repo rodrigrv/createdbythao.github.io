@@ -1,0 +1,28 @@
+Vday box colors:
+box 1 - #c12428
+box 2 - #ee7586
+box 3 - #f7dcd7
+
+jardin box colors:
+box 1 - #37b34a
+box 2 - #f05d16
+box 3 - #a2a2a4
+
+expanse box colors:
+box 1 - #4d6476
+box 2 - #aeafb0
+box 3 - #e9eef2
+
+tx garden box colors:
+box 1 - #f7911e
+box 2 - #00aedb
+
+alphablocks box colors:
+box 1 - #25a9e0
+box 2 - #f1ea41
+box 3 - #f26422
+box 4 - #606060
+
+trinket box colors:
+box 1 - #db7d56
+box 2 - #eab89f
