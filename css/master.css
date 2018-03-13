@@ -282,6 +282,7 @@ input[type=email].contact-inline {
 
 input[type=submit] {
   background:#f47a5d;
+  border:0 solid #000;
   color:#fff;
   display: block;
   font:bold 1rem 'Nunito';
@@ -522,10 +523,10 @@ input[type=submit] {
   .about-copy-wrap {margin:1rem 1.5rem 0;}
 
   /* ########## Contact Page ########## */
-  .content-wrap.contact {margin:0 auto 15rem;}
+  .content-wrap.contact {margin:0 auto 15rem; position: relative;}
   .header-copy.contact {width:80%;}
   .contact-form-wrap {margin:2rem 0; width:97%;}
-  .contact-image {bottom:0;}
+  .contact-image {bottom:-25%; right:-5%;}
   input[type=submit] {margin:0 auto 0 0;}
 
   /* ########## Content Pages ########## */
