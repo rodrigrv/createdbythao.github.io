@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Thao Ha | Graphic Designer</title>
+  <title>Contact | Thao Ha | Graphic Design | Fort Worth | Dallas</title>
   <meta charset="utf-8">
+  <meta name="author" content="Thao Ha" />
   <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <meta name="description" content="Graphic Designer in the DFW area with multiple years of experience in publications, branding, logo design, website design and more." />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="css/master.css" />
   <link rel="icon" type="image/png" href="new-images/home/logocolor.png" />
   <link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/custom.js"></script>
-  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 </head>
 <body>
   <section class="body-wrapper">
@@ -37,13 +39,14 @@
       <span class="header-copy font-sans contact">Got a burning question or simply want to chat? Shoot me an email. I'm typically pretty good about responding. Don't be shy!</span>
     </div>
     <div class="contact-form-wrap">
-      <form action="https://formspree.io/rodrigrv87@gmail.com" method="POST">
-        <input type="text" class="contact-inline" name="name" placeholder="Name" autocomplete="on" autofocus />
+      <form action="https://formspree.io/thao_ha@outlook.com" method="POST">
+        <input type="hidden" name="_next" value="https://createdbythao.github.io/confirm.html" />
+        <input type="text" class="contact-inline" name="name" placeholder="Name" autocomplete="on" />
         <input type="email" class="contact-inline" name="email" placeholder="Email" required autocomplete="on" />
         <input type="hidden" name="_subject" value="New submission!" />
-        <input type="text" name="subject" placeholder="Subject" required />
-        <textarea name="message" rows="10" cols="30" placeholder="Message"></textarea>
-        <input type="submit" name="submit" value="Submit" />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" rows="10" cols="30" placeholder="Message" required></textarea>
+        <input type="submit" value="Submit" />
         <input type="text"  name="_gotcha" style="display:none" />
       </form>
     </div>

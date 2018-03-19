@@ -11,13 +11,6 @@ $(document).ready(function(){
     $('.open').show();
     $('.close').hide();
   });
-  // $(function(){
-  //   if ('.open') {
-  //     $('#c-img-mobile').slideDown();
-  //   } else {
-  //     $('#c-img-mobile').slideUp();
-  //   }
-  // });
   $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
