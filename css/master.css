@@ -83,7 +83,7 @@ nav li a:hover {
 .subnav li:nth-child(6) {border-bottom:none;}
 .subnav li a {
   display: block;
-  font-size: 1.3rem;
+  font:bold 1.3rem 'Nunito';
   margin: 0 auto;
   padding:1rem;
 }

@@ -10,7 +10,6 @@ About page
 - [ ] Add an updated picture to about page.
 
 Contact page
-- [ ] Make a 'Thank You' page after form submission.
 - [ ] Add more validation to the form.
 
 Footer (all pages)
