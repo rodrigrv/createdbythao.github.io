@@ -1,0 +1,548 @@
+/* =========================================================== */
+/* ========================= BASE CSS ======================== */
+/* =========================================================== */
+
+/* ########## ALL ELEMENTS ########## */
+* {
+  font-size: 16px;
+  font-family: 'Bitter', serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  clear: both;
+  height: 100%;
+  min-height: 100%;
+}
+
+.orange {
+  color: #f47a5d;
+}
+
+.creme {
+  color: #f3ecd8;
+}
+
+.grey,
+p {
+  color: #4f424b;
+}
+
+.font-serif {
+  font-family: 'Bitter';
+}
+
+.font-sans {
+  font-family: 'Nunito';
+  font-weight: bold;
+}
+
+.body-wrapper {
+  margin: 0 auto -63px;
+  max-width: 1600px;
+  min-height: 99vh;
+  padding: 1rem;
+  width: 90%;
+}
+
+.content-wrap {
+  margin: 0 auto 5rem;
+  z-index: 1;
+}
+
+.mobile,
+.lb3 {
+  display: none;
+}
+
+.dt,
+.lb2 {
+  display: block;
+}
+
+/* ########## NAVIGATION ########## */
+.nav-toggle {
+  display: none;
+}
+
+nav {
+  display: block;
+  font: 600 1rem 'Nunito';
+  font-family: 'Nunito', sans-serif;
+  margin: 2rem auto 0;
+
+  li {
+    a {
+      text-decoration: none;
+
+      &:link,
+      &:visited,
+      &:focus {
+        color: #4f424b;
+      }
+
+      &:hover {
+        color: #f47a5d;
+        -webkit-transition: .3s;
+        transition: .3s;
+      }
+
+      &.active {
+        color: #f47a5d;
+      }
+    }
+  }
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.mainnav {
+  overflow: hidden;
+  text-align: right;
+
+  li {
+    display: inline-block;
+
+    a {
+      font: bold 1.5rem 'Nunito';
+      margin: 0 0 0 4rem;
+    }
+  }
+}
+
+.subnav {
+  background: #f3ecd8;
+  display: none;
+  min-width: 310px;
+  position: absolute;
+  text-align: left;
+  z-index: 2;
+
+  li {
+    display: block;
+    border-bottom: 1px solid #000;
+    margin: 0 auto;
+    width: 90%;
+
+    &:nth-child(6) {
+      border-bottom: none;
+    }
+
+    a {
+      display: block;
+      font: bold 1.3rem 'Nunito';
+      margin: 0 auto;
+      padding: 1rem;
+    }
+  }
+}
+
+.dropdown {
+  &:hover {
+    .subnav {
+      display: block;
+      margin: 0 0 0 3rem;
+      -webkit-transition: 2s;
+      transition: 2s;
+    }
+  }
+}
+
+/* ########## Footer ########## */
+footer {
+  background: #f3ecd8;
+  height: 55px;
+  padding: .5rem 0 0;
+  width: 100%;
+}
+
+.footer {
+  &-img-wrap {
+    margin: 0 auto;
+    max-width: 2000px;
+  }
+
+  &-left {
+    float: left;
+    margin: 0 0 0 3rem;
+
+    img {
+      padding: .5rem 0 0;
+      width: 25%;
+    }
+  }
+
+  &-right {
+    float: right;
+    margin: 0 3rem 0 0;
+
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+/* =========================================================== */
+/* ========================= HOMEPAGE ======================== */
+/* =========================================================== */
+.grid-wrap {
+  display: grid;
+  grid-gap: 4rem 4rem;
+  grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.project-img-wrap {
+  max-width: 430px;
+  position: relative;
+
+  img {
+    display: block;
+    max-width: 430px;
+    width: 100%;
+  }
+
+  a {
+    display: block;
+  }
+
+  &:hover {
+    .project-overlay {
+      background: rgba(0, 0, 0, .7);
+      opacity: 1;
+      -webkit-transition: 5s;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      visibility: visible;
+    }
+  }
+}
+
+.project-overlay {
+  height: 100%;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  width: 100%;
+
+  span {
+    color: #f47a5d;
+    font: 2rem 'Bitter';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+h2 {
+  color: #f47a5d;
+  font: 300 4rem/1.3 'Bitter';
+  margin: 0 auto 2rem;
+}
+
+.header {
+  &-color-block {
+    background: #f3ecd8;
+    display: inline-block;
+    height: 15px;
+    margin: 0.3rem 1rem 0 0;
+    vertical-align: top;
+    width: 4rem;
+  }
+
+  &-copy {
+    color: #4f424b;
+    display: inline-block;
+    font: bold 1.1rem 'Nunito';
+    width: 80%;
+  }
+}
+
+/* =========================================================== */
+/* ======================== ABOUT PAGE ======================= */
+/* =========================================================== */
+.about {
+  &-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-bubble {
+    display: block;
+    position: relative;
+
+    &.about {
+      h2 {
+        font-size: 5rem;
+      }
+    }
+
+    h2 {
+      left: 100px;
+      position: absolute;
+      top: 100px;
+    }
+  }
+
+  &-copy-wrap {
+    display: block;
+    margin: -1rem auto 0 30rem;
+    text-align: left;
+  }
+
+  &-lights {
+    img {
+      width: auto;
+    }
+  }
+
+  &-blurb {
+    p {
+      font: bold 1.2rem/1.5 'Nunito';
+      margin: 2rem auto 0;
+    }
+
+    a,
+    span {
+      color: #f47a5d;
+      font-family: inherit;
+      font-size: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+/* =========================================================== */
+/* ======================= CONTACT PAGE ====================== */
+/* =========================================================== */
+.header-copy.contact {
+  width: 50%;
+}
+
+.header-wrap.contact h2 {
+  margin: 0 auto 1rem;
+}
+
+.content-wrap.contact {
+  margin: 3rem auto 5rem;
+}
+
+.contact-form-wrap {
+  margin: 2rem auto 0 5rem;
+  width: 50%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  border: 2px solid #4f424b;
+  display: block;
+  font: bold 1.2rem 'Nunito';
+  margin: 0 0 1rem;
+  padding: .5rem 0 .5rem 1rem;
+  width: 96%;
+}
+
+input[type=text].contact-inline {
+  display: inline-block;
+  margin: 0 2% 1rem 0;
+  width: 35%;
+}
+
+input[type=email].contact-inline {
+  display: inline-block;
+  margin: 0 0 1rem 0;
+  width: 54%;
+}
+
+input[type=submit] {
+  background: #f47a5d;
+  border: 0 solid #4f424b;
+  color: #fff;
+  display: block;
+  font: bold 1rem 'Nunito';
+  margin: 0 .7rem 0 auto;
+  padding: .3rem .7rem;
+}
+
+.contact-image {
+  bottom: 10%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+/* =========================================================== */
+/* ======================= CONFIRM PAGE ====================== */
+/* =========================================================== */
+.content-wrap.confirm {
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.header-wrap.confirm {
+  border: 1px solid #4f424b;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 50%;
+}
+
+.header-copy.confirm {
+  text-align: left;
+  width: 95%;
+
+  a {
+    color: #f47a5d;
+    font-family: 'Nunito';
+    text-decoration: none;
+  }
+}
+
+/* =========================================================== */
+/* ======================= CONTENT PAGES ===================== */
+/* =========================================================== */
+.content-left-wrap {
+  float: left;
+  margin: 3rem 0 0;
+  width: 50%;
+}
+
+.content-right-wrap {
+  float: right;
+  margin: 3rem 0 0;
+  width: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.content-right-wrap.expanse img:first-child,
+.content-right-wrap.expanse .mobile,
+.content-right-wrap.gardens img {
+  margin: 0 0 3rem;
+}
+
+.header-color-block.projects {
+  width: 2rem;
+}
+
+.header-copy .content-link {
+  text-decoration: none;
+}
+
+.content-logo-type-wrap {
+  margin: 5rem auto 0 3.5rem;
+
+  &.sml-margin {
+    margin: 0 auto 3.5rem;
+  }
+
+  &>div {
+    margin: 4rem auto 0 0;
+    width: 85%;
+  }
+
+  em {
+    color: #757575;
+    display: block;
+    font: italic 1rem 'Bitter';
+    margin: 1rem auto;
+  }
+}
+
+.content-logo {
+  &.half-width {
+    display: inline-block;
+    width: 45%;
+    margin: 4rem 2rem 0 0;
+
+    &:nth-of-type(2) {
+      margin: 4rem auto 0;
+    }
+
+    .content-logo {
+      &-svg {
+        margin: 0;
+        width: 70%;
+
+        &.alpha {
+          width: auto;
+        }
+      }
+
+      &-png {
+        margin: 0;
+        width: auto;
+
+        &.alpha {
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .trinket {
+    img {
+      margin: 0;
+      width: 300px;
+    }
+  }
+}
+
+.content-type img {
+  width: 90%;
+}
+
+.content-colors {
+  &.v-day {
+    span {
+      &:nth-child(2) {
+        background: #c12428;
+      }
+
+      &:nth-child(3) {
+        background: #ee7586;
+      }
+
+      &::nth-child(4) {
+        background: #f7dcd7;
+      }
+    }
+  }
+
+  &.jardin {
+    span {
+      &:nth-child(2) {
+        background: #37b34a;
+      }
+
+      &:nth-child(3) {
+        background: #f05d16;
+      }
+
+      &::nth-child(4) {
+        background: #a2a2a4;
+      }
+    }
+  }
+}
