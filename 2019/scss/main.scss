@@ -1,0 +1,106 @@
+@import 'helpers.scss';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vw;
+  width: 100%;
+}
+
+/* Nav img */
+.active {
+  ::before {
+    background: $orange;
+    border-radius: 50% 50% 0 50%;
+    content: '';
+    display: inline-flex;
+    height: 15px;
+    margin: 0 0.5rem 0 0;
+    width: 15px;
+  }
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Nav */
+nav {
+  font: 600 1rem/1 'Nunito';
+  width: 95%;
+  position: relative;
+
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 2rem 0;
+    width: 100%;
+
+    .icon {
+      left: 0;
+      list-style: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      a {
+        padding: 1rem;
+      }
+    }
+  }
+
+  li {
+    align-items: center;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin: 0 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $gray;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-decoration: none;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .dropdown {
+    display: none;
+  }
+}
+
+/* Footer */
+footer {
+  width: 95%;
+
+  .icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+  }
+
+  a {
+    padding: 1rem;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

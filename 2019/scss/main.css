@@ -1,0 +1,128 @@
+/* Colors */
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vw;
+  width: 100%;
+}
+
+/* Nav img */
+.active ::before {
+  background: #F47A5E;
+  border-radius: 50% 50% 0 50%;
+  content: '';
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 15px;
+  margin: 0 0.5rem 0 0;
+  width: 15px;
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Nav */
+nav {
+  font: 600 1rem/1 'Nunito';
+  width: 95%;
+  position: relative;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+nav ul .icon {
+  left: 0;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+nav ul .icon a {
+  padding: 1rem;
+}
+
+nav li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 1rem;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #5A5A5A;
+  font-size: 1.5em;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav a:last-child {
+  padding-right: 0;
+}
+
+nav .dropdown {
+  display: none;
+}
+
+/* Footer */
+footer {
+  width: 95%;
+}
+
+footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer a {
+  padding: 1rem;
+}
+
+footer a:last-child {
+  padding-right: 0;
+}
+/*# sourceMappingURL=main.css.map */
