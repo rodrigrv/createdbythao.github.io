@@ -1,0 +1,108 @@
+@import 'main.scss';
+@import 'helpers';
+
+h1 {
+  color: $orange;
+  display: inline-block;
+  font: 700 1.875rem/1 'Nunito', sans-serif;
+  margin: 2rem 1rem;
+  position: relative;
+  text-transform: capitalize;
+
+  @media (min-width: $nav-mobile) {
+    font-size: 3rem;
+    margin: 2rem 5rem;
+  }
+
+  &::after {
+    background: $cream;
+    bottom: 0;
+    content: '';
+    display: inline-block;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 115%;
+    z-index: -1;
+  }
+}
+
+.about-me {
+  margin: 2rem 1rem;
+  overflow: hidden;
+
+  @media (min-width: $nav-mobile) {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 5rem;
+  }
+
+  aside {
+    width: 100%;
+
+    @media (min-width: $nav-mobile) {
+      margin: 0 5rem 0 0;
+      width: auto;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: 50%;
+
+      @media (min-width: $nav-mobile) {
+        width: 360px;
+      }
+    }
+  }
+
+  .copy {
+    border-bottom: 10px solid $orange;
+
+    @media (min-width: $nav-mobile) {
+      max-width: 1170px;
+    }
+
+    .lights {
+      margin: 1.5rem auto;
+      max-width: 250%;
+
+      @media (min-width: $nav-mobile) {
+        margin: 0 0 3rem;
+        max-width: 100%;
+      }
+    }
+
+    p {
+      font: 400 .9rem/1.5 'PT Serif', serif;
+      margin: 0 0 1rem;
+
+      @media (min-width: $nav-mobile) {
+        font-size: 1.3rem;
+        margin: 0 0 1rem 2rem;
+      }
+    }
+
+    a {
+      color: $orange;
+      text-decoration: none;
+
+      &:link,
+      &:visited,
+      &:hover,
+      &:focus {
+        color: $orange;
+      }
+    }
+
+    .cacti {
+      margin: 3rem 0 1rem auto;
+      width: 45%;
+
+      @media (min-width: $nav-mobile) {
+        max-width: 200px;
+      }
+    }
+  }
+}

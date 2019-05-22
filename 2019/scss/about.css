@@ -374,4 +374,131 @@ footer a {
 footer a:last-child {
   padding-right: 0;
 }
-/*# sourceMappingURL=main.css.map */
+
+/* Colors */
+/* Breakpoints */
+h1 {
+  color: #F47A5E;
+  display: inline-block;
+  font: 700 1.875rem/1 'Nunito', sans-serif;
+  margin: 2rem 1rem;
+  position: relative;
+  text-transform: capitalize;
+}
+
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 3rem;
+    margin: 2rem 5rem;
+  }
+}
+
+h1::after {
+  background: #F4EEDA;
+  bottom: 0;
+  content: '';
+  display: inline-block;
+  height: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 115%;
+  z-index: -1;
+}
+
+.about-me {
+  margin: 2rem 1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 48rem) {
+  .about-me {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 2rem 5rem;
+  }
+}
+
+.about-me aside {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .about-me aside {
+    margin: 0 5rem 0 0;
+    width: auto;
+  }
+}
+
+.about-me aside img {
+  display: block;
+  max-width: 100%;
+  width: 50%;
+}
+
+@media (min-width: 48rem) {
+  .about-me aside img {
+    width: 360px;
+  }
+}
+
+.about-me .copy {
+  border-bottom: 10px solid #F47A5E;
+}
+
+@media (min-width: 48rem) {
+  .about-me .copy {
+    max-width: 1170px;
+  }
+}
+
+.about-me .copy .lights {
+  margin: 1.5rem auto;
+  max-width: 250%;
+}
+
+@media (min-width: 48rem) {
+  .about-me .copy .lights {
+    margin: 0 0 3rem;
+    max-width: 100%;
+  }
+}
+
+.about-me .copy p {
+  font: 400 .9rem/1.5 'PT Serif', serif;
+  margin: 0 0 1rem;
+}
+
+@media (min-width: 48rem) {
+  .about-me .copy p {
+    font-size: 1.3rem;
+    margin: 0 0 1rem 2rem;
+  }
+}
+
+.about-me .copy a {
+  color: #F47A5E;
+  text-decoration: none;
+}
+
+.about-me .copy a:link, .about-me .copy a:visited, .about-me .copy a:hover, .about-me .copy a:focus {
+  color: #F47A5E;
+}
+
+.about-me .copy .cacti {
+  margin: 3rem 0 1rem auto;
+  width: 45%;
+}
+
+@media (min-width: 48rem) {
+  .about-me .copy .cacti {
+    max-width: 200px;
+  }
+}
+/*# sourceMappingURL=about.css.map */

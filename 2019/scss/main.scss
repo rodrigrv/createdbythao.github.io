@@ -10,6 +10,7 @@
 
 body {
   height: 100vh;
+  position: relative;
   width: 100%;
 }
 
@@ -264,6 +265,12 @@ nav {
 /* Footer */
 footer {
   width: 95%;
+
+  @media (min-width: $nav-mobile) {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
 
   .icons {
     display: flex;
