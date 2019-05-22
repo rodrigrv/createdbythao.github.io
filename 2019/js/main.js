@@ -1,7 +1,6 @@
-// Declare variables
-const overlay = document.querySelector('.overlay');
-const menu = document.querySelector('#menu');
-const close = document.querySelector('.closebtn');
+const overlay = document.querySelector(".overlay");
+const menu = document.querySelector("#menu");
+const close = document.querySelector(".closebtn");
 
 // Add event listener
 menu.addEventListener("click", openNav);
