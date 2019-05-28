@@ -21,26 +21,32 @@
   <meta name="description"
     content="Graphic Designer in the DFW area with multiple years of experience in publications, branding, logo design, website design and more." />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="scss/main.css" />
-  <link rel="icon" type="image/png" href="img/logocolor.png" />
   <link href="https://fonts.googleapis.com/css?family=Nunito:600,700|PT+Serif:400,400i" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="owlcarousel/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="owlcarousel/dist/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" type="text/css" href="scss/homepage.css" />
+  <link rel="icon" type="image/png" href="img/logocolor.png" />
 </head>
 
 <body>
   <nav>
     <li class="icon">
-      <a href="index.html">
-        <img src="img/logo.png" alt="Thao Ha-Rodriguez logo" /></a>
+      <a href="index.html"><img src="img/logo.png" alt="Thao Ha-Rodriguez logo" /></a>
     </li>
     <ul class="overlay">
       <a href="javascript:void(0)" class="closebtn" aria-label="Close Navigation">&times;</a>
       <li class="nav-active nav-project">
         <a href="index.html">Projects</a>
         <ul class="dropdown">
-          <li><a href="projects/beauty-bar-on-13.html">Beauty Bar on 13</a></li>
-          <li><a href="projects/lighting-after-dark.html">Lighting After Dark</a></li>
-          <li><a href="projects/expanse-entertainment.html">Expanse Entertainment</a></li>
+          <li>
+            <a href="projects/beauty-bar-on-13.html">Beauty Bar on 13</a>
+          </li>
+          <li>
+            <a href="projects/lighting-after-dark.html">Lighting After Dark</a>
+          </li>
+          <li>
+            <a href="projects/expanse-entertainment.html">Expanse Entertainment</a>
+          </li>
           <li><a href="projects/fastpass">FastPass</a></li>
           <li><a href="projects/thanksgiving.html">Thanksgiving</a></li>
           <li><a href="projects/luxe-apartments.html">Luxe Apartments</a></li>
@@ -51,7 +57,98 @@
     </ul>
     <div class="mobile-only" id="menu"><a href="#">Menu</a></div>
   </nav>
-  <section class="homepage-projects"></section>
+  <section class="homepage-projects">
+    <h1>Projects</h1>
+    <div class="owl-carousel owl-theme">
+
+      <div class="project-wrap">
+        <div class="copy">
+          <h2>Lighting After Dark</h2>
+          <div class="border"></div>
+          <h3>Signage</h3>
+        </div>
+        <div class="image">
+          <a href="projects/lighting-after-dark.html">
+            <img src="img/home_lad.jpg" alt="A sign depicting a lighting event at Dallas Market Center." />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-wrap">
+        <div class="copy">
+          <h2>Expanse Entertainment</h2>
+          <div class="border"></div>
+          <h3>Business Cards</h3>
+        </div>
+        <div class="image">
+          <a href="projects/expanse-entertainment.html">
+            <img src="img/home_expanse.jpg" alt="A sign depicting a lighting event at Dallas Market Center." />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-wrap">
+        <div class="copy">
+          <h2>FastPass</h2>
+          <div class="border"></div>
+          <h3>Email Design</h3>
+        </div>
+        <div class="image">
+          <a href="projects/fastpass.html">
+            <img src="img/home_fastpass.gif" alt="A sign depicting a lighting event at Dallas Market Center." />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-wrap">
+        <div class="copy">
+          <h2>Thanksgiving</h2>
+          <div class="border"></div>
+          <h3>Email Design</h3>
+        </div>
+        <div class="image">
+          <a href="projects/thanksgiving.html">
+            <img src="img/home_ty.jpg" alt="A sign depicting a lighting event at Dallas Market Center." />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-wrap">
+        <div class="copy">
+          <h2>Luxe Apartments</h2>
+          <div class="border"></div>
+          <h3>Website Design</h3>
+        </div>
+        <div class="image">
+          <a href="projects/luxe-apartments.html">
+            <img src="img/home_luxe.jpg" alt="A sign depicting a lighting event at Dallas Market Center." />
+          </a>
+        </div>
+      </div>
+
+      <div class="project-wrap">
+        <div class="copy">
+          <h2>Beauty Bar on 13</h2>
+          <div class="border"></div>
+          <h3>Social Media</h3>
+        </div>
+        <div class="image">
+          <a href="projects/beauty-bar-on-13.html">
+            <img src="img/home_beauty.jpg" alt="Facebook post regarding beauty care at Dallas Market Center." />
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="slider-nav owl-dots">
+      <div class="owl-dot active"><span></span></div>
+      <div class="owl-dot"><span></span></div>
+      <div class="owl-dot"><span></span></div>
+      <div class="owl-dot"><span></span></div>
+      <div class="owl-dot"><span></span></div>
+      <div class="owl-dot"><span></span></div>
+    </div>
+  </section>
   <footer>
     <div class="icons">
       <a href="https://www.linkedin.com/in/thao-ha/" target="_blank">
@@ -61,6 +158,20 @@
         <img src="img/icon_instagram.png" alt="instagram icon" />
       </a>
     </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="owlcarousel/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+          center: true,
+          items: 3,
+          loop: true,
+          margin: 80,
+          stagePadding: 100
+        });
+      });
+    </script>
   </footer>
 </body>
 
