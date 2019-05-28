@@ -22,7 +22,7 @@ img {
 
 /* Nav */
 nav {
-  font: 600 1rem/1 "Nunito";
+  font: 600 1rem/1 $font-sans;
   padding: 2rem 0;
   width: 95%;
   position: relative;
@@ -52,7 +52,7 @@ nav {
       transition: .5s;
       top: 0;
       width: 0;
-      z-index: 1;
+      z-index: 5;
     }
   }
 
@@ -161,6 +161,7 @@ nav {
       .dropdown {
         display: flex;
         flex-direction: column;
+        z-index: 10;
 
         li {
           justify-content: flex-start;
@@ -259,6 +260,34 @@ nav {
     a {
       color: $orange;
     }
+  }
+}
+
+/* Headings */
+h1 {
+  color: $orange;
+  display: inline-block;
+  font: 700 1.875rem/1 $font-sans;
+  margin: 2rem 1rem;
+  position: relative;
+  text-transform: capitalize;
+
+  @media (min-width: $nav-mobile) {
+    font-size: 3rem;
+    margin: 2rem 5rem;
+  }
+
+  &::after {
+    background: $cream;
+    bottom: 0;
+    content: '';
+    display: inline-block;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 115%;
+    z-index: -1;
   }
 }
 
