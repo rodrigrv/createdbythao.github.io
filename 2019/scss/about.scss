@@ -1,33 +1,6 @@
 @import 'main.scss';
 @import 'helpers';
 
-h1 {
-  color: $orange;
-  display: inline-block;
-  font: 700 1.875rem/1 'Nunito', sans-serif;
-  margin: 2rem 1rem;
-  position: relative;
-  text-transform: capitalize;
-
-  @media (min-width: $nav-mobile) {
-    font-size: 3rem;
-    margin: 2rem 5rem;
-  }
-
-  &::after {
-    background: $cream;
-    bottom: 0;
-    content: '';
-    display: inline-block;
-    height: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 115%;
-    z-index: -1;
-  }
-}
-
 .about-me {
   margin: 2rem 1rem;
   overflow: hidden;
