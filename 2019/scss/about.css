@@ -11,7 +11,9 @@
 }
 
 body {
-  height: 100vh;
+  margin: 0 auto;
+  max-height: 100vh;
+  max-width: 1600px;
   position: relative;
   width: 100%;
 }
@@ -408,9 +410,6 @@ footer a:last-child {
   padding-right: 0;
 }
 
-/* Colors */
-/* Breakpoints */
-/* Fonts */
 .about-me {
   margin: 2rem 1rem;
   overflow: hidden;
