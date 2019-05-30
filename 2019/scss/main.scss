@@ -1,4 +1,4 @@
-@import "helpers.scss";
+@import 'helpers.scss';
 
 *,
 *::after,
@@ -16,18 +16,18 @@ body {
   width: 100%;
 }
 
-/* Images */
+// Images
 img {
   display: block;
   max-width: 100%;
 }
 
-/* Nav */
+// Nav
 nav {
   font: 600 1rem/1 $font-sans;
   padding: 2rem 0;
-  width: 95%;
   position: relative;
+  width: 95%;
 
   @media (max-width: $nav-mobile) {
     height: 56px;
@@ -51,8 +51,9 @@ nav {
       opacity: .9;
       position: fixed;
       right: 0;
-      transition: .5s;
       top: 0;
+      transition: .5s;
+
       width: 0;
       z-index: 5;
     }
@@ -72,7 +73,7 @@ nav {
     font-size: 1.5em;
     padding: 1rem;
     text-decoration: none;
-    transition: all .2s linear;
+    transition: .2s linear;
 
     @media (max-width: $nav-mobile) {
       color: $orange;
@@ -81,7 +82,7 @@ nav {
 
     &:hover {
       color: $orange;
-      transition: all .2s linear;
+      transition: .2s linear;
 
       @media (max-width: $nav-mobile) {
         transition: none;
@@ -90,11 +91,11 @@ nav {
   }
 
   .closebtn {
+    color: $orange;
     display: none;
     font-size: 3rem;
     line-height: .6;
-    color: #F47A5E;
-    padding: 0rem 0;
+    padding: 0;
     position: absolute;
     right: 1rem;
     top: 2.5rem;
@@ -127,11 +128,11 @@ nav {
   .nav-active {
     ::before {
       background: $orange;
-      border-radius: 50% 50% 0 50%;
-      content: "";
+      border-radius: 50% 50% 0;
+      content: '';
       display: inline-flex;
       height: 15px;
-      margin: 0 0.5rem 0 0;
+      margin: 0 .5rem 0 0;
       width: 15px;
 
       @media (max-width: $nav-mobile) {
@@ -154,7 +155,7 @@ nav {
     }
 
     &:hover {
-      transition: all .2s linear;
+      transition: .2s linear;
 
       @media (max-width: $nav-mobile) {
         transition: none;
@@ -191,22 +192,22 @@ nav {
     padding: 1rem 0;
     position: absolute;
     top: 2rem;
-    transition: all .2s linear;
+    transition: .2s linear;
     width: 270px;
 
     @media (max-width: $nav-mobile) {
       align-items: flex-end;
       display: flex;
       flex-flow: column wrap;
-      justify-content: flex-end;
       height: auto;
+      justify-content: flex-end;
       left: 0;
+      margin: .5rem 0 0;
       opacity: 1;
       padding: 0;
       position: relative;
-      margin: .5rem 0 0;
-      transition: none;
       top: 0;
+      transition: none;
       width: auto;
       z-index: 0;
     }
@@ -255,7 +256,7 @@ nav {
     @media (max-width: $nav-mobile) {
       display: flex;
       position: absolute;
-      right: 0rem;
+      right: 0;
       top: 3rem;
     }
 
@@ -265,7 +266,7 @@ nav {
   }
 }
 
-/* Headings */
+// Headings
 h1 {
   color: $orange;
   display: inline-block;
@@ -293,7 +294,7 @@ h1 {
   }
 }
 
-/* Footer */
+// Footer
 footer {
   width: 95%;
 

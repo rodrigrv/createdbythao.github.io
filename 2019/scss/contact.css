@@ -18,18 +18,16 @@ body {
   width: 100%;
 }
 
-/* Images */
 img {
   display: block;
   max-width: 100%;
 }
 
-/* Nav */
 nav {
   font: 600 1rem/1 "Nunito";
   padding: 2rem 0;
-  width: 95%;
   position: relative;
+  width: 95%;
 }
 
 @media (max-width: 48rem) {
@@ -72,9 +70,9 @@ nav ul {
     opacity: .9;
     position: fixed;
     right: 0;
+    top: 0;
     -webkit-transition: .5s;
     transition: .5s;
-    top: 0;
     width: 0;
     z-index: 5;
   }
@@ -96,8 +94,8 @@ nav a {
   font-size: 1.5em;
   padding: 1rem;
   text-decoration: none;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 @media (max-width: 48rem) {
@@ -109,8 +107,8 @@ nav a {
 
 nav a:hover {
   color: #F47A5E;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 @media (max-width: 48rem) {
@@ -121,11 +119,11 @@ nav a:hover {
 }
 
 nav .closebtn {
+  color: #F47A5E;
   display: none;
   font-size: 3rem;
   line-height: .6;
-  color: #F47A5E;
-  padding: 0rem 0;
+  padding: 0;
   position: absolute;
   right: 1rem;
   top: 2.5rem;
@@ -165,13 +163,13 @@ nav .icon img {
 
 nav .nav-active ::before {
   background: #F47A5E;
-  border-radius: 50% 50% 0 50%;
-  content: "";
+  border-radius: 50% 50% 0;
+  content: '';
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 15px;
-  margin: 0 0.5rem 0 0;
+  margin: 0 .5rem 0 0;
   width: 15px;
 }
 
@@ -198,8 +196,8 @@ nav .nav-project {
 }
 
 nav .nav-project:hover {
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 @media (max-width: 48rem) {
@@ -247,8 +245,8 @@ nav .dropdown {
   padding: 1rem 0;
   position: absolute;
   top: 2rem;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
   width: 270px;
 }
 
@@ -264,18 +262,18 @@ nav .dropdown {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+    height: auto;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    height: auto;
     left: 0;
+    margin: .5rem 0 0;
     opacity: 1;
     padding: 0;
     position: relative;
-    margin: .5rem 0 0;
+    top: 0;
     -webkit-transition: none;
     transition: none;
-    top: 0;
     width: auto;
     z-index: 0;
   }
@@ -336,7 +334,7 @@ nav .mobile-only {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    right: 0rem;
+    right: 0;
     top: 3rem;
   }
 }
@@ -345,7 +343,6 @@ nav .mobile-only a {
   color: #F47A5E;
 }
 
-/* Headings */
 h1 {
   color: #F47A5E;
   display: inline-block;
@@ -376,7 +373,6 @@ h1::after {
   z-index: -1;
 }
 
-/* Footer */
 footer {
   width: 95%;
 }
@@ -408,5 +404,52 @@ footer a {
 
 footer a:last-child {
   padding-right: 0;
+}
+
+.contact {
+  width: 100%;
+  margin: 1rem auto 3rem;
+}
+
+.contact .table {
+  margin: 3rem 0 0 auto;
+  width: 80%;
+}
+
+.form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.form-wrap input[type=text],
+.form-wrap input[type=email],
+.form-wrap textarea {
+  border: 1px solid #F47A5E;
+  color: #5A5A5A;
+  font: 1rem/1 "PT Serif";
+  margin: 0 auto 1rem;
+  padding: .5rem;
+  width: 100%;
+}
+
+.form-wrap input[type=submit] {
+  background: #5A5A5A;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font: 1rem/1 "Nunito";
+  margin: 0 0 0 auto;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 /*# sourceMappingURL=contact.css.map */
