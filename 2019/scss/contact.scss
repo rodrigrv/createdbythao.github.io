@@ -40,4 +40,12 @@
     text-transform: uppercase;
     transition: .2s ease-in-out;
   }
+
+  .error-msg {
+    color: #e42b11;
+    display: none;
+    font: italic 400 85%/1 $font-serif;
+    margin: 0.5rem 0 1rem;
+    transition: .5s ease-in-out;
+  }
 }
