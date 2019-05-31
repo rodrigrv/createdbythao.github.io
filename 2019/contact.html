@@ -63,9 +63,18 @@
       <form action="https://formspree.io/thao_ha@outlook.com" method="POST">
         <input type="hidden" name="_next" value="https://createdbythao.github.io/confirm.html" />
         <input type="hidden" name="_subject" value="New submission!" />
-        <input type="text" name="name" placeholder="Name" class="name" autocomplete="on" />
-        <input type="email" name="email" placeholder="Email" class="email" autocomplete="on" required />
-        <textarea name="message" placeholder="Message" rows="10" cols="30" required></textarea>
+        <label for="name">
+          <input type="text" name="name" placeholder="Name" class="name" autocomplete="on" />
+          <small class="error-msg"></small>
+        </label>
+        <label for="email">
+          <input type="email" name="email" placeholder="Email" class="email" autocomplete="on" />
+          <small class="error-msg"></small>
+        </label>
+        <label for="message">
+          <textarea name="message" placeholder="Message" class="message" rows="10" cols="30"></textarea>
+          <small class="error-msg"></small>
+        </label>
         <input type="submit" value="Submit" class="submit" />
         <input type="text" name="_gotcha" style="display: none;" />
       </form>
