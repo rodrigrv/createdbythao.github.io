@@ -452,4 +452,13 @@ footer a:last-child {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
+
+.form-wrap .error-msg {
+  color: #e42b11;
+  display: none;
+  font: italic 400 85%/1 "PT Serif";
+  margin: 0.5rem 0 1rem;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
 /*# sourceMappingURL=contact.css.map */
