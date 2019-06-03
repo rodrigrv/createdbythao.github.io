@@ -12,6 +12,7 @@
 
 body {
   margin: 0 auto;
+  height: 100vh;
   max-height: 100vh;
   max-width: 1600px;
   position: relative;
@@ -93,6 +94,7 @@ nav a {
   cursor: pointer;
   font-size: 1.5em;
   padding: 1rem;
+  position: relative;
   text-decoration: none;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -165,11 +167,11 @@ nav .nav-active ::before {
   background: #F47A5E;
   border-radius: 50% 50% 0;
   content: '';
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   height: 15px;
-  margin: 0 .5rem 0 0;
+  left: -5px;
+  position: absolute;
+  top: 25px;
   width: 15px;
 }
 
@@ -241,7 +243,7 @@ nav .nav-project:hover .dropdown li a {
 nav .dropdown {
   background-color: #F4EEDA;
   display: none;
-  left: 2.4rem;
+  left: 1rem;
   padding: 1rem 0;
   position: absolute;
   top: 2rem;
@@ -377,14 +379,6 @@ footer {
   width: 95%;
 }
 
-@media (min-width: 48rem) {
-  footer {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-}
-
 footer .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,21 +406,20 @@ footer a:last-child {
 }
 
 .project-wrap .copy {
-  bottom: 16rem;
+  bottom: 47%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: -18rem;
+  right: 30%;
   position: absolute;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   width: 150%;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   .project-wrap .copy {
-    bottom: 52vw;
-    left: 26vw;
+    right: 31%;
   }
 }
 
@@ -446,6 +439,12 @@ footer a:last-child {
   font: 700 1.4rem/1 "Nunito";
 }
 
+@media (max-width: 64rem) {
+  .project-wrap h2 {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 48rem) {
   .project-wrap h2 {
     font-size: 1rem;
@@ -457,9 +456,15 @@ footer a:last-child {
   font: italic 1.1rem/1 "PT Serif";
 }
 
+@media (max-width: 64rem) {
+  .project-wrap h3 {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 48rem) {
   .project-wrap h3 {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -479,27 +484,27 @@ footer a:last-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: .6rem 1rem 0;
+  margin: 0.6rem 1rem 0;
   width: 100%;
 }
 
 @media (max-width: 48rem) {
   .project-wrap .border {
     border-bottom-width: 2px;
-    margin-top: .4rem;
+    margin-top: 0.4rem;
   }
 }
 
 .project-wrap .image {
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .project-wrap .image:hover {
   -webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
           box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .project-wrap .image a {
@@ -507,12 +512,28 @@ footer a:last-child {
 }
 
 /* Slider */
+.owl-theme {
+  overflow: hidden;
+}
+
 .owl-theme .owl-stage-outer {
-  margin: 0 0 0 -28rem;
+  margin: 0 0 0 -32.5%;
   padding: 0 0 1.5rem;
 }
 
+@media (max-width: 64rem) {
+  .owl-theme .owl-stage-outer {
+    margin: 0 0 0 -32%;
+  }
+}
+
 @media (max-width: 48rem) {
+  .owl-theme .owl-stage-outer {
+    margin: 0 0 0 -11.5rem;
+  }
+}
+
+@media (max-width: 35rem) {
   .owl-theme .owl-stage-outer {
     margin: 0 0 0 -1rem;
   }
@@ -523,15 +544,21 @@ footer a:last-child {
   text-align: left;
 }
 
+@media (max-width: 64rem) {
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin: 0 0 0 4.5rem;
+  }
+}
+
 @media (max-width: 48rem) {
   .owl-theme .owl-nav.disabled + .owl-dots {
-    margin: 1rem 0 0 1.5rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 
 .owl-theme .owl-dots .owl-dot {
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
@@ -540,21 +567,21 @@ footer a:last-child {
 
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #F47A5E;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .owl-theme .owl-dots .owl-dot span {
   background: none;
   border: 1px solid #F47A5E;
   color: transparent;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .owl-theme .owl-dots .owl-dot span:hover {
   background: #F47A5E;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 /*# sourceMappingURL=homepage.css.map */

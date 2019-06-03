@@ -12,6 +12,7 @@
 
 body {
   margin: 0 auto;
+  height: 100vh;
   max-height: 100vh;
   max-width: 1600px;
   position: relative;
@@ -93,6 +94,7 @@ nav a {
   cursor: pointer;
   font-size: 1.5em;
   padding: 1rem;
+  position: relative;
   text-decoration: none;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -165,11 +167,11 @@ nav .nav-active ::before {
   background: #F47A5E;
   border-radius: 50% 50% 0;
   content: '';
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   height: 15px;
-  margin: 0 .5rem 0 0;
+  left: -5px;
+  position: absolute;
+  top: 25px;
   width: 15px;
 }
 
@@ -241,7 +243,7 @@ nav .nav-project:hover .dropdown li a {
 nav .dropdown {
   background-color: #F4EEDA;
   display: none;
-  left: 2.4rem;
+  left: 1rem;
   padding: 1rem 0;
   position: absolute;
   top: 2rem;
@@ -377,14 +379,6 @@ footer {
   width: 95%;
 }
 
-@media (min-width: 48rem) {
-  footer {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-}
-
 footer .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,13 +401,36 @@ footer a:last-child {
 }
 
 .contact {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 1rem auto 3rem;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .contact .table {
   margin: 3rem 0 0 auto;
   width: 80%;
+}
+
+@media (min-width: 48rem) {
+  .contact .table {
+    margin: 0;
+    width: auto;
+  }
 }
 
 .form-wrap {
@@ -428,18 +445,130 @@ footer a:last-child {
   width: 90%;
 }
 
-.form-wrap input[type=text],
-.form-wrap input[type=email],
-.form-wrap textarea {
+@media (min-width: 48rem) {
+  .form-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0 0 0 4rem;
+    width: 55%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .form-wrap form {
+    width: 85%;
+  }
+}
+
+.form-wrap label {
+  position: relative;
+}
+
+.form-wrap .name,
+.form-wrap .email,
+.form-wrap .message {
   border: 1px solid #F47A5E;
   color: #5A5A5A;
   font: 1rem/1 "PT Serif";
   margin: 0 auto 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
+  position: relative;
   width: 100%;
 }
 
-.form-wrap input[type=submit] {
+.form-wrap .name:focus,
+.form-wrap .email:focus,
+.form-wrap .message:focus {
+  border: 1px solid #F47A5E;
+}
+
+.form-wrap .name.valid,
+.form-wrap .email.valid,
+.form-wrap .message.valid {
+  background-color: transparent;
+  border-color: #71d996;
+}
+
+@media (min-width: 64rem) {
+  .form-wrap .name.valid,
+  .form-wrap .email.valid,
+  .form-wrap .message.valid {
+    margin: 0 2rem 0 0;
+  }
+}
+
+.form-wrap .name.valid + .error-msg,
+.form-wrap .email.valid + .error-msg,
+.form-wrap .message.valid + .error-msg {
+  display: none;
+}
+
+.form-wrap .name.invalid,
+.form-wrap .email.invalid,
+.form-wrap .message.invalid {
+  margin-bottom: 0;
+  background-color: #fbd3ce;
+}
+
+.form-wrap .name.invalid + .error-msg,
+.form-wrap .email.invalid + .error-msg,
+.form-wrap .message.invalid + .error-msg {
+  display: block;
+}
+
+@media (min-width: 64rem) {
+  .form-wrap .name,
+  .form-wrap .email,
+  .form-wrap .message {
+    margin: 0 2rem 0 0;
+    width: calc(44% - 2rem);
+  }
+}
+
+@media (min-width: 64rem) {
+  .form-wrap .email {
+    margin: 0;
+    width: 55%;
+  }
+}
+
+.form-wrap .email.valid {
+  margin: 0;
+}
+
+@media (max-width: 64rem) {
+  .form-wrap .email.valid {
+    margin: 0 0 1rem;
+  }
+}
+
+.form-wrap .message {
+  height: 15rem;
+}
+
+@media (min-width: 48rem) {
+  .form-wrap .message {
+    margin: 0;
+    height: 20rem;
+    width: 99.5%;
+  }
+}
+
+@media (min-width: 64rem) {
+  .form-wrap .message {
+    margin: 2rem 0 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .form-wrap .message.valid {
+    margin: 2rem 0 0;
+  }
+}
+
+.form-wrap .submit {
   background: #5A5A5A;
   border: 0;
   color: white;
@@ -447,10 +576,16 @@ footer a:last-child {
   display: block;
   font: 1rem/1 "Nunito";
   margin: 0 0 0 auto;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+@media (min-width: 48rem) {
+  .form-wrap .submit {
+    margin: 1rem 0.5% 0 auto;
+  }
 }
 
 .form-wrap .error-msg {
@@ -458,7 +593,15 @@ footer a:last-child {
   display: none;
   font: italic 400 85%/1 "PT Serif";
   margin: 0.5rem 0 1rem;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media (min-width: 64rem) {
+  .form-wrap .error-msg {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

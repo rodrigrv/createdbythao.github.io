@@ -302,12 +302,6 @@ h1 {
 footer {
   width: 95%;
 
-  @media (min-width: $nav-mobile) {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-
   .icons {
     display: flex;
     flex-flow: row nowrap;
