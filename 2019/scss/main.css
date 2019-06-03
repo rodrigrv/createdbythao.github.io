@@ -12,6 +12,7 @@
 
 body {
   margin: 0 auto;
+  height: 100vh;
   max-height: 100vh;
   max-width: 1600px;
   position: relative;
@@ -93,6 +94,7 @@ nav a {
   cursor: pointer;
   font-size: 1.5em;
   padding: 1rem;
+  position: relative;
   text-decoration: none;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -165,11 +167,11 @@ nav .nav-active ::before {
   background: #F47A5E;
   border-radius: 50% 50% 0;
   content: '';
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   height: 15px;
-  margin: 0 .5rem 0 0;
+  left: -5px;
+  position: absolute;
+  top: 25px;
   width: 15px;
 }
 
@@ -241,7 +243,7 @@ nav .nav-project:hover .dropdown li a {
 nav .dropdown {
   background-color: #F4EEDA;
   display: none;
-  left: 2.4rem;
+  left: 1rem;
   padding: 1rem 0;
   position: absolute;
   top: 2rem;
