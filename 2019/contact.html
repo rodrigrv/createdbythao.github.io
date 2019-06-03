@@ -33,6 +33,7 @@
       <a href="index.html">
         <img src="img/logo.png" alt="Thao Ha-Rodriguez logo" /></a>
     </li>
+    <div class="mobile-only" id="menu"><a href="#">Menu</a></div>
     <ul class="overlay">
       <a href="javascript:void(0)" class="closebtn" aria-label="Close Navigation">&times;</a>
       <li class="nav-project">
@@ -52,35 +53,36 @@
           <li><a href="projects/luxe-apartments.html">Luxe Apartments</a></li>
         </ul>
       </li>
-      <li class="nav-active"><a href="about.html">About</a></li>
-      <li class="nav-last"><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="nav-last nav-active"><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="mobile-only" id="menu"><a href="#">Menu</a></div>
   </nav>
   <h1>Contact</h1>
   <section class="contact">
     <div class="form-wrap">
-      <form action="https://formspree.io/thao_ha@outlook.com" method="POST">
+      <form action="https://formspree.io/thao_ha@outlook.com" method="POST" id="contact-form">
         <input type="hidden" name="_next" value="https://createdbythao.github.io/confirm.html" />
         <input type="hidden" name="_subject" value="New submission!" />
         <label for="name">
-          <input type="text" name="name" placeholder="Name" class="name" autocomplete="on" />
+          <input type="text" name="First and last name" placeholder="Name" class="name" autocomplete="on" />
           <small class="error-msg"></small>
         </label>
         <label for="email">
-          <input type="email" name="email" placeholder="Email" class="email" autocomplete="on" />
+          <input type="email" name="Email" placeholder="Email" class="email" autocomplete="on" />
           <small class="error-msg"></small>
         </label>
         <label for="message">
-          <textarea name="message" placeholder="Message" class="message" rows="10" cols="30"></textarea>
+          <textarea name="Message" placeholder="Message" class="message"></textarea>
           <small class="error-msg"></small>
         </label>
-        <input type="submit" value="Submit" class="submit" />
+        <button type="submit" value="Submit" class="submit" disabled>
+          Submit
+        </button>
         <input type="text" name="_gotcha" style="display: none;" />
       </form>
     </div>
     <div class="table">
-      <img src="img/contact_table.png" alt="Illustration of table with cactus in the corner.">
+      <img src="img/contact_table.png" alt="Illustration of table with cactus in the corner." />
     </div>
   </section>
   <footer>
@@ -93,8 +95,8 @@
       </a>
     </div>
   </footer>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/form.js"></script>
 </body>
 
 </html>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/form.js"></script>
