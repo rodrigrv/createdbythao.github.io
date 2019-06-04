@@ -540,7 +540,7 @@ footer a:last-child {
 }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
-  margin: 2rem 0 0 4.5rem;
+  margin: 0 0 0 3.5rem;
   text-align: left;
 }
 
