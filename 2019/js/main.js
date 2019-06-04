@@ -11,21 +11,23 @@ close.addEventListener("click", closeNav);
 function openNav() {
   close.style.display = "block";
   overlay.style.width = "80%";
+  menu.style.visibility = "hidden";
 }
 
 // close navigation
 function closeNav() {
   close.style.display = "none";
   overlay.style.width = "0";
+  menu.style.visibility = "visible";
 }
 
-/* Owl Carousel */
+/* Mousewheel on carousels */
 var owl = $('.owl-carousel');
 owl.on('mousewheel', '.owl-stage', function (e) {
-  e.preventDefault();
-  if (e.deltaY > 0) {
+  if (e.deltaY < 0) {
     owl.trigger('next.owl');
   } else {
     owl.trigger('prev.owl');
   }
+  e.preventDefault();
 });
