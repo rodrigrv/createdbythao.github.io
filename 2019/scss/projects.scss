@@ -13,6 +13,7 @@ h1 {
 
   @media (min-width:$nav-mobile) {
     flex-direction: row;
+    padding: 0 0 0 .5rem;
   }
 
   .copy {
@@ -29,22 +30,39 @@ h1 {
     margin: 0 0 .5rem;
   }
 
+  hr {
+    border-top: 3px solid $cream;
+    color: $cream;
+    display: block;
+    margin: 1.5rem 0;
+    width: 35px;
+
+    @media (min-width: $nav-mobile) {
+      border-top-width: 5px;
+      margin: 3.5rem 0;
+      width: 50px;
+    }
+  }
+
   small {
     color: $orange;
     display: block;
     font: italic 90%/1 $font-serif;
-    margin: 1.5rem 0 0;
 
     @media (min-width: $nav-mobile) {
       font-size: 80%;
-      margin: 3.5rem 0 0;
     }
   }
 }
 
 .project-slider {
   @media (min-width: $nav-mobile) {
-    width: 45%;
+    width: 55%;
+    margin: 0 0 0 auto;
+  }
+
+  .image {
+    width: 50%;
   }
 }
 
@@ -53,11 +71,27 @@ h1 {
   overflow: hidden;
 
   .owl-stage-outer {
-    margin: 0 0 0 -7%;
+    // margin: 0 0 0 -7%;
 
-    @media (min-width: $nav-mobile) {
-      margin: 0;
-    }
+    // @media (min-width: $nav-mobile) {
+    //   margin: 0 0 0 -24%;
+    // }
+
+    // @media (min-width: $s-desktop) {
+    //   margin: 0 0 0 -18%;
+    // }
+
+    // @media (min-width: $m-desktop) {
+    //   margin: 0 0 0 -15%;
+    // }
+  }
+
+  .owl-item {
+    // width: 10%;
+
+    // img {
+    //   width: 50%;
+    // }
   }
 
   .owl-nav {
