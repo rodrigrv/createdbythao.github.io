@@ -60,10 +60,6 @@ h1 {
     width: 55%;
     margin: 0 0 0 auto;
   }
-
-  .image {
-    width: 50%;
-  }
 }
 
 // Slider
@@ -89,9 +85,9 @@ h1 {
   .owl-item {
     // width: 10%;
 
-    // img {
-    //   width: 50%;
-    // }
+    img {
+      width: auto;
+    }
   }
 
   .owl-nav {

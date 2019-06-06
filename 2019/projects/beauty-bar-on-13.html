@@ -69,11 +69,11 @@
       <div class="project-slider">
         <div class="owl-carousel owl-theme">
           <div class="image">
-            <img src="../img/beauty_1.jpg" alt="">
+            <img src="../img/beauty_1.png" alt="">
           </div>
 
           <div class="image">
-            <img src="../img/beauty_2.jpg" alt="">
+            <img src="../img/beauty_2.png" alt="">
           </div>
         </div>
       </div>
@@ -102,18 +102,23 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $(".owl-carousel").owlCarousel({
-        autoWidth: true,
         items: 1,
         loop: false,
-        margin: 20,
-        stagePadding: 20,
+        margin: 30,
+        stagePadding: 50,
         responsive: {
           768: {
             margin: 10,
-            stagePadding: 10
+            stagePadding: 10,
           }
         }
       });
+
+      const pageCarousel = $('.owl-carousel');
+      const carouselWidth = pageCarousel.width();
+      if (carouselWidth > 600) {
+        pageCarousel.trigger('remove.owl.carousel');
+      }
     });
   </script>
 </body>

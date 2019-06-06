@@ -476,12 +476,12 @@ h1::after {
   }
 }
 
-.project-slider .image {
-  width: 50%;
-}
-
 .owl-theme {
   overflow: hidden;
+}
+
+.owl-theme .owl-item img {
+  width: auto;
 }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
