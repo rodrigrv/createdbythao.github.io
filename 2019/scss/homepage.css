@@ -269,7 +269,7 @@ nav .dropdown {
         -ms-flex-pack: end;
             justify-content: flex-end;
     left: 0;
-    margin: .5rem 0 0;
+    margin: .5rem .7rem 0 0;
     opacity: 1;
     padding: 0;
     position: relative;
@@ -361,6 +361,12 @@ h1 {
   }
 }
 
+@media (max-width: 22.25rem) {
+  h1 {
+    font-size: 1.65rem;
+  }
+}
+
 h1::after {
   background: #F4EEDA;
   bottom: 0;
@@ -401,10 +407,12 @@ footer a:last-child {
 }
 
 /* Project names/descriptions */
+.homepage-projects,
 .project-wrap {
   position: relative;
 }
 
+.homepage-projects .copy,
 .project-wrap .copy {
   bottom: 47%;
   display: -webkit-box;
@@ -418,11 +426,14 @@ footer a:last-child {
 }
 
 @media (max-width: 64rem) {
+  .homepage-projects .copy,
   .project-wrap .copy {
     right: 31%;
   }
 }
 
+.homepage-projects h2,
+.homepage-projects h3,
 .project-wrap h2,
 .project-wrap h3 {
   display: -webkit-box;
@@ -434,40 +445,47 @@ footer a:last-child {
   white-space: nowrap;
 }
 
+.homepage-projects h2,
 .project-wrap h2 {
   color: #F47A5E;
   font: 700 1.4rem/1 "Nunito";
 }
 
 @media (max-width: 64rem) {
+  .homepage-projects h2,
   .project-wrap h2 {
     font-size: 1.3rem;
   }
 }
 
 @media (max-width: 48rem) {
+  .homepage-projects h2,
   .project-wrap h2 {
     font-size: 1rem;
   }
 }
 
+.homepage-projects h3,
 .project-wrap h3 {
   color: #5A5A5A;
   font: italic 1.1rem/1 "PT Serif";
 }
 
 @media (max-width: 64rem) {
+  .homepage-projects h3,
   .project-wrap h3 {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 48rem) {
+  .homepage-projects h3,
   .project-wrap h3 {
     font-size: 0.9rem;
   }
 }
 
+.homepage-projects .border,
 .project-wrap .border {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -489,17 +507,20 @@ footer a:last-child {
 }
 
 @media (max-width: 48rem) {
+  .homepage-projects .border,
   .project-wrap .border {
     border-bottom-width: 2px;
     margin-top: 0.4rem;
   }
 }
 
+.homepage-projects .image,
 .project-wrap .image {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
+.homepage-projects .image:hover,
 .project-wrap .image:hover {
   -webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
           box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
@@ -507,8 +528,20 @@ footer a:last-child {
   transition: 0.2s ease-in-out;
 }
 
+.homepage-projects .image a,
 .project-wrap .image a {
   display: block;
+}
+
+.homepage-projects .last,
+.project-wrap .last {
+  font: 3rem/1 "Nunito";
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  visibility: hidden;
 }
 
 /* Slider */

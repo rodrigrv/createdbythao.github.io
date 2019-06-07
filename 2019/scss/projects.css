@@ -269,7 +269,7 @@ nav .dropdown {
         -ms-flex-pack: end;
             justify-content: flex-end;
     left: 0;
-    margin: .5rem 0 0;
+    margin: .5rem .7rem 0 0;
     opacity: 1;
     padding: 0;
     position: relative;
@@ -358,6 +358,12 @@ h1 {
   h1 {
     font-size: 3rem;
     margin: 2rem 5rem;
+  }
+}
+
+@media (max-width: 22.25rem) {
+  h1 {
+    font-size: 1.65rem;
   }
 }
 
@@ -476,8 +482,64 @@ h1::after {
   }
 }
 
+@media (min-width: 64rem) {
+  .project-slider {
+    width: 50%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .project-slider {
+    width: 61%;
+  }
+}
+
+.project-slider .image-desktop {
+  display: none;
+}
+
+@media (min-width: 70rem) {
+  .project-slider .image-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 70rem) {
+  .project-slider .img-container {
+    margin: 0 2rem 0 0;
+    width: 50%;
+  }
+  .project-slider .img-container:last-of-type {
+    margin: 0;
+  }
+}
+
+@media (min-width: 70rem) {
+  .owl-carousel.owl-loaded {
+    display: none;
+  }
+}
+
 .owl-theme {
   overflow: hidden;
+}
+
+@media (min-width: 70rem) {
+  .owl-theme {
+    display: none;
+  }
+}
+
+.owl-theme .owl-stage-outer {
+  margin: 0 0 0 -14%;
+}
+
+@media (min-width: 48rem) {
+  .owl-theme .owl-stage-outer {
+    margin: 0;
+  }
 }
 
 .owl-theme .owl-item img {
@@ -539,6 +601,12 @@ h1::after {
   }
 }
 
+@media (min-width: 80rem) {
+  .project-nav {
+    padding: 0 4.5rem;
+  }
+}
+
 .project-nav a {
   color: gray;
   display: block;
@@ -554,12 +622,37 @@ h1::after {
   }
 }
 
-.project-nav a:hover, .project-nav a:visited, .project-nav a:focus {
+.project-nav a:visited {
+  color: #5A5A5A;
+}
+
+.project-nav a:hover, .project-nav a:active {
   color: #F47A5E;
 }
 
 .project-nav span {
   color: #F47A5E;
   font-weight: 700;
+}
+
+.fastpass .project-slider .image-desktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin: 0 auto 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .fastpass .project-slider .image-desktop {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 70rem) {
+  .fastpass .project-slider .img-container {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

@@ -206,7 +206,7 @@ nav {
       height: auto;
       justify-content: flex-end;
       left: 0;
-      margin: .5rem 0 0;
+      margin: .5rem .7rem 0 0;
       opacity: 1;
       padding: 0;
       position: relative;
@@ -282,6 +282,10 @@ h1 {
   @media (min-width: $nav-mobile) {
     font-size: 3rem;
     margin: 2rem 5rem;
+  }
+
+  @media (max-width: $xs-mobile) {
+    font-size: 1.65rem;
   }
 
   &::after {

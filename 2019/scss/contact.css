@@ -269,7 +269,7 @@ nav .dropdown {
         -ms-flex-pack: end;
             justify-content: flex-end;
     left: 0;
-    margin: .5rem 0 0;
+    margin: .5rem .7rem 0 0;
     opacity: 1;
     padding: 0;
     position: relative;

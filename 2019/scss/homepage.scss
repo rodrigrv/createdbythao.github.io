@@ -1,6 +1,7 @@
 @import "main.scss";
 
 /* Project names/descriptions */
+.homepage-projects,
 .project-wrap {
   position: relative;
 
@@ -78,6 +79,15 @@
     a {
       display: block;
     }
+  }
+
+  .last {
+    font: 3rem/1 $font-sans;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
   }
 }
 

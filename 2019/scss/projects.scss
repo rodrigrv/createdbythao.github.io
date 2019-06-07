@@ -60,31 +60,58 @@ h1 {
     width: 55%;
     margin: 0 0 0 auto;
   }
+
+  @media (min-width: $s-desktop) {
+    width: 50%;
+  }
+
+  @media (min-width: $m-desktop) {
+    width: 61%;
+  }
+
+  .image-desktop {
+    display: none;
+
+    @media (min-width: $carousel-replace) {
+      display: flex;
+    }
+  }
+
+  .img-container {
+    @media (min-width: $carousel-replace) {
+      margin: 0 2rem 0 0;
+      width: 50%;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
 }
 
 // Slider
+.owl-carousel.owl-loaded {
+  @media (min-width: $carousel-replace) {
+    display: none;
+  }
+}
+
 .owl-theme {
   overflow: hidden;
 
+  @media (min-width: $carousel-replace) {
+    display: none;
+  }
+
   .owl-stage-outer {
-    // margin: 0 0 0 -7%;
+    margin: 0 0 0 -14%;
 
-    // @media (min-width: $nav-mobile) {
-    //   margin: 0 0 0 -24%;
-    // }
-
-    // @media (min-width: $s-desktop) {
-    //   margin: 0 0 0 -18%;
-    // }
-
-    // @media (min-width: $m-desktop) {
-    //   margin: 0 0 0 -15%;
-    // }
+    @media (min-width: $nav-mobile) {
+      margin: 0;
+    }
   }
 
   .owl-item {
-    // width: 10%;
-
     img {
       width: auto;
     }
@@ -140,6 +167,10 @@ h1 {
     padding: 0 3.5rem;
   }
 
+  @media (min-width: $m-desktop) {
+    padding: 0 4.5rem;
+  }
+
   a {
     color: gray;
     display: block;
@@ -151,15 +182,42 @@ h1 {
       font-size: 1.3rem;
     }
 
+    &:visited {
+      color: $gray;
+    }
+
     &:hover,
-    &:visited,
-    &:focus {
+    &:active {
       color: $orange;
     }
+
+
   }
 
   span {
     color: $orange;
     font-weight: 700;
+  }
+}
+
+// Fastpass fix
+.fastpass {
+  .project-slider {
+    .image-desktop {
+      display: flex;
+      width: 70%;
+      margin: 0 auto 1.5rem;
+
+      @media (min-width: $nav-mobile) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .img-container {
+      @media (min-width: $carousel-replace) {
+        margin: 0 auto;
+      }
+    }
   }
 }

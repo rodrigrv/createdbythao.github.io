@@ -269,7 +269,7 @@ nav .dropdown {
         -ms-flex-pack: end;
             justify-content: flex-end;
     left: 0;
-    margin: .5rem 0 0;
+    margin: .5rem .7rem 0 0;
     opacity: 1;
     padding: 0;
     position: relative;
@@ -358,6 +358,12 @@ h1 {
   h1 {
     font-size: 3rem;
     margin: 2rem 5rem;
+  }
+}
+
+@media (max-width: 22.25rem) {
+  h1 {
+    font-size: 1.65rem;
   }
 }
 
