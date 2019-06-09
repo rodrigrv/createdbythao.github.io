@@ -408,6 +408,10 @@ footer a:last-child {
 }
 
 /* Project names/descriptions */
+.homepage-projects {
+  overflow-x: hidden;
+}
+
 .homepage-projects,
 .project-wrap {
   position: relative;

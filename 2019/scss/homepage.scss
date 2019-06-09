@@ -1,6 +1,10 @@
 @import "main.scss";
 
 /* Project names/descriptions */
+.homepage-projects {
+  overflow-x: hidden;
+}
+
 .homepage-projects,
 .project-wrap {
   position: relative;
