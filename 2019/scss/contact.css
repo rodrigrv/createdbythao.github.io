@@ -361,6 +361,12 @@ h1 {
   }
 }
 
+@media (max-width: 22.25rem) {
+  h1 {
+    font-size: 1.65rem;
+  }
+}
+
 h1::after {
   background: #F4EEDA;
   bottom: 0;

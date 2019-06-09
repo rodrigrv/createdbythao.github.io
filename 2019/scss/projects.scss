@@ -17,10 +17,10 @@ h1 {
   }
 
   .copy {
-    font: .9rem/1.4 $font-serif;
+    font: 1.1rem/1.4 $font-serif;
 
     @media (min-width: $nav-mobile) {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin: 0 2rem 0 4rem;
       max-width: 400px;
     }
@@ -201,23 +201,23 @@ h1 {
 }
 
 // Fastpass fix
-.fastpass {
-  .project-slider {
-    .image-desktop {
-      display: flex;
-      width: 70%;
-      margin: 0 auto 1.5rem;
+// .fastpass {
+//   .project-slider {
+//     .image-desktop {
+//       display: flex;
+//       width: 70%;
+//       margin: 0 auto 1.5rem;
 
-      @media (min-width: $nav-mobile) {
-        width: 100%;
-        margin: 0;
-      }
-    }
+//       @media (min-width: $nav-mobile) {
+//         width: 100%;
+//         margin: 0;
+//       }
+//     }
 
-    .img-container {
-      @media (min-width: $carousel-replace) {
-        margin: 0 auto;
-      }
-    }
-  }
-}
+//     .img-container {
+//       @media (min-width: $carousel-replace) {
+//         margin: 0 auto;
+//       }
+//     }
+//   }
+// }

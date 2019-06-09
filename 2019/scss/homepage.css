@@ -533,15 +533,37 @@ footer a:last-child {
   display: block;
 }
 
-.homepage-projects .last,
-.project-wrap .last {
+.homepage-projects .to-be-cont,
+.project-wrap .to-be-cont {
+  opacity: 0;
   font: 3rem/1 "Nunito";
   position: absolute;
-  right: 5%;
+  right: -70%;
+  text-align: center;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  visibility: hidden;
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+}
+
+@media (max-width: 48rem) {
+  .homepage-projects .to-be-cont,
+  .project-wrap .to-be-cont {
+    display: none;
+  }
+}
+
+.homepage-projects .to-be-cont.is-visible,
+.project-wrap .to-be-cont.is-visible {
+  opacity: 1;
+  right: 5%;
+}
+
+.homepage-projects .to-be-cont img,
+.project-wrap .to-be-cont img {
+  width: 50%;
+  margin: 0 0 0 auto;
 }
 
 /* Slider */
@@ -573,7 +595,7 @@ footer a:last-child {
 }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
-  margin: 0 0 0 3.5rem;
+  margin: 0 0 0 3.7rem;
   text-align: left;
 }
 
@@ -585,7 +607,7 @@ footer a:last-child {
 
 @media (max-width: 48rem) {
   .owl-theme .owl-nav.disabled + .owl-dots {
-    margin: 0 0 0 1.5rem;
+    margin: 0 0 0 2.5rem;
   }
 }
 
