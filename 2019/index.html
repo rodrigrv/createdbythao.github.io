@@ -140,7 +140,9 @@
 
     </div>
 
-    <div class="last">To be continued...</div>
+    <div class="to-be-cont">
+      <img src="img/home_tbc.png" alt="To be continued.">
+    </div>
   </section>
   <footer>
     <div class="icons">
@@ -160,7 +162,9 @@
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
-      $(".owl-carousel").owlCarousel({
+      var owl = $('.owl-carousel');
+
+      owl.owlCarousel({
         center: true,
         items: 1,
         loop: false,
@@ -185,15 +189,20 @@
         }
       });
 
-      // const bgDiv = document.querySelector('.last');
-      // const sliderClass = document.querySelector('.owl-theme .owl-stage-outer .owl-stage');
-      // const findWidth = sliderClass.offsetWidth;
-      // const sliderWidth = '2222px';
+      owl.on('changed.owl.carousel', function () {
 
-      // if (findWidth > sliderWidth) {
-      //   bgDiv.style.visibility = 'visible';
-      // }
+        if ($('.owl-item').last().hasClass('active')) {
+          $('.to-be-cont').addClass('is-visible')
+        } else {
+          $('.to-be-cont').removeClass('is-visible')
+        }
+      })
     });
+
+    // Other experiments
+    // var tbcWidth = window.innerWidth - ($('.owl-stage').outerWidth() + $('.owl-stage').offset().left);
+    // $('.to-be-cont').width(tbcWidth);
+    // $('.owl-item').last()[0].classList.value.indexOf("active") >= 0
   </script>
 </body>
 
