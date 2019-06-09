@@ -33,7 +33,7 @@ function validateEmail() {
     isFormValid();
     return;
   }
-  // Checking validity
+  // Checking min of @ and domain
   if (!checkingEmail(formEmail)) {
     isFormValid();
     return;
@@ -56,6 +56,7 @@ function validateMessage() {
   isFormValid();
 }
 
+// Loop through each and make sure they're valid
 function isFormValid() {
   const allInputs = form.querySelectorAll('inputs, textarea');
   let valid = true;
@@ -105,7 +106,7 @@ function checkingName(field) {
 }
 
 function checkingEmail(field) {
-  let validEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  let validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (validEmail.test(field.value)) {
     return setValid(field);
   } else {
