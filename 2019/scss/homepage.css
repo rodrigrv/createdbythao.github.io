@@ -74,6 +74,7 @@ nav ul {
     top: 0;
     -webkit-transition: .5s;
     transition: .5s;
+    visibility: hidden;
     width: 0;
     z-index: 5;
   }
@@ -537,6 +538,7 @@ footer a:last-child {
 .project-wrap .to-be-cont {
   opacity: 0;
   font: 3rem/1 "Nunito";
+  max-width: 500px;
   position: absolute;
   right: -70%;
   text-align: center;
@@ -562,7 +564,7 @@ footer a:last-child {
 
 .homepage-projects .to-be-cont img,
 .project-wrap .to-be-cont img {
-  width: 50%;
+  width: auto;
   margin: 0 0 0 auto;
 }
 
