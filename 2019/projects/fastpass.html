@@ -70,7 +70,18 @@
           <div class="img-container">
             <img src="../img/fastpass_1.gif" alt="Animated email header about Dallas Market Center’s Fastpass." />
           </div>
+          <div class="img-container">
+            <img src="../img/fastpass_2.png" alt="Fastpass email shown in mobile view." />
+          </div>
         </div>
+        <div class="owl-carousel owl-theme">
+            <div class="image">
+              <img src="../img/fastpass_1.gif" alt="Animated email header about Dallas Market Center’s Fastpass." />
+            </div>
+            <div class="image">
+              <img src="../img/fastpass_2.png" alt="Fastpass email shown in mobile view." />
+            </div>
+          </div>
       </div>
     </section>
     <section class="project-nav">
@@ -89,7 +100,27 @@
     </div>
   </footer>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js">
+  </script>
+  <script type="text/javascript" src="../owlcarousel/dist/owl.carousel.min.js"></script>
   <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: false,
+        margin: 30,
+        stagePadding: 50,
+        responsive: {
+          768: {
+            margin: 30,
+            stagePadding: 10,
+          }
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
