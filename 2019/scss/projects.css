@@ -74,6 +74,7 @@ nav ul {
     top: 0;
     -webkit-transition: .5s;
     transition: .5s;
+    visibility: hidden;
     width: 0;
     z-index: 5;
   }
@@ -432,6 +433,7 @@ h1::after {
 }
 
 .project-wrap .copy {
+  color: #5A5A5A;
   font: 1.1rem/1.4 "PT Serif";
 }
 
@@ -613,7 +615,7 @@ h1::after {
   text-decoration: none;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
-  font: 600 0.9rem/1 "Nunito";
+  font: 600 1.1rem/1 "Nunito";
 }
 
 @media (min-width: 48rem) {

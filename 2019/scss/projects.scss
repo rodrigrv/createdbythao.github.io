@@ -17,6 +17,7 @@ h1 {
   }
 
   .copy {
+    color: $gray;
     font: 1.1rem/1.4 $font-serif;
 
     @media (min-width: $nav-mobile) {
@@ -176,7 +177,7 @@ h1 {
     display: block;
     text-decoration: none;
     transition: .2s ease-in-out;
-    font: 600 .9rem/1 $font-sans;
+    font: 600 1.1rem/1 $font-sans;
 
     @media (min-width: $nav-mobile) {
       font-size: 1.3rem;
