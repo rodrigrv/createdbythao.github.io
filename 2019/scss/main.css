@@ -37,7 +37,7 @@ nav {
   }
 }
 
-nav ul {
+nav .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,7 +54,7 @@ nav ul {
 }
 
 @media (max-width: 48rem) {
-  nav ul {
+  nav .overlay {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
@@ -77,6 +77,12 @@ nav ul {
     visibility: hidden;
     width: 0;
     z-index: 5;
+  }
+}
+
+@media (max-width: 22.25rem) {
+  nav .overlay {
+    font-size: .8rem;
   }
 }
 
@@ -258,6 +264,7 @@ nav .dropdown {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    background-color: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

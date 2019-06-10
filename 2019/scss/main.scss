@@ -34,7 +34,7 @@ nav {
     height: 56px;
   }
 
-  ul {
+  .overlay {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -57,6 +57,10 @@ nav {
       visibility: hidden;
       width: 0;
       z-index: 5;
+    }
+
+    @media (max-width: $xs-mobile) {
+      font-size: .8rem;
     }
   }
 
@@ -201,6 +205,7 @@ nav {
 
     @media (max-width: $nav-mobile) {
       align-items: flex-end;
+      background-color: transparent;
       display: flex;
       flex-flow: column wrap;
       height: auto;
