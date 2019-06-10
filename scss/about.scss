@@ -30,6 +30,7 @@
   }
 
   .copy {
+    color: $gray;
     border-bottom: 10px solid $orange;
 
     @media (min-width: $nav-mobile) {
@@ -47,7 +48,6 @@
     }
 
     p {
-      color: $gray;
       font: 400 .9rem/1.5 'PT Serif', serif;
       margin: 0 0 1rem;
 
