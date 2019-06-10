@@ -35,12 +35,12 @@ h1 {
     border-top: 3px solid $cream;
     color: $cream;
     display: block;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto 1.5rem 0;
     width: 35px;
 
     @media (min-width: $nav-mobile) {
       border-top-width: 5px;
-      margin: 3.5rem 0;
+      margin: 3.5rem auto 3.5rem 0;
       width: 50px;
     }
   }
