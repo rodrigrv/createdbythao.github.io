@@ -80,6 +80,12 @@ nav .overlay {
   }
 }
 
+@media (max-width: 22.25rem) {
+  nav .overlay {
+    font-size: .8rem;
+  }
+}
+
 nav li {
   margin: 0 1rem;
 }
@@ -258,6 +264,7 @@ nav .dropdown {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    background-color: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -471,6 +478,7 @@ footer a:last-child {
 }
 
 .about-me .copy p {
+  color: #5A5A5A;
   font: 400 .9rem/1.5 'PT Serif', serif;
   margin: 0 0 1rem;
 }
