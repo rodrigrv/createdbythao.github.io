@@ -223,6 +223,8 @@ footer {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   visibility: hidden;
   width: 100%;
 }
