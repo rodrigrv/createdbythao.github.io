@@ -609,6 +609,7 @@ footer a:last-child {
   margin: 0.5rem 0 1rem;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  width: 215px;
 }
 
 @media (min-width: 64rem) {
