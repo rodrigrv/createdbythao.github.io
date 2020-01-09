@@ -197,20 +197,25 @@
         }
       });
 
+      /* Adding 'to be continued at end of carousel' */
       owl.on('changed.owl.carousel', function () {
-
         if ($('.owl-item').last().hasClass('active')) {
-          $('.to-be-cont').addClass('is-visible')
+          $('.to-be-cont').addClass('is-visible');
         } else {
-          $('.to-be-cont').removeClass('is-visible')
+          $('.to-be-cont').removeClass('is-visible');
         }
       })
-    });
 
-    // Other experiments
-    // var tbcWidth = window.innerWidth - ($('.owl-stage').outerWidth() + $('.owl-stage').offset().left);
-    // $('.to-be-cont').width(tbcWidth);
-    // $('.owl-item').last()[0].classList.value.indexOf("active") >= 0
+      /* Mousewheel on carousel */
+      owl.on('mousewheel', '.owl-stage', function (e) {
+        if (e.deltaY < 0) {
+          owl.trigger('next.owl');
+        } else {
+          owl.trigger('prev.owl');
+        }
+        e.preventDefault();
+      });
+    });
   </script>
 </body>
 

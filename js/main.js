@@ -22,14 +22,3 @@ function closeNav() {
   overlay.style.visibility = "hidden";
   menu.style.visibility = "visible";
 }
-
-/* Mousewheel on carousels */
-var owl = $('.owl-carousel');
-owl.on('mousewheel', '.owl-stage', function (e) {
-  if (e.deltaY < 0) {
-    owl.trigger('next.owl');
-  } else {
-    owl.trigger('prev.owl');
-  }
-  e.preventDefault();
-});
