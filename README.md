@@ -1,11 +1,18 @@
-# createdbythao.github.io
+# Createdbythao Portfolio
 
 Portfolio Website for showcasing current and future graphic design works.
 
-## New Portfolio Launched
+## Portfolio Launched!!
 
-Check out the new porfolio that we made. It's got the most up to date and current projects that I've worked on.
+Check out the new porfolio that we made. It's got the most up to date and current projects that I've worked on. Follow the link: https://createdbythao.com
 
-## Updated portfolio coming s0on
+### Featured works
 
-In the process of adding a new portfolio site for 2019 works. Check in soon for the latest works.
+- Beauty Bar on 13
+- Lighting After Dark
+- Expanse Entertainment
+- FastPass
+- Thanksgiving
+- Luxe Apartments
+- Mystical Bluebonnets
+
