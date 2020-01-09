@@ -1,6 +1,3 @@
-/* Colors */
-/* Breakpoints */
-/* Fonts */
 *,
 *::after,
 *::before {
@@ -548,7 +545,6 @@ footer a:last-child {
 .homepage-projects .to-be-cont,
 .project-wrap .to-be-cont {
   opacity: 0;
-  font: 3rem/1 "Nunito";
   max-width: 500px;
   position: absolute;
   right: -70%;
