@@ -1,0 +1,32 @@
+@import 'main.scss';
+
+.confirmation {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 75vh;
+  padding: 1rem;
+  text-align: center;
+
+  @media (min-width: $nav-mobile) {
+    min-height: 60vh;
+  }
+
+  p {
+    font: 1rem/1.2 $font-serif;
+
+    @media (min-width: $nav-mobile) {
+      font-size: 1.5rem;
+    }
+  }
+
+  a {
+    background: $orange;
+    color: white;
+    font: 1.2rem/1 $font-sans;
+    margin: 1.5rem auto 0;
+    padding: .7rem;
+    text-decoration: none;
+  }
+}

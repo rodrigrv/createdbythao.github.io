@@ -1,0 +1,224 @@
+@import 'main.scss';
+
+h1 {
+  &::after {
+    width: 105%;
+  }
+}
+
+.project-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 .5rem;
+
+  @media (min-width:$nav-mobile) {
+    flex-direction: row;
+    padding: 0 0 0 .5rem;
+  }
+
+  .copy {
+    color: $gray;
+    font: 1.1rem/1.4 $font-serif;
+
+    @media (min-width: $nav-mobile) {
+      font-size: 1.3rem;
+      margin: 0 2rem 0 4rem;
+      max-width: 400px;
+    }
+  }
+
+  p {
+    margin: 0 0 .5rem;
+  }
+
+  hr {
+    border-top: 3px solid $cream;
+    color: $cream;
+    display: block;
+    margin: 1.5rem auto 1.5rem 0;
+    width: 35px;
+
+    @media (min-width: $nav-mobile) {
+      border-top-width: 5px;
+      margin: 3.5rem auto 3.5rem 0;
+      width: 50px;
+    }
+  }
+
+  small {
+    color: $orange;
+    display: block;
+    font: italic 90%/1 $font-serif;
+
+    @media (min-width: $nav-mobile) {
+      font-size: 80%;
+    }
+  }
+}
+
+.project-slider {
+  @media (min-width: $nav-mobile) {
+    width: 55%;
+    margin: 0 0 0 auto;
+  }
+
+  @media (min-width: $s-desktop) {
+    width: 50%;
+  }
+
+  @media (min-width: $m-desktop) {
+    width: 61%;
+  }
+
+  .image-desktop {
+    display: none;
+
+    @media (min-width: $carousel-replace) {
+      display: flex;
+    }
+  }
+
+  .img-container {
+    @media (min-width: $carousel-replace) {
+      margin: 0 2rem 0 0;
+      width: 50%;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Slider
+.owl-carousel.owl-loaded {
+  @media (min-width: $carousel-replace) {
+    display: none;
+  }
+}
+
+.owl-theme {
+  overflow: hidden;
+
+  @media (min-width: $carousel-replace) {
+    display: none;
+  }
+
+  .owl-stage-outer {
+    margin: 0 0 0 -14%;
+
+    @media (min-width: $nav-mobile) {
+      margin: 0;
+    }
+  }
+
+  .owl-item {
+    img {
+      width: auto;
+    }
+  }
+
+  .owl-nav {
+    &.disabled+.owl-dots {
+      margin: .5rem 0;
+      text-align: left;
+    }
+  }
+
+  .owl-dots {
+    .owl-dot {
+      transition: 0.2s ease-in-out;
+
+      &.active {
+        span {
+          background: $orange;
+        }
+      }
+
+      &:hover {
+        span {
+          background: $orange;
+          transition: 0.2s ease-in-out;
+        }
+      }
+
+      span {
+        background: none;
+        border: 1px solid $orange;
+        color: transparent;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          background: $orange;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.project-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 0 1rem;
+  padding: .5rem;
+
+  @media (min-width: $nav-mobile) {
+    padding: 0 3.5rem;
+  }
+
+  @media (min-width: $m-desktop) {
+    padding: 0 4.5rem;
+  }
+
+  a {
+    color: gray;
+    display: block;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+    font: 600 1.1rem/1 $font-sans;
+
+    @media (min-width: $nav-mobile) {
+      font-size: 1.3rem;
+    }
+
+    &:visited {
+      color: $gray;
+    }
+
+    &:hover,
+    &:active {
+      color: $orange;
+    }
+
+
+  }
+
+  span {
+    color: $orange;
+    font-weight: 700;
+  }
+}
+
+// Fastpass fix
+// .fastpass {
+//   .project-slider {
+//     .image-desktop {
+//       display: flex;
+//       width: 70%;
+//       margin: 0 auto 1.5rem;
+
+//       @media (min-width: $nav-mobile) {
+//         width: 100%;
+//         margin: 0;
+//       }
+//     }
+
+//     .img-container {
+//       @media (min-width: $carousel-replace) {
+//         margin: 0 auto;
+//       }
+//     }
+//   }
+// }

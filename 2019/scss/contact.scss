@@ -1,0 +1,156 @@
+@import "main.scss";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 3rem;
+  width: 100%;
+
+  @media (min-width: $nav-mobile) {
+    flex-direction: row;
+  }
+
+  .table {
+    margin: 3rem 0 0 auto;
+    width: 80%;
+
+    @media (min-width: $nav-mobile) {
+      margin: 0;
+      width: auto;
+    }
+  }
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+
+  @media (min-width: $nav-mobile) {
+    flex-direction: row;
+    margin: 0 0 0 4rem;
+    width: 55%;
+  }
+
+  form {
+    @media (min-width: $nav-mobile) {
+      width: 85%;
+    }
+  }
+
+  label {
+    position: relative;
+  }
+
+  .name,
+  .email,
+  .message {
+    border: 1px solid $orange;
+    color: $gray;
+    font: 1rem/1 $font-serif;
+    margin: 0 auto 1rem;
+    padding: 0.5rem;
+    position: relative;
+    width: 100%;
+
+    &:focus {
+      border: 1px solid $orange;
+    }
+
+    &.valid {
+      background-color: transparent;
+      border-color: #71d996;
+
+      @media (min-width: $s-desktop) {
+        margin: 0 2rem 0 0;
+      }
+
+      +.error-msg {
+        display: none;
+      }
+    }
+
+    &.invalid {
+      margin-bottom: 0;
+      background-color: #fbd3ce;
+
+      +.error-msg {
+        display: block;
+      }
+    }
+
+    @media (min-width: $s-desktop) {
+      margin: 0 2rem 0 0;
+      width: calc(44% - 2rem);
+    }
+  }
+
+  .email {
+    @media (min-width: $s-desktop) {
+      margin: 0;
+      width: 55%;
+    }
+
+    &.valid {
+      margin: 0;
+
+      @media (max-width: $s-desktop) {
+        margin: 0 0 1rem;
+      }
+    }
+  }
+
+  .message {
+    height: 15rem;
+
+    @media (min-width: $nav-mobile) {
+      margin: 0;
+      height: 20rem;
+      width: 99.5%;
+    }
+
+    @media (min-width: $s-desktop) {
+      margin: 2rem 0 0;
+    }
+
+    &.valid {
+      @media (min-width: $s-desktop) {
+        margin: 2rem 0 0;
+      }
+    }
+  }
+
+  .submit {
+    background: $gray;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font: 1rem/1 $font-sans;
+    margin: 0 0 0 auto;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+
+    @media (min-width: $nav-mobile) {
+      margin: 1rem 0.5% 0 auto;
+
+    }
+  }
+
+  .error-msg {
+    color: #e42b11;
+    display: none;
+    font: italic 400 85%/1 $font-serif;
+    margin: 0.5rem 0 1rem;
+    transition: 0.5s ease-in-out;
+    width: 215px;
+
+    @media (min-width: $s-desktop) {
+      position: absolute;
+      top: 1.5rem;
+      left: 0;
+    }
+  }
+}
