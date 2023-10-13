@@ -1,18 +1,32 @@
 @import '../utilities/variables.scss';
 @import '../utilities/layout.scss';
 
+aside {
+  background: $gold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 320px;
+}
+
+.nav-container {
+  position: relative;
+  margin: 20vh 0 0 0;
+  padding: 1.5rem;
+}
+
+.logo-wrapper img {
+  max-width: 60%;
+  margin: 0;
+  display: block;
+}
+
 nav {
-  background-color: $gold;
   display: flex;
   flex-flow: column;
   font-family: $sans;
-  height: 100vh;
-  text-align: right;
-  padding: 1rem;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 70%;
+  padding: 1rem 1.5rem;
 
   ul,
   li {
@@ -22,7 +36,9 @@ nav {
   }
 
   li {
-    font-weight: bold;
+    font-weight: $font-bold;
+    font-size: $nav-heading;
+    margin: 0 0 1.5rem;
   }
 
   a {
@@ -30,7 +46,27 @@ nav {
     text-decoration: none;
   }
 
+  .subnav {
+    margin: 0 0 2rem;
+
+    li {
+      font-size: $nav-project;
+      font-weight: normal;
+      margin: 0 0 1rem 1rem;
+    }
+  }
+
   .main-nav {
     margin: 2rem 0 0;
   }
+
+  .social-icons {
+    position: absolute;
+    bottom: -25vh;
+  }
+}
+
+.menu,
+.close {
+  display: none;
 }
