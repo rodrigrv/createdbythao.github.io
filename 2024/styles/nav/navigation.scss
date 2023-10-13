@@ -1,0 +1,36 @@
+@import '../utilities/variables.scss';
+@import '../utilities/layout.scss';
+
+nav {
+  background-color: $gold;
+  display: flex;
+  flex-flow: column;
+  font-family: $sans;
+  height: 100vh;
+  text-align: right;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 70%;
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    font-weight: bold;
+  }
+
+  a {
+    color: $dark-blue;
+    text-decoration: none;
+  }
+
+  .main-nav {
+    margin: 2rem 0 0;
+  }
+}

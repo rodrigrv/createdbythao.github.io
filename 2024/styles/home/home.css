@@ -1,0 +1,37 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #F0AE46;
+  display: flex;
+  flex-flow: column;
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  text-align: right;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 70%;
+}
+nav ul,
+nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  font-weight: bold;
+}
+nav a {
+  color: #3B3F61;
+  text-decoration: none;
+}
+nav .main-nav {
+  margin: 2rem 0 0;
+}/*# sourceMappingURL=home.css.map */

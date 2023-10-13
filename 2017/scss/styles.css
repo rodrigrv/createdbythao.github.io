@@ -4,7 +4,7 @@
 /* ########## ALL ELEMENTS ########## */
 * {
   font-size: 16px;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   margin: 0;
   padding: 0;
 }
@@ -29,11 +29,11 @@ p {
 }
 
 .font-serif {
-  font-family: 'Bitter';
+  font-family: "Bitter";
 }
 
 .font-sans {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-weight: bold;
 }
 
@@ -67,25 +67,20 @@ p {
 
 nav {
   display: block;
-  font: 600 1rem 'Nunito';
-  font-family: 'Nunito', sans-serif;
+  font: 600 1rem "Nunito";
+  font-family: "Nunito", sans-serif;
   margin: 2rem auto 0;
 }
-
 nav li a {
   text-decoration: none;
 }
-
 nav li a:link, nav li a:visited, nav li a:focus {
   color: #4f424b;
 }
-
 nav li a:hover {
   color: #f47a5d;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
 }
-
 nav li a.active {
   color: #f47a5d;
 }
@@ -99,13 +94,11 @@ li {
   overflow: hidden;
   text-align: right;
 }
-
 .mainnav li {
   display: inline-block;
 }
-
 .mainnav li a {
-  font: bold 1.5rem 'Nunito';
+  font: bold 1.5rem "Nunito";
   margin: 0 0 0 4rem;
 }
 
@@ -117,21 +110,18 @@ li {
   text-align: left;
   z-index: 2;
 }
-
 .subnav li {
   display: block;
   border-bottom: 1px solid #000;
   margin: 0 auto;
   width: 90%;
 }
-
 .subnav li:nth-child(6) {
   border-bottom: none;
 }
-
 .subnav li a {
   display: block;
-  font: bold 1.3rem 'Nunito';
+  font: bold 1.3rem "Nunito";
   margin: 0 auto;
   padding: 1rem;
 }
@@ -139,7 +129,6 @@ li {
 .dropdown:hover .subnav {
   display: block;
   margin: 0 0 0 3rem;
-  -webkit-transition: 2s;
   transition: 2s;
 }
 
@@ -147,7 +136,7 @@ li {
 footer {
   background: #f3ecd8;
   height: 55px;
-  padding: .5rem 0 0;
+  padding: 0.5rem 0 0;
   width: 100%;
 }
 
@@ -155,22 +144,18 @@ footer {
   margin: 0 auto;
   max-width: 2000px;
 }
-
 .footer-left {
   float: left;
   margin: 0 0 0 3rem;
 }
-
 .footer-left img {
-  padding: .5rem 0 0;
+  padding: 0.5rem 0 0;
   width: 25%;
 }
-
 .footer-right {
   float: right;
   margin: 0 3rem 0 0;
 }
-
 .footer-right a {
   display: inline-block;
 }
@@ -179,13 +164,10 @@ footer {
 /* ========================= HOMEPAGE ======================== */
 /* =========================================================== */
 .grid-wrap {
-  display: -ms-grid;
   display: grid;
   grid-gap: 4rem 4rem;
   grid-template-columns: auto auto auto;
   -ms-grid-columns: auto auto auto;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 3rem auto;
   text-align: center;
@@ -195,23 +177,18 @@ footer {
   max-width: 430px;
   position: relative;
 }
-
 .project-img-wrap img {
   display: block;
   max-width: 430px;
   width: 100%;
 }
-
 .project-img-wrap a {
   display: block;
 }
-
 .project-img-wrap:hover .project-overlay {
   background: rgba(0, 0, 0, 0.7);
   opacity: 1;
-  -webkit-transition: 5s;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   visibility: visible;
 }
 
@@ -221,26 +198,22 @@ footer {
   opacity: 0;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   visibility: hidden;
   width: 100%;
 }
-
 .project-overlay span {
   color: #f47a5d;
-  font: 2rem 'Bitter';
+  font: 2rem "Bitter";
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 h2 {
   color: #f47a5d;
-  font: 300 4rem/1.3 'Bitter';
+  font: 300 4rem/1.3 "Bitter";
   margin: 0 auto 2rem;
 }
 
@@ -252,11 +225,10 @@ h2 {
   vertical-align: top;
   width: 4rem;
 }
-
 .header-copy {
   color: #4f424b;
   display: inline-block;
-  font: bold 1.1rem 'Nunito';
+  font: bold 1.1rem "Nunito";
   width: 80%;
 }
 
@@ -267,37 +239,30 @@ h2 {
   position: relative;
   z-index: 1;
 }
-
 .about-bubble {
   display: block;
   position: relative;
 }
-
 .about-bubble.about h2 {
   font-size: 5rem;
 }
-
 .about-bubble h2 {
   left: 100px;
   position: absolute;
   top: 100px;
 }
-
 .about-copy-wrap {
   display: block;
   margin: -1rem auto 0 30rem;
   text-align: left;
 }
-
 .about-lights img {
   width: auto;
 }
-
 .about-blurb p {
-  font: bold 1.2rem/1.5 'Nunito';
+  font: bold 1.2rem/1.5 "Nunito";
   margin: 2rem auto 0;
 }
-
 .about-blurb a,
 .about-blurb span {
   color: #f47a5d;
@@ -331,9 +296,9 @@ input[type=email],
 textarea {
   border: 2px solid #4f424b;
   display: block;
-  font: bold 1.2rem 'Nunito';
+  font: bold 1.2rem "Nunito";
   margin: 0 0 1rem;
-  padding: .5rem 0 .5rem 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   width: 96%;
 }
 
@@ -354,9 +319,9 @@ input[type=submit] {
   border: 0 solid #4f424b;
   color: #fff;
   display: block;
-  font: bold 1rem 'Nunito';
-  margin: 0 .7rem 0 auto;
-  padding: .3rem .7rem;
+  font: bold 1rem "Nunito";
+  margin: 0 0.7rem 0 auto;
+  padding: 0.3rem 0.7rem;
 }
 
 .contact-image {
@@ -385,10 +350,9 @@ input[type=submit] {
   text-align: left;
   width: 95%;
 }
-
 .header-copy.confirm a {
   color: #f47a5d;
-  font-family: 'Nunito';
+  font-family: "Nunito";
   text-decoration: none;
 }
 
@@ -406,7 +370,6 @@ input[type=submit] {
   margin: 3rem 0 0;
   width: 50%;
 }
-
 .content-right-wrap img {
   width: 100%;
 }
@@ -428,20 +391,17 @@ input[type=submit] {
 .content-logo-type-wrap {
   margin: 5rem auto 0 3.5rem;
 }
-
 .content-logo-type-wrap.sml-margin {
   margin: 0 auto 3.5rem;
 }
-
 .content-logo-type-wrap > div {
   margin: 4rem auto 0 0;
   width: 85%;
 }
-
 .content-logo-type-wrap em {
   color: #757575;
   display: block;
-  font: italic 1rem 'Bitter';
+  font: italic 1rem "Bitter";
   margin: 1rem auto;
 }
 
@@ -450,34 +410,27 @@ input[type=submit] {
   width: 45%;
   margin: 4rem 2rem 0 0;
 }
-
 .content-logo.half-width:nth-of-type(2) {
   margin: 4rem auto 0;
 }
-
 .content-logo.half-width .content-logo-svg {
   margin: 0;
   width: 70%;
 }
-
 .content-logo.half-width .content-logo-svg.alpha {
   width: auto;
 }
-
 .content-logo.half-width .content-logo-png {
   margin: 0;
   width: auto;
 }
-
 .content-logo.half-width .content-logo-png.alpha {
   width: 70px;
 }
-
 .content-logo img {
   display: block;
   margin: 0 auto;
 }
-
 .content-logo .trinket img {
   margin: 0;
   width: 300px;
@@ -490,24 +443,18 @@ input[type=submit] {
 .content-colors.v-day span:nth-child(2) {
   background: #c12428;
 }
-
 .content-colors.v-day span:nth-child(3) {
   background: #ee7586;
 }
-
 .content-colors.v-day span::nth-child(4) {
   background: #f7dcd7;
 }
-
 .content-colors.jardin span:nth-child(2) {
   background: #37b34a;
 }
-
 .content-colors.jardin span:nth-child(3) {
   background: #f05d16;
 }
-
 .content-colors.jardin span::nth-child(4) {
   background: #a2a2a4;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
