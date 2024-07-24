@@ -20,12 +20,18 @@ aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.logo-wrapper img {
-  max-width: 60%;
-  margin: 0;
-  display: block;
+  img {
+    max-width: 30%;
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+
+  .menu {
+    font-family: $serif;
+    cursor: pointer;
+  }
 }
 
 nav {
@@ -36,10 +42,10 @@ nav {
   padding: 2rem 1.5rem;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100vw;
   text-align: right;
   height: 100vh;
-  transition: 1s ease-in-out;
+  transition: 1s right ease-in-out;
 
   ul,
   li {
@@ -83,11 +89,12 @@ nav {
 
 .close {
   cursor: pointer;
-}
+  font-family: $serif;
 
-.close span {
-  display: inline-block;
-  margin: 0 0 0 1rem;
-  color: $off-white;
-  font-size: 1.5em;
+  span {
+    display: inline-block;
+    margin: 0 0 0 1rem;
+    color: $off-white;
+    font-size: 1.5em;
+  }
 }

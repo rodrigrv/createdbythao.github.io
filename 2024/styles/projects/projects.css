@@ -7,31 +7,47 @@ html {
 }
 
 aside {
-  background: #F0AE46;
-  position: fixed;
+  background: #E7E5EA;
+  position: static;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 320px;
+  width: 100%;
 }
 
 .nav-container {
   position: relative;
-  margin: 20vh 0 0 0;
+  margin: 0;
   padding: 1.5rem;
 }
 
+.logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .logo-wrapper img {
-  max-width: 60%;
+  max-width: 30%;
   margin: 0;
   display: block;
+  width: 100%;
+}
+.logo-wrapper .menu {
+  font-family: "Hepta Slab", serif;
 }
 
 nav {
+  background: #F0AE46;
   display: flex;
   flex-flow: column;
   font-family: "Work Sans", sans-serif;
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
+  position: absolute;
+  top: 0;
+  right: -100vw;
+  text-align: right;
+  height: 100vh;
+  transition: 1s right ease-in-out;
 }
 nav ul,
 nav li {
@@ -61,10 +77,18 @@ nav .main-nav {
 }
 nav .social-icons {
   position: absolute;
-  bottom: -25vh;
+  bottom: 15vh;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.menu,
 .close {
-  display: none;
+  cursor: pointer;
+  font-family: "Hepta Slab", serif;
+}
+.close span {
+  display: inline-block;
+  margin: 0 0 0 1rem;
+  color: #E7E5EA;
+  font-size: 1.5em;
 }/*# sourceMappingURL=projects.css.map */
