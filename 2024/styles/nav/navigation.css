@@ -3,12 +3,12 @@ html {
 }
 
 aside {
-  background: #F0AE46;
+  background: #E7E5EA;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 320px;
+  width: 100%;
 }
 
 .nav-container {
@@ -62,5 +62,5 @@ nav .social-icons {
 
 .menu,
 .close {
-  display: none;
+  display: block;
 }/*# sourceMappingURL=navigation.css.map */

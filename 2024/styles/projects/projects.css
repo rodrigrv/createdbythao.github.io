@@ -23,7 +23,7 @@ aside {
 
 .logo-wrapper img {
   max-width: 60%;
-  margin: 0 auto;
+  margin: 0;
   display: block;
 }
 
@@ -61,7 +61,7 @@ nav .main-nav {
 }
 nav .social-icons {
   position: absolute;
-  bottom: -55vh;
+  bottom: -25vh;
 }
 
 .menu,
