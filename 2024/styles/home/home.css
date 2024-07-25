@@ -2,23 +2,31 @@ html {
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
+body {
+  position: relative;
+}
+
+.nav-close {
+  overflow-y: scroll;
+}
+
+.nav-open {
+  overflow-y: hidden;
 }
 
 aside {
-  background: #E7E5EA;
-  position: static;
+  background: #FFFFFF;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 100%;
+  box-shadow: #E7E5EA 0px 3px 6px;
 }
 
 .nav-container {
   position: relative;
   margin: 0;
-  padding: 1.5rem;
+  padding: 0.7rem 1.5rem;
 }
 
 .logo-wrapper {
@@ -33,7 +41,31 @@ aside {
   width: 100%;
 }
 .logo-wrapper .menu {
+  color: #D75A28;
   font-family: "Hepta Slab", serif;
+  font-weight: bold;
+  margin: 0 2rem 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.logo-wrapper .menu span {
+  position: absolute;
+  border-top: 1.5px solid #D75A28;
+  right: -2rem;
+  top: 6px;
+  width: 15px;
+  margin: 0 0 0 0.5rem;
+}
+.logo-wrapper .menu span::before, .logo-wrapper .menu span::after {
+  position: absolute;
+  border-top: 1.5px solid #D75A28;
+  right: 0rem;
+  top: -7px;
+  width: 20px;
+  content: "";
+}
+.logo-wrapper .menu span::after {
+  top: 6px;
 }
 
 nav {
@@ -41,7 +73,7 @@ nav {
   display: flex;
   flex-flow: column;
   font-family: "Work Sans", sans-serif;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 2rem 3rem 1.5rem;
   position: absolute;
   top: 0;
   right: -100vw;
@@ -79,16 +111,24 @@ nav .social-icons {
   position: absolute;
   bottom: 15vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  width: min(80%, 30rem);
+  gap: 1rem;
 }
 
 .close {
   cursor: pointer;
   font-family: "Hepta Slab", serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
 .close span {
   display: inline-block;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 0.75rem;
   color: #E7E5EA;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  font-weight: normal;
+  line-height: 0.5;
 }/*# sourceMappingURL=home.css.map */

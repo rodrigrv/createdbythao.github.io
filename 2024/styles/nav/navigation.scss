@@ -1,19 +1,31 @@
 @import '../utilities/variables.scss';
 @import '../utilities/layout.scss';
 
+body {
+  position: relative;
+}
+
+.nav-close {
+  overflow-y: scroll;
+}
+
+.nav-open {
+  overflow-y: hidden;
+}
+
 aside {
-  background: $off-white;
-  position: static;
+  background: $white;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 100%;
+  box-shadow: $off-white 0px 3px 6px;
 }
 
 .nav-container {
   position: relative;
   margin: 0;
-  padding: 1.5rem;
+  padding: .7rem 1.5rem;
 }
 
 .logo-wrapper {
@@ -29,8 +41,26 @@ aside {
   }
 
   .menu {
+    color: $orange;
     font-family: $serif;
+    font-weight: $font-bold;
+    margin: 0 2rem 0 0;
+    position: relative;
     cursor: pointer;
+
+    span {
+      @include nav-burger(-2rem, 6px, 15px);
+      margin: 0 0 0 0.5rem;
+
+      &::before, &::after {
+      @include nav-burger(0rem, -7px, 20px);
+        content: "";
+      }
+
+      &::after {
+        top: 6px;
+      }
+    }
   }
 }
 
@@ -39,13 +69,13 @@ nav {
   display: flex;
   flex-flow: column;
   font-family: $sans;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 2rem 3rem 1.5rem;
   position: absolute;
   top: 0;
   right: -100vw;
   text-align: right;
   height: 100vh;
-  transition: 1s right ease-in-out;
+  transition: .5s right ease-in-out;
 
   ul,
   li {
@@ -83,18 +113,26 @@ nav {
     position: absolute;
     bottom: 15vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    width: min(80%, 30rem);
+    gap: 1rem;
   }
 }
 
 .close {
   cursor: pointer;
   font-family: $serif;
+  font-weight: $font-bold;
+  display: flex;
+  align-items: center;
+  justify-content: right;
 
   span {
     display: inline-block;
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 0.75rem;
     color: $off-white;
-    font-size: 1.5em;
+    font-size: 2.5em;
+    font-weight: $font-normal;
+    line-height: 0.5;
   }
 }
