@@ -26,11 +26,22 @@ aside {
   width: 100%;
   box-shadow: #E7E5EA 0px 3px 6px;
 }
+@media (min-width: 769px) {
+  aside {
+    width: 320px;
+    height: 100vh;
+  }
+}
 
 .nav-container {
   position: relative;
   margin: 0;
   padding: 0.7rem 1.5rem;
+}
+@media (min-width: 769px) {
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
 }
 
 .logo-wrapper {
@@ -44,28 +55,43 @@ aside {
   display: block;
   width: 100%;
 }
+@media (min-width: 769px) {
+  .logo-wrapper img {
+    margin: 0 0 0 1rem;
+  }
+}
 .logo-wrapper .menu {
   color: #D75A28;
   font-family: "Hepta Slab", serif;
   font-weight: bold;
-  margin: 0 2rem 0 0;
+  padding: 0 2rem 0 0;
   position: relative;
   cursor: pointer;
+  padding-block: 0;
+  border: 0;
+  background: white;
+}
+@media (min-width: 769px) {
+  .logo-wrapper .menu {
+    display: none;
+  }
 }
 .logo-wrapper .menu span {
   position: absolute;
   border-top: 1.5px solid #D75A28;
-  right: -2rem;
+  right: 0;
   top: 6px;
   width: 15px;
+  cursor: pointer;
   margin: 0 0 0 0.5rem;
 }
 .logo-wrapper .menu span::before, .logo-wrapper .menu span::after {
   position: absolute;
   border-top: 1.5px solid #D75A28;
-  right: 0rem;
+  right: 0;
   top: -7px;
   width: 20px;
+  cursor: pointer;
   content: "";
 }
 .logo-wrapper .menu span::after {
@@ -83,7 +109,16 @@ nav {
   right: -100vw;
   text-align: right;
   height: 100vh;
-  transition: 1s right ease-in-out;
+  transition: 0.5s right ease-in-out;
+}
+@media (min-width: 769px) {
+  nav {
+    right: 0;
+    position: relative;
+    background: white;
+    text-align: left;
+    padding: 1rem;
+  }
 }
 nav ul,
 nav li {
@@ -93,23 +128,23 @@ nav li {
 }
 nav li {
   font-weight: bold;
-  font-size: 1.56rem;
+  font-size: 1.56em;
   margin: 0 0 1.5rem;
 }
 nav a {
   color: #3B3F61;
   text-decoration: none;
 }
+nav .main-nav {
+  margin: 2rem 0 0;
+}
 nav .subnav {
   margin: 0 0 2rem;
 }
 nav .subnav li {
-  font-size: 1.25rem;
+  font-size: 1.25em;
   font-weight: normal;
   margin: 0 0 1rem 1rem;
-}
-nav .main-nav {
-  margin: 2rem 0 0;
 }
 nav .social-icons {
   position: absolute;
@@ -119,6 +154,13 @@ nav .social-icons {
   width: min(80%, 30rem);
   gap: 1rem;
 }
+@media (min-width: 769px) {
+  nav .social-icons {
+    bottom: 20vh;
+    justify-content: flex-start;
+    width: 0;
+  }
+}
 
 .close {
   cursor: pointer;
@@ -127,6 +169,15 @@ nav .social-icons {
   display: flex;
   align-items: center;
   justify-content: right;
+  padding-block: 0;
+  background: initial;
+  border: 0;
+  padding-inline: 0;
+}
+@media (min-width: 769px) {
+  .close {
+    display: none;
+  }
 }
 .close span {
   display: inline-block;
