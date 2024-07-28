@@ -1,1 +1,114 @@
 @import '../nav/navigation.scss';
+
+main {
+  margin: calc(2rem + 55px) 0 0 0;
+  padding: 0 1rem;
+}
+
+.heading {
+  &-lockup {
+    span {
+      font-family: $sans;
+      font-weight: $font-bold;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h3 {
+      color: $orange;
+      font-family: $serif;
+      font-size: $heading-title;
+      margin: .5rem 0;
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  overflow: scroll;
+  margin: 2rem 0;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.project {
+  flex: 1 0 auto;
+
+  &.ds {
+    .img-container {
+      background-image: url("../../../2024/images/ds-bg-mobile.jpg");
+      @include hp-bg-images;
+    }
+  }
+
+  &.tec {
+    .img-container {
+      background-image: url("../../../2024/images/tec-bg-mobile.jpg");
+      @include hp-bg-images;
+    }
+  }
+
+  &.ar {
+    .img-container {
+      background-image: url("../../../2024/images/report-bg-mobile.jpg");
+      @include hp-bg-images;
+    }
+  }
+
+  &.ar-grad {
+    .img-container {
+      background-image: url("../../../2024/images/gradhat-bg-mobile.jpg");
+      @include hp-bg-images;
+    }
+  }
+
+  &.gigi {
+    .img-container {
+      background-image: url("../../../2024/images/gigis-bg-mobile.jpg");
+      @include hp-bg-images;
+    }
+  }
+
+  .img-container {
+    padding: 1rem 1rem 0;
+
+    img {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      max-width: fit-content;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+
+    h2 {
+      color: $black;
+      justify-content: center;
+      font-family: $sans;
+      font-size: $nav-heading;
+      font-weight: $font-bold;
+      margin: 1rem auto 2rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        border-bottom: 5px solid orange;
+        bottom: -5px;
+        left: 0;
+      }
+    }
+
+    p {
+      margin: 0 .75rem .75rem 0;
+      text-align: right;
+      font-family: $sans;
+    }
+  }
+}

@@ -20,10 +20,12 @@ aside {
   left: 0;
   width: 100%;
   box-shadow: $off-white 0px 3px 6px;
+  max-height: 55px;
 
   @include media(md) {
     width: 320px;
     height: 100vh;
+    max-height: 100%;
   }
 }
 

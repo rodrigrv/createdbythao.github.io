@@ -21,11 +21,13 @@ aside {
   left: 0;
   width: 100%;
   box-shadow: #E7E5EA 0px 3px 6px;
+  max-height: 55px;
 }
 @media (min-width: 769px) {
   aside {
     width: 320px;
     height: 100vh;
+    max-height: 100%;
   }
 }
 

@@ -18,6 +18,7 @@ $font-light: lighter;
 // Sizes
 $nav-heading: 1.56em;
 $nav-project: 1.25em;
+$heading-title: 2.5em;
 
 // Mixins
 @mixin nav-burger($top, $width) {
@@ -29,6 +30,12 @@ $nav-project: 1.25em;
   cursor: pointer;
 }
 
+@mixin hp-bg-images {
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
 // Breakpoints
 $bp-xsm: 0px;
 $bp-sm: 541px;
@@ -38,36 +45,42 @@ $bp-xl: 1201px;
 $bp-xxl: 1441px;
 
 @mixin media ($point) {
-  @if $point == xsm {
+  @if $point ==xsm {
     @media (min-width: $bp-xsm) {
       @content;
     }
   }
-  @else if $point == sm {
+
+  @else if $point ==sm {
     @media (min-width: $bp-sm) {
       @content;
     }
   }
-  @else if $point == md {
+
+  @else if $point ==md {
     @media (min-width: $bp-md) {
       @content;
     }
   }
-  @else if $point == lg {
+
+  @else if $point ==lg {
     @media (min-width: $bp-lg) {
       @content;
     }
   }
-  @else if $point == xl {
+
+  @else if $point ==xl {
     @media (min-width: $bp-xl) {
       @content;
     }
   }
-  @else if $point == xxl {
+
+  @else if $point ==xxl {
     @media (min-width: $bp-xxl) {
       @content;
     }
   }
+
   @else {
     @media (min-width: '#{$point}') {
       @content;

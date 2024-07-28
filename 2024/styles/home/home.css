@@ -21,11 +21,13 @@ aside {
   left: 0;
   width: 100%;
   box-shadow: #E7E5EA 0px 3px 6px;
+  max-height: 55px;
 }
 @media (min-width: 769px) {
   aside {
     width: 320px;
     height: 100vh;
+    max-height: 100%;
   }
 }
 
@@ -182,4 +184,102 @@ nav .social-icons {
   font-size: 2.5em;
   font-weight: normal;
   line-height: 0.5;
+}
+
+main {
+  margin: calc(2rem + 55px) 0 0 0;
+  padding: 0 1rem;
+}
+
+.heading-lockup span {
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  color: #272626;
+  text-transform: uppercase;
+}
+.heading-lockup h1,
+.heading-lockup h3 {
+  color: #D75A28;
+  font-family: "Hepta Slab", serif;
+  font-size: 2.5em;
+  margin: 0.5rem 0;
+}
+
+.projects {
+  display: flex;
+  overflow: scroll;
+  margin: 2rem 0;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.project {
+  flex: 1 0 auto;
+}
+.project.ds .img-container {
+  background-image: url("../../../2024/images/ds-bg-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.project.tec .img-container {
+  background-image: url("../../../2024/images/tec-bg-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.project.ar .img-container {
+  background-image: url("../../../2024/images/report-bg-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.project.ar-grad .img-container {
+  background-image: url("../../../2024/images/gradhat-bg-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.project.gigi .img-container {
+  background-image: url("../../../2024/images/gigis-bg-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.project .img-container {
+  padding: 1rem 1rem 0;
+}
+.project .img-container img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.project .text-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+.project .text-container h2 {
+  color: #272626;
+  justify-content: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.56em;
+  font-weight: bold;
+  margin: 1rem auto 2rem;
+  position: relative;
+}
+.project .text-container h2::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  border-bottom: 5px solid orange;
+  bottom: -5px;
+  left: 0;
+}
+.project .text-container p {
+  margin: 0 0.75rem 0.75rem 0;
+  text-align: right;
+  font-family: "Work Sans", sans-serif;
 }/*# sourceMappingURL=home.css.map */
