@@ -20,7 +20,7 @@ aside {
   left: 0;
   width: 100%;
   box-shadow: $off-white 0px 3px 6px;
-  max-height: 55px;
+  z-index: 100;
 
   @include media(md) {
     width: 320px;
@@ -33,8 +33,9 @@ aside {
   position: relative;
   margin: 0;
   padding: .7rem 1.5rem;
+
   @include media(md) {
-    padding: 1rem 1.5rem;
+    padding: 5rem 1.5rem 1rem;
   }
 }
 
@@ -44,12 +45,14 @@ aside {
   align-items: center;
 
   img {
-    max-width: 30%;
+    max-width: 30px;
     margin: 0;
     display: block;
     width: 100%;
+
     @include media(md) {
       margin: 0 0 0 1rem;
+      max-width: 120px;
     }
   }
 
@@ -97,6 +100,7 @@ nav {
   text-align: right;
   height: 100vh;
   transition: .5s right ease-in-out;
+  z-index: 100;
 
   @include media(md) {
     right: 0;
@@ -124,9 +128,9 @@ nav {
     text-decoration: none;
   }
 
-        .main-nav {
-          margin: 2rem 0 0;
-        }
+  .main-nav {
+    margin: 2rem 0 0;
+  }
 
   .subnav {
     margin: 0 0 2rem;
@@ -145,8 +149,9 @@ nav {
     justify-content: flex-end;
     width: min(80%, 30rem);
     gap: 1rem;
+
     @include media(md) {
-      bottom: 20vh;
+      bottom: 25vh;
       justify-content: flex-start;
       width: 0;
     }
@@ -176,5 +181,16 @@ nav {
     font-size: 2.5em;
     font-weight: $font-normal;
     line-height: 0.5;
+  }
+}
+
+// Footer
+footer {
+  background: $gold;
+  padding: 0.5rem .5rem;
+  font-size: .75em;
+
+  p {
+    margin: 0;
   }
 }
