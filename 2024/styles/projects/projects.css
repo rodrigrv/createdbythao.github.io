@@ -113,6 +113,7 @@ nav {
   text-align: right;
   height: 100vh;
   transition: 0.5s right ease-in-out;
+  box-shadow: #272626 -10px 0px 30px;
   z-index: 100;
 }
 @media (min-width: 769px) {
@@ -122,6 +123,7 @@ nav {
     background: white;
     text-align: left;
     padding: 1rem;
+    box-shadow: none;
   }
 }
 nav ul,
@@ -152,7 +154,7 @@ nav .subnav li {
 }
 nav .social-icons {
   position: absolute;
-  bottom: 15vh;
+  bottom: 20vh;
   display: flex;
   justify-content: flex-end;
   width: min(80%, 30rem);
