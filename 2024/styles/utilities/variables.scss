@@ -23,7 +23,7 @@ $heading-title: 2.5em;
 // Mixins
 @mixin nav-burger($top, $width) {
   position: absolute;
-  border-top: 1.5px solid $orange;
+  border-top: 2px solid $gold;
   right: 0;
   top: $top;
   width: $width;
@@ -40,9 +40,9 @@ $heading-title: 2.5em;
 $bp-xsm: 0px;
 $bp-sm: 541px;
 $bp-md: 769px;
-$bp-lg: 1025px;
-$bp-xl: 1201px;
-$bp-xxl: 1441px;
+$bp-lg: 1024px;
+$bp-xl: 1200px;
+$bp-xxl: 1440px;
 
 @mixin media ($point) {
   @if $point ==xsm {

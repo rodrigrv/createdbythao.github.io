@@ -77,12 +77,12 @@ aside {
 
       &::before,
       &::after {
-        @include nav-burger(-7px, 20px);
+        @include nav-burger(-8px, 20px);
         content: "";
       }
 
       &::after {
-        top: 6px;
+        top: 5px;
       }
     }
   }
@@ -100,7 +100,7 @@ nav {
   text-align: right;
   height: 100vh;
   transition: .5s right ease-in-out;
-  box-shadow: #272626 -10px 0px 30px;
+  box-shadow: $dark-blue -5px 0px 15px;
   z-index: 100;
 
   @include media(md) {
@@ -162,6 +162,7 @@ nav {
 
 .close {
   cursor: pointer;
+  color: $dark-blue;
   font-family: $serif;
   font-weight: $font-bold;
   display: flex;
@@ -191,6 +192,11 @@ footer {
   background: $gold;
   padding: 0.5rem .5rem;
   font-size: .75em;
+
+  @include media(md) {
+    width: calc(100% - 335px);
+    margin: 0 0 0 auto;
+  }
 
   p {
     margin: 0;

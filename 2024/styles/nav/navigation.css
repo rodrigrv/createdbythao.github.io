@@ -77,7 +77,7 @@ aside {
 }
 .logo-wrapper .menu span {
   position: absolute;
-  border-top: 1.5px solid #D75A28;
+  border-top: 2px solid #F0AE46;
   right: 0;
   top: 6px;
   width: 15px;
@@ -86,15 +86,15 @@ aside {
 }
 .logo-wrapper .menu span::before, .logo-wrapper .menu span::after {
   position: absolute;
-  border-top: 1.5px solid #D75A28;
+  border-top: 2px solid #F0AE46;
   right: 0;
-  top: -7px;
+  top: -8px;
   width: 20px;
   cursor: pointer;
   content: "";
 }
 .logo-wrapper .menu span::after {
-  top: 6px;
+  top: 5px;
 }
 
 nav {
@@ -109,7 +109,7 @@ nav {
   text-align: right;
   height: 100vh;
   transition: 0.5s right ease-in-out;
-  box-shadow: #272626 -10px 0px 30px;
+  box-shadow: #3B3F61 -5px 0px 15px;
   z-index: 100;
 }
 @media (min-width: 769px) {
@@ -166,6 +166,7 @@ nav .social-icons {
 
 .close {
   cursor: pointer;
+  color: #3B3F61;
   font-family: "Hepta Slab", serif;
   font-weight: bold;
   display: flex;
@@ -194,6 +195,12 @@ footer {
   background: #F0AE46;
   padding: 0.5rem 0.5rem;
   font-size: 0.75em;
+}
+@media (min-width: 769px) {
+  footer {
+    width: calc(100% - 335px);
+    margin: 0 0 0 auto;
+  }
 }
 footer p {
   margin: 0;
