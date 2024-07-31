@@ -14,6 +14,10 @@ main {
   @include media(xl) {
     margin: 5rem 0 0 30vw;
   }
+
+  @include media(xxl) {
+    margin: 5rem 0 0 25rem;
+  }
 }
 
 header {
@@ -37,6 +41,10 @@ strong {
       font-weight: $font-bold;
       color: $dark-blue;
       text-transform: uppercase;
+
+      @include media(xl) {
+        font-size: clamp(1em, 5vw, 1.25em);
+      }
     }
 
     h1,
@@ -45,6 +53,10 @@ strong {
       font-family: $serif;
       font-size: $heading-title;
       margin: .5rem 0;
+
+      @include media(xl) {
+        font-size: clamp($heading-title, 3.5vw, 3.75em);
+      }
     }
   }
 }
@@ -59,9 +71,10 @@ strong {
 
   @include media(xl) {
     flex-flow: column wrap;
-    margin: 2rem;
+    margin: 2rem 2rem 5rem 1rem;
     gap: 7rem;
     padding: 0;
+    overflow: hidden;
   }
 }
 
@@ -70,7 +83,7 @@ strong {
   scroll-snap-align: start;
 
   &.ds {
-    .img-container {
+    .bg-container {
       background-image: url("../../../2024/images/hp-dsbg-m.png");
       @include hp-bg-images;
 
@@ -81,7 +94,7 @@ strong {
   }
 
   &.tec {
-    .img-container {
+    .bg-container {
       background-image: url("../../../2024/images/hp-tecbg-m.png");
       @include hp-bg-images;
 
@@ -92,7 +105,7 @@ strong {
   }
 
   &.ar {
-    .img-container {
+    .bg-container {
       background-image: url("../../../2024/images/hp-reportbg-m.png");
       @include hp-bg-images;
 
@@ -104,7 +117,7 @@ strong {
   }
 
   &.gigi {
-    .img-container {
+    .bg-container {
       background-image: url("../../../2024/images/hp-gigibg-m.png");
       @include hp-bg-images;
 
@@ -114,14 +127,24 @@ strong {
     }
   }
 
-  .img-container {
+  .bg-container {
     padding: 1rem 1rem 0;
+
+    @include media(xl) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
 
     img {
       width: 100%;
       margin: 0 auto;
       display: block;
       max-width: fit-content;
+
+      @include media(xl) {
+        max-width: 26vw;
+      }
     }
   }
 
@@ -129,6 +152,7 @@ strong {
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
+    position: relative;
 
     h2 {
       color: $black;
@@ -138,6 +162,10 @@ strong {
       font-weight: $font-bold;
       margin: 1rem auto 2rem;
       position: relative;
+
+      @include media(xl) {
+        font-size: clamp(1.56em, 2.5vw, 3.1em);
+      }
 
       &::after {
         content: "";
@@ -153,6 +181,14 @@ strong {
       margin: 0 .75rem .75rem 0;
       text-align: right;
       font-family: $sans;
+
+      @include media(xl) {
+        position: absolute;
+        bottom: 0;
+        right: -2rem;
+        margin: 0 0 .75rem;
+        font-size: 1.2em;
+      }
     }
   }
 }

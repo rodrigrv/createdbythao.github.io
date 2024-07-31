@@ -224,6 +224,11 @@ main {
     margin: 5rem 0 0 30vw;
   }
 }
+@media (min-width: 1440px) {
+  main {
+    margin: 5rem 0 0 25rem;
+  }
+}
 
 header {
   padding: 0 1rem;
@@ -245,12 +250,23 @@ strong {
   color: #3B3F61;
   text-transform: uppercase;
 }
+@media (min-width: 1200px) {
+  .heading-lockup span {
+    font-size: clamp(1em, 5vw, 1.25em);
+  }
+}
 .heading-lockup h1,
 .heading-lockup h3 {
   color: #D75A28;
   font-family: "Hepta Slab", serif;
   font-size: 2.5em;
   margin: 0.5rem 0;
+}
+@media (min-width: 1200px) {
+  .heading-lockup h1,
+  .heading-lockup h3 {
+    font-size: clamp(2.5em, 3.5vw, 3.75em);
+  }
 }
 
 .projects {
@@ -264,9 +280,10 @@ strong {
 @media (min-width: 1200px) {
   .projects {
     flex-flow: column wrap;
-    margin: 2rem;
+    margin: 2rem 2rem 5rem 1rem;
     gap: 7rem;
     padding: 0;
+    overflow: hidden;
   }
 }
 
@@ -274,64 +291,77 @@ strong {
   flex: 1 0 auto;
   scroll-snap-align: start;
 }
-.project.ds .img-container {
+.project.ds .bg-container {
   background-image: url("../../../2024/images/hp-dsbg-m.png");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 }
 @media (min-width: 1200px) {
-  .project.ds .img-container {
+  .project.ds .bg-container {
     background-image: url("../../../2024/images/hp-dsbg-d.png");
   }
 }
-.project.tec .img-container {
+.project.tec .bg-container {
   background-image: url("../../../2024/images/hp-tecbg-m.png");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 }
 @media (min-width: 1200px) {
-  .project.tec .img-container {
+  .project.tec .bg-container {
     background-image: url("../../../2024/images/hp-tecbg-d.png");
   }
 }
-.project.ar .img-container {
+.project.ar .bg-container {
   background-image: url("../../../2024/images/hp-reportbg-m.png");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 }
 @media (min-width: 1200px) {
-  .project.ar .img-container {
+  .project.ar .bg-container {
     background-image: url("../../../2024/images/hp-reportbg-d.png");
   }
 }
-.project.gigi .img-container {
+.project.gigi .bg-container {
   background-image: url("../../../2024/images/hp-gigibg-m.png");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
 }
 @media (min-width: 1200px) {
-  .project.gigi .img-container {
+  .project.gigi .bg-container {
     background-image: url("../../../2024/images/hp-gigibg-d.png");
   }
 }
-.project .img-container {
+.project .bg-container {
   padding: 1rem 1rem 0;
 }
-.project .img-container img {
+@media (min-width: 1200px) {
+  .project .bg-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+  }
+}
+.project .bg-container img {
   width: 100%;
   margin: 0 auto;
   display: block;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
+@media (min-width: 1200px) {
+  .project .bg-container img {
+    max-width: 26vw;
+  }
+}
 .project .text-container {
   display: flex;
   justify-content: center;
   flex-flow: column wrap;
+  position: relative;
 }
 .project .text-container h2 {
   color: #272626;
@@ -341,6 +371,11 @@ strong {
   font-weight: bold;
   margin: 1rem auto 2rem;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .project .text-container h2 {
+    font-size: clamp(1.56em, 2.5vw, 3.1em);
+  }
 }
 .project .text-container h2::after {
   content: "";
@@ -354,6 +389,15 @@ strong {
   margin: 0 0.75rem 0.75rem 0;
   text-align: right;
   font-family: "Work Sans", sans-serif;
+}
+@media (min-width: 1200px) {
+  .project .text-container p {
+    position: absolute;
+    bottom: 0;
+    right: -2rem;
+    margin: 0 0 0.75rem;
+    font-size: 1.2em;
+  }
 }
 
 .about {
