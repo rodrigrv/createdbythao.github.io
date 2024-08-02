@@ -33,6 +33,7 @@ $heading-title: 2.5em;
 @mixin hp-bg-images {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center bottom;
   text-align: center;
 }
 

@@ -226,8 +226,14 @@ main {
 }
 @media (min-width: 1440px) {
   main {
-    margin: 5rem 0 0 25rem;
+    margin: 5rem 2rem 0 25rem;
   }
+}
+
+header,
+section {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 header {
@@ -286,6 +292,12 @@ strong {
     overflow: hidden;
   }
 }
+@media (min-width: 1440px) {
+  .projects {
+    align-items: stretch;
+    margin: 2rem auto 5rem;
+  }
+}
 
 .project {
   flex: 1 0 auto;
@@ -293,9 +305,6 @@ strong {
 }
 .project.ds .bg-container {
   background-image: url("../../../2024/images/hp-dsbg-m.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
 }
 @media (min-width: 1200px) {
   .project.ds .bg-container {
@@ -304,9 +313,6 @@ strong {
 }
 .project.tec .bg-container {
   background-image: url("../../../2024/images/hp-tecbg-m.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
 }
 @media (min-width: 1200px) {
   .project.tec .bg-container {
@@ -315,9 +321,6 @@ strong {
 }
 .project.ar .bg-container {
   background-image: url("../../../2024/images/hp-reportbg-m.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
 }
 @media (min-width: 1200px) {
   .project.ar .bg-container {
@@ -326,9 +329,6 @@ strong {
 }
 .project.gigi .bg-container {
   background-image: url("../../../2024/images/hp-gigibg-m.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
 }
 @media (min-width: 1200px) {
   .project.gigi .bg-container {
@@ -337,12 +337,18 @@ strong {
 }
 .project .bg-container {
   padding: 1rem 1rem 0;
+  border-radius: 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center;
 }
 @media (min-width: 1200px) {
   .project .bg-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
+    position: relative;
   }
 }
 .project .bg-container img {
@@ -362,6 +368,11 @@ strong {
   justify-content: center;
   flex-flow: column wrap;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .project .text-container {
+    position: static;
+  }
 }
 .project .text-container h2 {
   color: #272626;
@@ -394,8 +405,8 @@ strong {
   .project .text-container p {
     position: absolute;
     bottom: 0;
-    right: -2rem;
-    margin: 0 0 0.75rem;
+    right: 0;
+    margin: 0 2rem 1.3vw 0;
     font-size: 1.2em;
   }
 }

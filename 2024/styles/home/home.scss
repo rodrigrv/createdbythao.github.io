@@ -16,8 +16,14 @@ main {
   }
 
   @include media(xxl) {
-    margin: 5rem 0 0 25rem;
+    margin: 5rem 2rem 0 25rem;
   }
+}
+
+header,
+section {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 header {
@@ -76,6 +82,11 @@ strong {
     padding: 0;
     overflow: hidden;
   }
+
+  @include media(xxl) {
+    align-items: stretch;
+    margin: 2rem auto 5rem
+  }
 }
 
 .project {
@@ -85,7 +96,6 @@ strong {
   &.ds {
     .bg-container {
       background-image: url("../../../2024/images/hp-dsbg-m.png");
-      @include hp-bg-images;
 
       @include media(xl) {
         background-image: url("../../../2024/images/hp-dsbg-d.png");
@@ -96,7 +106,6 @@ strong {
   &.tec {
     .bg-container {
       background-image: url("../../../2024/images/hp-tecbg-m.png");
-      @include hp-bg-images;
 
       @include media(xl) {
         background-image: url("../../../2024/images/hp-tecbg-d.png");
@@ -107,7 +116,6 @@ strong {
   &.ar {
     .bg-container {
       background-image: url("../../../2024/images/hp-reportbg-m.png");
-      @include hp-bg-images;
 
       @include media(xl) {
         background-image: url("../../../2024/images/hp-reportbg-d.png");
@@ -119,7 +127,6 @@ strong {
   &.gigi {
     .bg-container {
       background-image: url("../../../2024/images/hp-gigibg-m.png");
-      @include hp-bg-images;
 
       @include media(xl) {
         background-image: url("../../../2024/images/hp-gigibg-d.png");
@@ -129,11 +136,14 @@ strong {
 
   .bg-container {
     padding: 1rem 1rem 0;
+    border-radius: 6px;
+    @include hp-bg-images;
 
     @include media(xl) {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-evenly;
+      position: relative;
     }
 
     img {
@@ -153,6 +163,9 @@ strong {
     justify-content: center;
     flex-flow: column wrap;
     position: relative;
+    @include media(xl) {
+      position: static;
+    }
 
     h2 {
       color: $black;
@@ -185,8 +198,8 @@ strong {
       @include media(xl) {
         position: absolute;
         bottom: 0;
-        right: -2rem;
-        margin: 0 0 .75rem;
+        right: 0;
+        margin: 0 2rem 1.3vw 0;
         font-size: 1.2em;
       }
     }
