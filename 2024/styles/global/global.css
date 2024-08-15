@@ -1,0 +1,21 @@
+footer {
+  background: #F0AE46;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.75em;
+}
+@media (min-width: 769px) {
+  footer {
+    width: calc(100% - 335px);
+    margin: 0 0 0 auto;
+  }
+}
+footer p {
+  margin: 0;
+}
+footer .footer-copy {
+  display: flex;
+  justify-content: space-between;
+}
+footer .social-icons a {
+  font-family: "Work Sans", sans-serif;
+}/*# sourceMappingURL=global.css.map */

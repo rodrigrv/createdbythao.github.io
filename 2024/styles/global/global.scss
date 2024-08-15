@@ -1,0 +1,28 @@
+@import '../utilities/variables.scss';
+
+// Footer
+footer {
+  background: $gold;
+  padding: 0.5rem .5rem;
+  font-size: .75em;
+
+  @include media(md) {
+    width: calc(100% - 335px);
+    margin: 0 0 0 auto;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .footer-copy {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-icons {
+    a {
+      font-family: $sans;
+    }
+  }
+}

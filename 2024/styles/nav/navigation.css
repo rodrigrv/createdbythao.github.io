@@ -148,21 +148,6 @@ nav .subnav li {
   font-weight: normal;
   margin: 0 0 1rem 1rem;
 }
-nav .social-icons {
-  position: absolute;
-  bottom: 20vh;
-  display: flex;
-  justify-content: flex-end;
-  width: min(80%, 30rem);
-  gap: 1rem;
-}
-@media (min-width: 769px) {
-  nav .social-icons {
-    bottom: 25vh;
-    justify-content: flex-start;
-    width: 0;
-  }
-}
 
 .close {
   cursor: pointer;
@@ -189,19 +174,4 @@ nav .social-icons {
   font-size: 2.5em;
   font-weight: normal;
   line-height: 0.5;
-}
-
-footer {
-  background: #F0AE46;
-  padding: 0.5rem 0.5rem;
-  font-size: 0.75em;
-}
-@media (min-width: 769px) {
-  footer {
-    width: calc(100% - 335px);
-    margin: 0 0 0 auto;
-  }
-}
-footer p {
-  margin: 0;
 }/*# sourceMappingURL=navigation.css.map */

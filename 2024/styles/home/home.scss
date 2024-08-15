@@ -1,4 +1,5 @@
 @import '../nav/navigation.scss';
+@import '../global/global.scss';
 
 main {
   margin: calc(2rem + 55px) 0 0 0;
@@ -16,13 +17,13 @@ main {
   }
 
   @include media(xxl) {
-    margin: 5rem 2rem 0 25rem;
+    margin: 5rem 0 0;
   }
 }
 
 header,
 section {
-  max-width: 1600px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -32,7 +33,13 @@ header {
 
 section {
   padding: 0 1rem;
-  margin: 0 0 3rem;
+  margin: 0 0 5rem;
+}
+
+header, .contact-us {
+  @include media(xxl) {
+    margin: 0 0 5rem 25rem;
+  }
 }
 
 p,
@@ -85,7 +92,7 @@ strong {
 
   @include media(xxl) {
     align-items: stretch;
-    margin: 2rem auto 5rem
+    margin: 2rem 1rem 5rem 25rem;
   }
 }
 
@@ -210,6 +217,9 @@ strong {
   background: $gold;
   position: relative;
   z-index: 10;
+  @include media(xxl) {
+    max-width: 100%;
+  }
 
   &::before {
     @include media(md) {
@@ -233,6 +243,12 @@ strong {
       gap: 1rem;
     }
 
+    @include media(xxl) {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 5rem 1rem;
+    }
+
     .img-container {
       margin: 2rem auto 3rem;
 
@@ -240,6 +256,10 @@ strong {
         margin: 0 auto;
         display: block;
         max-width: 100%;
+
+        @include media(xxl) {
+          margin: 0 5rem 0 auto;
+        }
       }
     }
 

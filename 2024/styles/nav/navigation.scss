@@ -144,20 +144,20 @@ nav {
     }
   }
 
-  .social-icons {
-    position: absolute;
-    bottom: 20vh;
-    display: flex;
-    justify-content: flex-end;
-    width: min(80%, 30rem);
-    gap: 1rem;
+  // .social-icons {
+  //   position: absolute;
+  //   bottom: 20vh;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   width: min(80%, 30rem);
+  //   gap: 1rem;
 
-    @include media(md) {
-      bottom: 25vh;
-      justify-content: flex-start;
-      width: 0;
-    }
-  }
+  //   @include media(md) {
+  //     bottom: 25vh;
+  //     justify-content: flex-start;
+  //     width: 0;
+  //   }
+  // }
 }
 
 .close {
@@ -184,21 +184,5 @@ nav {
     font-size: 2.5em;
     font-weight: $font-normal;
     line-height: 0.5;
-  }
-}
-
-// Footer
-footer {
-  background: $gold;
-  padding: 0.5rem .5rem;
-  font-size: .75em;
-
-  @include media(md) {
-    width: calc(100% - 335px);
-    margin: 0 0 0 auto;
-  }
-
-  p {
-    margin: 0;
   }
 }

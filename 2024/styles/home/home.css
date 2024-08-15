@@ -148,21 +148,6 @@ nav .subnav li {
   font-weight: normal;
   margin: 0 0 1rem 1rem;
 }
-nav .social-icons {
-  position: absolute;
-  bottom: 20vh;
-  display: flex;
-  justify-content: flex-end;
-  width: min(80%, 30rem);
-  gap: 1rem;
-}
-@media (min-width: 769px) {
-  nav .social-icons {
-    bottom: 25vh;
-    justify-content: flex-start;
-    width: 0;
-  }
-}
 
 .close {
   cursor: pointer;
@@ -205,6 +190,13 @@ footer {
 footer p {
   margin: 0;
 }
+footer .footer-copy {
+  display: flex;
+  justify-content: space-between;
+}
+footer .social-icons a {
+  font-family: "Work Sans", sans-serif;
+}
 
 main {
   margin: calc(2rem + 55px) 0 0 0;
@@ -226,13 +218,13 @@ main {
 }
 @media (min-width: 1440px) {
   main {
-    margin: 5rem 2rem 0 25rem;
+    margin: 5rem 0 0;
   }
 }
 
 header,
 section {
-  max-width: 1600px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -242,7 +234,13 @@ header {
 
 section {
   padding: 0 1rem;
-  margin: 0 0 3rem;
+  margin: 0 0 5rem;
+}
+
+@media (min-width: 1440px) {
+  header, .contact-us {
+    margin: 0 0 5rem 25rem;
+  }
 }
 
 p,
@@ -295,7 +293,7 @@ strong {
 @media (min-width: 1440px) {
   .projects {
     align-items: stretch;
-    margin: 2rem auto 5rem;
+    margin: 2rem 1rem 5rem 25rem;
   }
 }
 
@@ -416,6 +414,11 @@ strong {
   position: relative;
   z-index: 10;
 }
+@media (min-width: 1440px) {
+  .about {
+    max-width: 100%;
+  }
+}
 @media (min-width: 769px) {
   .about::before {
     content: "";
@@ -438,6 +441,13 @@ strong {
     gap: 1rem;
   }
 }
+@media (min-width: 1440px) {
+  .about-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+  }
+}
 .about-wrapper .img-container {
   margin: 2rem auto 3rem;
 }
@@ -445,6 +455,11 @@ strong {
   margin: 0 auto;
   display: block;
   max-width: 100%;
+}
+@media (min-width: 1440px) {
+  .about-wrapper .img-container img {
+    margin: 0 5rem 0 auto;
+  }
 }
 @media (min-width: 541px) {
   .about-wrapper .about-me {
