@@ -1,5 +1,17 @@
 @import '../utilities/variables.scss';
 
+header {
+  scroll-margin: 5rem 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:visited {
+  text-decoration: none;
+}
+
 // Footer
 footer {
   background: $gold;

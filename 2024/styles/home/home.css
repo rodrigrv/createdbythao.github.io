@@ -176,6 +176,18 @@ nav .subnav li {
   line-height: 0.5;
 }
 
+header {
+  scroll-margin: 5rem 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:visited {
+  text-decoration: none;
+}
+
 footer {
   background: #F0AE46;
   padding: 0.5rem 0.5rem;
@@ -244,8 +256,10 @@ section {
 }
 
 p,
-strong {
+strong,
+span {
   font-family: "Work Sans", sans-serif;
+  color: #272626;
 }
 
 .heading-lockup span {
@@ -413,6 +427,7 @@ strong {
   background: #F0AE46;
   position: relative;
   z-index: 10;
+  scroll-margin: 3rem 0 0;
 }
 @media (min-width: 1440px) {
   .about {

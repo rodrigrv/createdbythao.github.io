@@ -3,21 +3,42 @@ const navigation = document.querySelector('nav')
 const navMenu = document.querySelector('.menu')
 const pageBody = document.querySelector('body')
 const pageLinks = document.querySelectorAll('.nav-container a')
+const urlBookmark = window.location.hash
+
+navMenu.addEventListener('click', () => {
+  openNavigation()
+})
+
+closeNav.addEventListener('click', () => {
+  closeNavigation()
+})
 
 function openNavigation() {
-  navMenu.addEventListener('click', () => {
-    navigation.style.right = "0vw"
-    pageBody.classList.add("nav-open")
-    pageBody.classList.remove("nav-close")
-  })
+  navigation.style.right = "0vw"
+  pageBody.classList.add("nav-open")
+  pageBody.classList.remove("nav-close")
 }
 
 function closeNavigation() {
-  closeNav.addEventListener('click', () => {
-    navigation.style.right = '-90vw'
-    pageBody.classList.add("nav-close")
-    pageBody.classList.remove("nav-open")
-  })
+  navigation.style.right = '-90vw'
+  pageBody.classList.add("nav-close")
+  pageBody.classList.remove("nav-open")
+}
+
+// pageLinks.forEach((link) => {
+//   console.log(link.hash)
+//   if(link.hash == urlBookmark) {
+//     console.log('this matches, please close')
+//     closeNavigation();
+//   }
+// })
+
+if (urlBookmark == "#projects") {
+  closeNavigation()
+} else if (urlBookmark == "#about") {
+  closeNavigation()
+} else if (urlBookmark == "#contact") {
+  closeNavigation()
 }
 
 openNavigation();

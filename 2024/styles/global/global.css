@@ -1,3 +1,15 @@
+header {
+  scroll-margin: 5rem 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:visited {
+  text-decoration: none;
+}
+
 footer {
   background: #F0AE46;
   padding: 0.5rem 0.5rem;
