@@ -1,79 +1,8 @@
 @import '../nav/navigation.scss';
 @import '../global/global.scss';
 
-main {
-  margin: calc(2rem + 55px) 0 0 0;
-
-  @include media(md) {
-    margin: 5rem 0 0 42vw;
-  }
-
-  @include media(lg) {
-    margin: 5rem 0 0 35vw;
-  }
-
-  @include media(xl) {
-    margin: 5rem 0 0 30vw;
-  }
-
-  @include media(xxl) {
-    margin: 5rem 0 0;
-  }
-}
-
-header,
-section {
-  max-width: 1800px;
-  margin: 0 auto;
-}
-
 header {
-  padding: 0 1rem;
-}
-
-section {
-  padding: 0 1rem;
-  margin: 0 0 5rem;
-}
-
-header, .contact-us {
-  @include media(xxl) {
-    margin: 0 0 5rem 25rem;
-  }
-}
-
-p,
-strong,
-span {
-  font-family: $sans;
-  color: $black;
-}
-
-.heading {
-  &-lockup {
-    span {
-      font-family: $sans;
-      font-weight: $font-bold;
-      color: $dark-blue;
-      text-transform: uppercase;
-
-      @include media(xl) {
-        font-size: clamp(1em, 5vw, 1.25em);
-      }
-    }
-
-    h1,
-    h3 {
-      color: $orange;
-      font-family: $serif;
-      font-size: $heading-title;
-      margin: .5rem 0;
-
-      @include media(xl) {
-        font-size: clamp($heading-title, 3.5vw, 3.75em);
-      }
-    }
-  }
+  scroll-margin: 5rem 0 0;
 }
 
 .projects {

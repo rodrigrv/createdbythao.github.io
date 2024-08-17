@@ -176,40 +176,6 @@ nav .subnav li {
   line-height: 0.5;
 }
 
-header {
-  scroll-margin: 5rem 0 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover, a:visited {
-  text-decoration: none;
-}
-
-footer {
-  background: #F0AE46;
-  padding: 0.5rem 0.5rem;
-  font-size: 0.75em;
-}
-@media (min-width: 769px) {
-  footer {
-    width: calc(100% - 335px);
-    margin: 0 0 0 auto;
-  }
-}
-footer p {
-  margin: 0;
-}
-footer .footer-copy {
-  display: flex;
-  justify-content: space-between;
-}
-footer .social-icons a {
-  font-family: "Work Sans", sans-serif;
-}
-
 main {
   margin: calc(2rem + 55px) 0 0 0;
 }
@@ -250,7 +216,8 @@ section {
 }
 
 @media (min-width: 1440px) {
-  header, .contact-us {
+  header,
+  .contact-us {
     margin: 0 0 5rem 25rem;
   }
 }
@@ -285,6 +252,40 @@ span {
   .heading-lockup h3 {
     font-size: clamp(2.5em, 3.5vw, 3.75em);
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:visited {
+  text-decoration: none;
+}
+
+footer {
+  background: #F0AE46;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.75em;
+}
+@media (min-width: 769px) {
+  footer {
+    width: calc(100% - 335px);
+    margin: 0 0 0 auto;
+  }
+}
+footer p {
+  margin: 0;
+}
+footer .footer-copy {
+  display: flex;
+  justify-content: space-between;
+}
+footer .social-icons a {
+  font-family: "Work Sans", sans-serif;
+}
+
+header {
+  scroll-margin: 5rem 0 0;
 }
 
 .projects {
