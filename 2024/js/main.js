@@ -3,7 +3,7 @@ const navigation = document.querySelector('nav')
 const navMenu = document.querySelector('.menu')
 const pageBody = document.querySelector('body')
 const pageLinks = document.querySelectorAll('.nav-container a')
-const urlBookmark = window.location.hash
+const urlBookmark = window.location.href.split('/')[8]
 
 navMenu.addEventListener('click', () => {
   openNavigation()
@@ -33,13 +33,11 @@ function closeNavigation() {
 //   }
 // })
 
-if (urlBookmark == "#projects") {
-  closeNavigation()
-} else if (urlBookmark == "#about") {
-  closeNavigation()
-} else if (urlBookmark == "#contact") {
-  closeNavigation()
-}
+// if (urlBookmark == "#projects") {
+//   closeNavigation()
+// } else if (urlBookmark == "#about") {
+//   closeNavigation()
+// } else if (urlBookmark == "#contact") {
+//   closeNavigation()
+// }
 
-openNavigation();
-closeNavigation();
