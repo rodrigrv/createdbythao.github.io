@@ -4,7 +4,7 @@ const aside =
     <div class="logo-wrapper">
       <div class="img-container">
         <a href="../../Createdbythao/2024/index.html">
-          <img src="../2024/images/th-logo-orange.svg" alt="Created By Thao" />
+          <img src="../../../Createdbythao/2024/images/th-logo-orange.svg" alt="Created By Thao" />
         </a>
       </div>
       <button class="menu">Menu<span></span></button>
@@ -30,7 +30,7 @@ const footer =
 `<footer>
   <div class="footer-copy">
     <p class="copyright">
-      &copy; 2022 Thao Ha-Rodriguez
+      &copy; 2024 Thao Ha-Rodriguez
     </p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/thao-ha/" target="_blank">

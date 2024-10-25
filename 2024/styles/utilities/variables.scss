@@ -37,6 +37,11 @@ $heading-title: 2.5em;
   text-align: center;
 }
 
+@mixin image-scroller($width) {
+  width: $width;
+  flex: 1 0 auto;
+}
+
 // Breakpoints
 $bp-xsm: 0px;
 $bp-sm: 541px;

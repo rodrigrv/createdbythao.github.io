@@ -1,3 +1,99 @@
 @import '../nav/navigation.scss';
 @import '../global/global.scss';
 
+section {
+  margin: 0 0 2.5rem;
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  max-width: fit-content;
+}
+
+h3 {
+  font-size: $nav-project;
+  font-family: $serif;
+  color: $orange;
+}
+
+p {
+  line-height: 1.2;
+}
+
+.intro {
+  margin: 2.5rem 0;
+
+  &-description {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 1rem;
+    column-gap: 2rem;
+  }
+
+  &-title {
+    span {
+      font-weight: $font-bold;
+      text-transform: uppercase;
+      font-size: .93em;
+    }
+
+    h2 {
+      color: $orange;
+      font-size: $nav-heading;
+      font-family: $serif;
+      margin: 0;
+      line-height: 1.5;
+      font-weight: $font-normal;
+    }
+  }
+
+  .img-container {
+    margin: 1rem 0;
+  }
+}
+
+.img-scroll {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+
+  &.scroll-1 {
+    .img-container {
+      @include image-scroller(250%);
+    }
+  }
+
+  &.scroll-2 {
+    .img-container {
+      @include image-scroller(85%);
+
+      img {
+        margin: 0 0 1rem;
+      }
+    }
+  }
+}
+
+.img-gallery {
+  .img-container {
+    margin: 0 0 2.5rem;
+  }
+}
+
+.copy-block {
+  margin: 0 0 5rem;
+}
+
+.social-images {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+
+  .img-container {
+    flex: 1 0 45%;
+  }
+}

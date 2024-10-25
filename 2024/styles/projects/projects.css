@@ -278,4 +278,89 @@ footer .footer-copy {
 }
 footer .social-icons a {
   font-family: "Work Sans", sans-serif;
+}
+
+section {
+  margin: 0 0 2.5rem;
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-family: "Hepta Slab", serif;
+  color: #D75A28;
+}
+
+p {
+  line-height: 1.2;
+}
+
+.intro {
+  margin: 2.5rem 0;
+}
+.intro-description {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 1rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.intro-title span {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.93em;
+}
+.intro-title h2 {
+  color: #D75A28;
+  font-size: 1.56em;
+  font-family: "Hepta Slab", serif;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: normal;
+}
+.intro .img-container {
+  margin: 1rem 0;
+}
+
+.img-scroll {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+.img-scroll.scroll-1 .img-container {
+  width: 250%;
+  flex: 1 0 auto;
+}
+.img-scroll.scroll-2 .img-container {
+  width: 85%;
+  flex: 1 0 auto;
+}
+.img-scroll.scroll-2 .img-container img {
+  margin: 0 0 1rem;
+}
+
+.img-gallery .img-container {
+  margin: 0 0 2.5rem;
+}
+
+.copy-block {
+  margin: 0 0 5rem;
+}
+
+.social-images {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+.social-images .img-container {
+  flex: 1 0 45%;
 }/*# sourceMappingURL=projects.css.map */

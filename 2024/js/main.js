@@ -4,7 +4,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
   const navMenu = document.querySelector('.menu')
   const pageBody = document.querySelector('body')
   const pageLinks = document.querySelectorAll('.nav-container a')
-  const urlBookmark = window.location.hash
 
   navMenu.addEventListener('click', () => {
     openNavigation()
