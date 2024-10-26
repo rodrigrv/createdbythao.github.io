@@ -64,6 +64,10 @@ p {
   &.scroll-1 {
     .img-container {
       @include image-scroller(250%);
+
+      img {
+        margin: 0;
+      }
     }
   }
 

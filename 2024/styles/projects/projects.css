@@ -340,6 +340,9 @@ p {
   width: 250%;
   flex: 1 0 auto;
 }
+.img-scroll.scroll-1 .img-container img {
+  margin: 0;
+}
 .img-scroll.scroll-2 .img-container {
   width: 85%;
   flex: 1 0 auto;
