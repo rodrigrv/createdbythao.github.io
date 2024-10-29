@@ -283,13 +283,23 @@ footer .social-icons a {
 section {
   margin: 0 0 2.5rem;
 }
+@media (min-width: 1440px) {
+  section {
+    margin: 2.5rem 0 0 25rem;
+  }
+}
 
 img {
   width: 100%;
   margin: 0 auto;
   display: block;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: 100%;
+}
+@media (min-width: 1200px) {
+  img {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
 }
 
 h3 {
@@ -305,12 +315,29 @@ p {
 .intro {
   margin: 2.5rem 0;
 }
+@media (min-width: 1200px) {
+  .intro {
+    display: grid;
+    grid-template-areas: "attributes . . image" "about . . image" ". . . image";
+    gap: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .intro {
+    margin: 5rem 0 0 25rem;
+  }
+}
 .intro-description {
   display: flex;
   flex-flow: row wrap;
   row-gap: 1rem;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+@media (min-width: 1200px) {
+  .intro-description {
+    grid-area: attributes;
+  }
 }
 .intro-title span {
   font-weight: bold;
@@ -328,6 +355,39 @@ p {
 .intro .img-container {
   margin: 1rem 0;
 }
+@media (min-width: 1200px) {
+  .intro .img-container {
+    grid-area: image;
+  }
+}
+@media (min-width: 1200px) {
+  .intro .about {
+    grid-area: about;
+  }
+}
+
+@media (min-width: 1200px) {
+  .strategy-1 {
+    display: flex;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+}
+.strategy-1 h3 {
+  flex: 1 0 23%;
+}
+
+@media (min-width: 1440px) {
+  .strategy-2 {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .strategy-2 .copy-block {
+    flex: 0 1 100%;
+  }
+}
 
 .img-scroll {
   display: flex;
@@ -340,6 +400,11 @@ p {
   width: 250%;
   flex: 1 0 auto;
 }
+@media (min-width: 1200px) {
+  .img-scroll.scroll-1 .img-container {
+    flex: 0 1 auto;
+  }
+}
 .img-scroll.scroll-1 .img-container img {
   margin: 0;
 }
@@ -347,23 +412,36 @@ p {
   width: 85%;
   flex: 1 0 auto;
 }
+@media (min-width: 1024px) {
+  .img-scroll.scroll-2 .img-container {
+    flex: 0 1 auto;
+  }
+}
 .img-scroll.scroll-2 .img-container img {
   margin: 0 0 1rem;
 }
 
+@media (min-width: 1024px) {
+  .img-gallery.gallery-1, .img-gallery.gallery-3 {
+    display: flex;
+    gap: 1rem;
+  }
+}
 .img-gallery .img-container {
   margin: 0 0 2.5rem;
-}
-
-.copy-block {
-  margin: 0 0 5rem;
 }
 
 .social-images {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 .social-images .img-container {
   flex: 1 0 45%;
+}
+@media (min-width: 1200px) {
+  .social-images .img-container {
+    flex: 1 0 22%;
+  }
 }/*# sourceMappingURL=projects.css.map */

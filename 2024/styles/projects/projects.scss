@@ -3,13 +3,21 @@
 
 section {
   margin: 0 0 2.5rem;
+
+  @include media(xxl) {
+    margin: 2.5rem 0 0 25rem;
+  }
 }
 
 img {
   width: 100%;
   margin: 0 auto;
   display: block;
-  max-width: fit-content;
+  max-width: 100%;
+
+  @include media(xl) {
+    max-width: fit-content;
+  }
 }
 
 h3 {
@@ -25,11 +33,28 @@ p {
 .intro {
   margin: 2.5rem 0;
 
+  @include media(xl) {
+    display: grid;
+    grid-template-areas:
+      "attributes . . image"
+      "about . . image"
+      ". . . image";
+    gap: 1rem;
+  }
+
+  @include media(xxl) {
+    margin: 5rem 0 0 25rem;
+  }
+
   &-description {
     display: flex;
     flex-flow: row wrap;
     row-gap: 1rem;
     column-gap: 2rem;
+
+    @include media(xl) {
+      grid-area: attributes;
+    }
   }
 
   &-title {
@@ -51,6 +76,40 @@ p {
 
   .img-container {
     margin: 1rem 0;
+
+    @include media(xl) {
+      grid-area: image;
+    }
+  }
+
+  .about {
+    @include media(xl) {
+      grid-area: about;
+    }
+  }
+}
+
+.strategy-1 {
+  @include media(xl) {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+
+  h3 {
+    flex: 1 0 23%;
+  }
+}
+
+.strategy-2 {
+  @include media (xxl) {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .copy-block {
+    @include media(xxl) {
+      flex: 0 1 100%;
+    }
   }
 }
 
@@ -64,6 +123,9 @@ p {
   &.scroll-1 {
     .img-container {
       @include image-scroller(250%);
+      @include media(xl) {
+        flex: 0 1 auto;
+      }
 
       img {
         margin: 0;
@@ -75,6 +137,10 @@ p {
     .img-container {
       @include image-scroller(85%);
 
+      @include media(lg) {
+        flex: 0 1 auto;
+      }
+
       img {
         margin: 0 0 1rem;
       }
@@ -83,21 +149,30 @@ p {
 }
 
 .img-gallery {
+
+  &.gallery-1,
+  &.gallery-3 {
+    @include media(lg) {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
   .img-container {
     margin: 0 0 2.5rem;
   }
-}
-
-.copy-block {
-  margin: 0 0 5rem;
 }
 
 .social-images {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
+  margin-bottom: 5rem;
 
   .img-container {
     flex: 1 0 45%;
+    @include media(xl) {
+      flex: 1 0 22%;
+    }
   }
 }
