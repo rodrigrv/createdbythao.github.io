@@ -280,12 +280,22 @@ footer .social-icons a {
   font-family: "Work Sans", sans-serif;
 }
 
+header,
 section {
-  margin: 0 0 2.5rem;
+  margin: 2.5rem 0;
 }
 @media (min-width: 1440px) {
+  header,
   section {
     margin: 2.5rem 0 0 25rem;
+  }
+}
+@media (min-width: 1750px) {
+  header,
+  section {
+    margin: 2.5rem 0 2.5rem calc(160px + 40vw);
+    max-width: 1350px;
+    translate: -50%;
   }
 }
 
@@ -312,19 +322,11 @@ p {
   line-height: 1.2;
 }
 
-.intro {
-  margin: 2.5rem 0;
-}
 @media (min-width: 1200px) {
   .intro {
     display: grid;
     grid-template-areas: "attributes . . image" "about . . image" ". . . image";
     gap: 1rem;
-  }
-}
-@media (min-width: 1440px) {
-  .intro {
-    margin: 5rem 0 0 25rem;
   }
 }
 .intro-description {
@@ -383,6 +385,10 @@ p {
     gap: 1.5rem;
   }
 }
+.strategy-2 .copy-block {
+  max-width: auto;
+  text-align: left;
+}
 @media (min-width: 1440px) {
   .strategy-2 .copy-block {
     flex: 0 1 100%;
@@ -395,6 +401,11 @@ p {
   overflow-x: scroll;
   gap: 1rem;
   scroll-snap-type: x mandatory;
+}
+@media (min-width: 1200px) {
+  .img-scroll {
+    overflow: hidden;
+  }
 }
 .img-scroll.scroll-1 .img-container {
   width: 250%;
@@ -412,6 +423,16 @@ p {
   width: 85%;
   flex: 1 0 auto;
 }
+@media (min-width: 541px) {
+  .img-scroll.scroll-2 .img-container {
+    flex: 0 1 auto;
+  }
+}
+@media (min-width: 769px) {
+  .img-scroll.scroll-2 .img-container {
+    flex: 1 0 auto;
+  }
+}
 @media (min-width: 1024px) {
   .img-scroll.scroll-2 .img-container {
     flex: 0 1 auto;
@@ -421,14 +442,32 @@ p {
   margin: 0 0 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 541px) {
   .img-gallery.gallery-1, .img-gallery.gallery-3 {
     display: flex;
     gap: 1rem;
   }
 }
+@media (min-width: 769px) {
+  .img-gallery.gallery-1, .img-gallery.gallery-3 {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .img-gallery.gallery-1, .img-gallery.gallery-3 {
+    display: flex;
+  }
+}
 .img-gallery .img-container {
   margin: 0 0 2.5rem;
+}
+
+@media (min-width: 1200px) {
+  .copy-block {
+    max-width: 110ch;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
 }
 
 .social-images {

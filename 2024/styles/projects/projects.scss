@@ -1,11 +1,18 @@
 @import '../nav/navigation.scss';
 @import '../global/global.scss';
 
+header,
 section {
-  margin: 0 0 2.5rem;
+  margin: 2.5rem 0;
 
   @include media(xxl) {
     margin: 2.5rem 0 0 25rem;
+  }
+
+  @include media(1750px) {
+    margin: 2.5rem 0 2.5rem calc(160px + 40vw);
+    max-width: 1350px;
+    translate: -50%;
   }
 }
 
@@ -31,8 +38,6 @@ p {
 }
 
 .intro {
-  margin: 2.5rem 0;
-
   @include media(xl) {
     display: grid;
     grid-template-areas:
@@ -40,10 +45,6 @@ p {
       "about . . image"
       ". . . image";
     gap: 1rem;
-  }
-
-  @include media(xxl) {
-    margin: 5rem 0 0 25rem;
   }
 
   &-description {
@@ -107,6 +108,9 @@ p {
   }
 
   .copy-block {
+    max-width: auto;
+    text-align: left;
+
     @include media(xxl) {
       flex: 0 1 100%;
     }
@@ -120,9 +124,14 @@ p {
   gap: 1rem;
   scroll-snap-type: x mandatory;
 
+  @include media(xl) {
+    overflow: hidden;
+  }
+
   &.scroll-1 {
     .img-container {
       @include image-scroller(250%);
+
       @include media(xl) {
         flex: 0 1 auto;
       }
@@ -136,6 +145,14 @@ p {
   &.scroll-2 {
     .img-container {
       @include image-scroller(85%);
+
+      @include media(sm) {
+        flex: 0 1 auto;
+      }
+
+      @include media(md) {
+        flex: 1 0 auto;
+      }
 
       @include media(lg) {
         flex: 0 1 auto;
@@ -152,14 +169,30 @@ p {
 
   &.gallery-1,
   &.gallery-3 {
-    @include media(lg) {
+    @include media(sm) {
       display: flex;
       gap: 1rem;
+    }
+
+    @include media(md) {
+      display: block;
+    }
+
+    @include media(lg) {
+      display: flex;
     }
   }
 
   .img-container {
     margin: 0 0 2.5rem;
+  }
+}
+
+.copy-block {
+  @include media(xl) {
+    max-width: 110ch;
+    text-align: center;
+    margin-bottom: 4rem;
   }
 }
 
@@ -171,6 +204,7 @@ p {
 
   .img-container {
     flex: 1 0 45%;
+
     @include media(xl) {
       flex: 1 0 22%;
     }
