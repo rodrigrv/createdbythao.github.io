@@ -105,6 +105,11 @@ p {
   @include media (xxl) {
     display: flex;
     gap: 1.5rem;
+
+    &.h-flip {
+      flex-direction: row-reverse;
+      align-items: flex-end;
+    }
   }
 
   .copy-block {
@@ -163,10 +168,31 @@ p {
       }
     }
   }
+
+  &.scroll-y {
+    overflow-x: auto;
+    overflow-y: scroll;
+    background-color: $off-blue;
+    max-height: 40vh;
+    @include media(xxl) {
+      flex-basis: 450%;
+    }
+
+    .img-container {
+      @include media(sm) {
+        flex: 1 0 auto;
+      }
+
+      img {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1.5rem 0;
+      }
+    }
+  }
 }
 
 .img-gallery {
-
   &.gallery-1,
   &.gallery-3 {
     @include media(sm) {
@@ -180,6 +206,10 @@ p {
 
     @include media(lg) {
       display: flex;
+    }
+
+    @include media(xxl) {
+      justify-content: space-between;
     }
   }
 
