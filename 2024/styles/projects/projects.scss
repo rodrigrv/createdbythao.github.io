@@ -1,18 +1,19 @@
 @import '../nav/navigation.scss';
 @import '../global/global.scss';
 
+main {
+  @include media(xxl) {
+    margin: 5rem 0 0 320px;
+  }
+}
+
 header,
 section {
   margin: 2.5rem 0;
 
   @include media(xxl) {
-    margin: 2.5rem 0 0 25rem;
-  }
-
-  @include media(1750px) {
-    margin: 2.5rem 0 2.5rem calc(160px + 40vw);
+    margin: 2.5rem auto;
     max-width: 1350px;
-    translate: -50%;
   }
 }
 
@@ -118,6 +119,12 @@ p {
 
     @include media(xxl) {
       flex: 0 1 100%;
+    }
+
+    &.f-basis-58 {
+      @include media(xxl) {
+        flex: 0 1 58%;
+      }
     }
   }
 }

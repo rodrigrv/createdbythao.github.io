@@ -280,6 +280,12 @@ footer .social-icons a {
   font-family: "Work Sans", sans-serif;
 }
 
+@media (min-width: 1440px) {
+  main {
+    margin: 5rem 0 0 320px;
+  }
+}
+
 header,
 section {
   margin: 2.5rem 0;
@@ -287,15 +293,8 @@ section {
 @media (min-width: 1440px) {
   header,
   section {
-    margin: 2.5rem 0 0 25rem;
-  }
-}
-@media (min-width: 1750px) {
-  header,
-  section {
-    margin: 2.5rem 0 2.5rem calc(160px + 40vw);
+    margin: 2.5rem auto;
     max-width: 1350px;
-    translate: -50%;
   }
 }
 
@@ -396,6 +395,11 @@ p {
 @media (min-width: 1440px) {
   .strategy-2 .copy-block {
     flex: 0 1 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .strategy-2 .copy-block.f-basis-58 {
+    flex: 0 1 58%;
   }
 }
 
