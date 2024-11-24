@@ -172,6 +172,10 @@ nav .subnav li {
   line-height: 0.5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   margin: calc(2rem + 55px) 0 0 0;
 }

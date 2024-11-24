@@ -1,5 +1,9 @@
 @import '../utilities/variables.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   margin: calc(2rem + 55px) 0 0 0;
 

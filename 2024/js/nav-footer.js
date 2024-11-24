@@ -4,7 +4,7 @@ const aside =
     <div class="logo-wrapper">
       <div class="img-container">
         <a href="../../Createdbythao/2024/index.html">
-          <img src="../../../Createdbythao/2024/images/th-logo-orange.svg" alt="Created By Thao" />
+          <img src="https://res.cloudinary.com/thaos-images/image/upload/v1732400447/th-logo-orange_hdhkoy.svg" alt="Created By Thao" />
         </a>
       </div>
       <button class="menu">Menu<span></span></button>
@@ -12,15 +12,15 @@ const aside =
     <nav>
       <button class="close">Close<span>&times;</span></button>
       <ul class="main-nav">
-        <li><a href="../../Createdbythao/2024/index.html#projects">Projects</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
         <ul class="subnav">
           <li><a href="/projects/destination-success.html">Destination Success</a></li>
-          <li><a href="/projects/texas-extra/credit.html">Texas Extra Credit</a></li>
+          <li><a href="/projects/texas-extra-credit.html">Texas Extra Credit</a></li>
           <li><a href="/projects/annual-report.html">Annual Report</a></li>
           <li><a href="/projects/gigis-party-decor">Gigi's Party Decor</a></li>
         </ul>
-        <li><a href="../../Createdbythao/2024/index.html#about">About</a></li>
-        <li><a href="../../Createdbythao/2024/index.html#contact">Contact</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
