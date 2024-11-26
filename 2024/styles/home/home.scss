@@ -208,3 +208,11 @@ header {
     }
   }
 }
+
+.contact-us {
+  .form {
+    &-copy {
+      font-family: $sans;
+    }
+  }
+}

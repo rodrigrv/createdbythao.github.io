@@ -101,7 +101,6 @@
           </div>
         </a>
       </div>
-
     </section>
 
     <section class="about" id="about">
@@ -139,7 +138,26 @@
           Want to start a project together or simply to say hi? Use the contact form below to contact me.
         </p>
       </div>
-      <div class="form"></div>
+      <div class="form">
+        <div class="form-wrapper">
+          <form method="POST" id="form">
+            <input type="hidden" name="access_key" value="60cebffe-6c5c-49ef-b1d2-c2c322ddf80a">
+            <input type="hidden" name="subject" value="New Submission from Website">
+            <input type="hidden" name="from_name" value="Created.By.Thao Website">
+            <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+            <input type="text" name="name" placeholder="Name" class="form-item form-name" required>
+            <input type="email" name="email" placeholder="Email" class="form-item form-email" required>
+            <textarea name="message" placeholder="Enter Message" class="form-item form-message" required></textarea>
+            <button type="submit" class="form-item form-submit">Submit</button>
+          </form>
+          <div id="result" class="heading-lockup"></div>
+        </div>
+        <div class="mailbox">
+          <div class="img-container">
+            <img src="https://res.cloudinary.com/thaos-images/image/upload/v1732400424/mailbox_skxk18.png" alt="Illustration of a mailbox opened up with mail inside.">
+          </div>
+        </div>
     </section>
   </main>
   <script type="text/javascript" src="js/nav-footer.js"></script>
