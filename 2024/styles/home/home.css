@@ -229,6 +229,12 @@ span {
   color: #272626;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .heading-lockup span {
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
@@ -484,4 +490,45 @@ header {
 }
 .about .about-copy h3 {
   color: #3B3F61;
+}
+
+.contact-us .form-copy {
+  font-family: "Work Sans", sans-serif;
+}
+.contact-us .form-item {
+  font-family: "Work Sans", sans-serif;
+  padding: 0.5rem;
+  color: #737373;
+  font-size: 1.25em;
+}
+.contact-us .form-submit {
+  max-width: 80px;
+  background: transparent;
+  border: 0px;
+  position: relative;
+  color: #272626;
+  padding: 0.5rem 0.25rem 0.25rem;
+  cursor: pointer;
+}
+.contact-us .form-submit::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  border-bottom: 8px solid #F0AE46;
+  bottom: -5px;
+  left: 0;
+}
+.contact-us .contact-form {
+  margin: 5rem auto;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+.contact-us .mailbox {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .contact-us .mailbox {
+    display: block;
+  }
 }/*# sourceMappingURL=home.css.map */

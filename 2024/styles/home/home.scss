@@ -101,6 +101,7 @@ header {
     justify-content: center;
     flex-flow: column wrap;
     position: relative;
+
     @include media(xl) {
       position: static;
     }
@@ -149,6 +150,7 @@ header {
   position: relative;
   z-index: 10;
   scroll-margin: 3rem 0 0;
+
   @include media(xxl) {
     max-width: 100%;
   }
@@ -213,6 +215,48 @@ header {
   .form {
     &-copy {
       font-family: $sans;
+    }
+
+    &-item {
+      font-family: $sans;
+      padding: .5rem;
+      // font-weight: $font-bold;
+      color: $gray;
+      font-size: $nav-project;
+    }
+
+    &-submit {
+      max-width: 80px;
+      background: transparent;
+      border: 0px;
+      position: relative;
+      color: $black;
+      padding: .5rem .25rem .25rem;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        border-bottom: 8px solid $gold;
+        bottom: -5px;
+        left: 0;
+      }
+    }
+  }
+
+  .contact-form {
+    margin: 5rem auto;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+  }
+
+  .mailbox {
+    display: none;
+
+    @include media(xl) {
+      display: block;
     }
   }
 }

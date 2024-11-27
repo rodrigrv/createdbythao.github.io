@@ -229,6 +229,12 @@ span {
   color: #272626;
 }
 
+image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .heading-lockup span {
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
