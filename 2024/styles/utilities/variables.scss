@@ -7,6 +7,8 @@ $orange: #D75A28;
 $white: #FFFFFF;
 $off-blue: #BBD3DD;
 $gray: #737373;
+$error: #BB2528;
+$success: #165B33;
 
 // Fonts
 $sans: 'Work Sans', sans-serif;
@@ -42,6 +44,16 @@ $heading-title: 2.5em;
 @mixin image-scroller($width) {
   width: $width;
   flex: 1 0 auto;
+}
+
+@mixin underline {
+  content: "";
+    width: 100%;
+    position: absolute;
+    border-bottom: 8px solid $gold;
+    bottom: -5px;
+    left: 0;
+    transition: all .3s ease-in-out;
 }
 
 // Breakpoints

@@ -139,12 +139,7 @@ header, section {
       }
 
       &::after {
-        content: "";
-        width: 100%;
-        position: absolute;
-        border-bottom: 5px solid orange;
-        bottom: -5px;
-        left: 0;
+        @include underline;
       }
     }
 
@@ -237,9 +232,15 @@ header, section {
     &-item {
       font-family: $sans;
       padding: .5rem;
-      // font-weight: $font-bold;
       color: $gray;
       font-size: $nav-project;
+      border: 0;
+      border-radius: 3px;
+      outline: 1.5px solid $gray;
+
+      &:focus {
+        outline: 1.5px solid $gold;
+      }
     }
 
     &-name {
@@ -260,6 +261,24 @@ header, section {
       }
     }
 
+    &-name:not(:placeholder-shown):valid, 
+    &-email:not(:placeholder-shown):valid, 
+    &-message:not(:placeholder-shown):valid {
+      outline-color: $success;
+    }
+    
+    &-name:not(:placeholder-shown):invalid, 
+    &-email:not(:placeholder-shown):invalid, 
+    &-message:not(:placeholder-shown):invalid {
+      outline-color: $error;
+    }
+    
+    &-name:focus:invalid, 
+    &-email:focus:invalid, 
+    &-message:focus:invalid {
+      outline-color: $gold;
+    }
+
     &-submit {
       max-width: 80px;
       background: transparent;
@@ -267,6 +286,7 @@ header, section {
       position: relative;
       color: $black;
       padding: .5rem .25rem .25rem;
+      outline: 0;
       cursor: pointer;
 
       @include media (lg) {
@@ -274,12 +294,15 @@ header, section {
       }
 
       &::after {
-        content: "";
-        width: 100%;
-        position: absolute;
-        border-bottom: 8px solid $gold;
-        bottom: -5px;
-        left: 0;
+        @include underline;
+      }
+
+      &:hover {
+        &::after {
+          top: 0;
+          background: $gold;
+          z-index: -1;
+        }
       }
     }
   }

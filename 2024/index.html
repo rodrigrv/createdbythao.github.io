@@ -141,15 +141,15 @@
       <div class="contact-split">
         <div class="form">
           <div class="form-wrapper">
-            <form method="POST" id="form" class="contact-form">
+            <form method="POST" id="form" class="contact-form" autocomplete="off">
               <input type="hidden" name="access_key" value="60cebffe-6c5c-49ef-b1d2-c2c322ddf80a">
               <input type="hidden" name="subject" value="New Submission from Website">
               <input type="hidden" name="from_name" value="Created.By.Thao Form">
               <input type="checkbox" name="botcheck" id="" style="display: none;">
 
-              <input type="text" name="name" placeholder="Name" class="form-item form-name" required>
-              <input type="email" name="email" placeholder="Email" class="form-item form-email" required>
-              <textarea name="message" placeholder="Enter Message" cols="10" rows="10" class="form-item form-message" required></textarea>
+              <input type="text" name="name" placeholder="Name" class="form-item form-name" pattern="/^\s?(.*?)\s?$/gm" required>
+              <input type="email" name="email" placeholder="Email" class="form-item form-email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+              <textarea name="message" placeholder="Enter Message" cols="10" rows="10" class="form-item form-message" pattern="/^\s?(.*?)\s?$/gm" required></textarea>
               <button type="submit" class="form-item form-submit">Submit</button>
             </form>
             <div id="result" class="heading-lockup"></div>

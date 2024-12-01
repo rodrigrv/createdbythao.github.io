@@ -215,13 +215,6 @@ section {
   margin: 0 0 5rem;
 }
 
-@media (min-width: 1440px) {
-  header,
-  .contact-us {
-    margin: 0 0 5rem 25rem;
-  }
-}
-
 p,
 strong,
 span {

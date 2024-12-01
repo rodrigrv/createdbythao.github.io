@@ -427,9 +427,10 @@ header {
   content: "";
   width: 100%;
   position: absolute;
-  border-bottom: 5px solid orange;
+  border-bottom: 8px solid #F0AE46;
   bottom: -5px;
   left: 0;
+  transition: all 0.3s ease-in-out;
 }
 .project .text-container p {
   margin: 0 0.75rem 0.75rem 0;
@@ -514,6 +515,12 @@ header {
   padding: 0.5rem;
   color: #737373;
   font-size: 1.25em;
+  border: 0;
+  border-radius: 3px;
+  outline: 1.5px solid #737373;
+}
+.contact-us .form-item:focus {
+  outline: 1.5px solid #F0AE46;
 }
 @media (min-width: 1024px) {
   .contact-us .form-name {
@@ -530,6 +537,21 @@ header {
     grid-area: message;
   }
 }
+.contact-us .form-name:not(:-moz-placeholder-shown):valid, .contact-us .form-email:not(:-moz-placeholder-shown):valid, .contact-us .form-message:not(:-moz-placeholder-shown):valid {
+  outline-color: #165B33;
+}
+.contact-us .form-name:not(:placeholder-shown):valid, .contact-us .form-email:not(:placeholder-shown):valid, .contact-us .form-message:not(:placeholder-shown):valid {
+  outline-color: #165B33;
+}
+.contact-us .form-name:not(:-moz-placeholder-shown):invalid, .contact-us .form-email:not(:-moz-placeholder-shown):invalid, .contact-us .form-message:not(:-moz-placeholder-shown):invalid {
+  outline-color: #BB2528;
+}
+.contact-us .form-name:not(:placeholder-shown):invalid, .contact-us .form-email:not(:placeholder-shown):invalid, .contact-us .form-message:not(:placeholder-shown):invalid {
+  outline-color: #BB2528;
+}
+.contact-us .form-name:focus:invalid, .contact-us .form-email:focus:invalid, .contact-us .form-message:focus:invalid {
+  outline-color: #F0AE46;
+}
 .contact-us .form-submit {
   max-width: 80px;
   background: transparent;
@@ -537,6 +559,7 @@ header {
   position: relative;
   color: #272626;
   padding: 0.5rem 0.25rem 0.25rem;
+  outline: 0;
   cursor: pointer;
 }
 @media (min-width: 1024px) {
@@ -551,6 +574,12 @@ header {
   border-bottom: 8px solid #F0AE46;
   bottom: -5px;
   left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.contact-us .form-submit:hover::after {
+  top: 0;
+  background: #F0AE46;
+  z-index: -1;
 }
 .contact-us .contact-form {
   display: flex;
