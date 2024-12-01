@@ -3,6 +3,22 @@
 
 header {
   scroll-margin: 5rem 0 0;
+  @include media(md) {
+    margin: 5rem 0 0;
+  }
+}
+
+main {
+  @include media(md) {
+    margin: 0 0 0 320px;
+    overflow-x: hidden;
+  }
+}
+
+header, section {
+  @include media(xxl) {
+    margin: 5rem auto;
+  }
 }
 
 .projects {
@@ -23,13 +39,16 @@ header {
 
   @include media(xxl) {
     align-items: stretch;
-    margin: 2rem 1rem 5rem 25rem;
+    margin: 5rem auto;
   }
 }
 
 .project {
   flex: 1 0 auto;
   scroll-snap-align: start;
+  @include media(xxl) {
+    margin: 0 1rem;
+  }
 
   &.ds {
     .bg-container {
@@ -151,15 +170,11 @@ header {
   z-index: 10;
   scroll-margin: 3rem 0 0;
 
-  @include media(xxl) {
-    max-width: 100%;
-  }
-
   &::before {
     @include media(md) {
       content: "";
       background: #F0AE46;
-      width: 100%;
+      width: 300%;
       height: 100%;
       left: -95%;
       top: 0;
@@ -190,10 +205,6 @@ header {
         margin: 0 auto;
         display: block;
         max-width: 100%;
-
-        @include media(xxl) {
-          margin: 0 5rem 0 auto;
-        }
       }
     }
 
@@ -212,7 +223,13 @@ header {
 }
 
 .contact-us {
+  scroll-margin: 6rem;
+
   .form {
+    @include media(xl) {
+      flex: 0 1 100%;
+    }
+
     &-copy {
       font-family: $sans;
     }
@@ -225,6 +242,24 @@ header {
       font-size: $nav-project;
     }
 
+    &-name {
+      @include media(lg) {
+        grid-area: name;
+      }
+    }
+
+    &-email {
+      @include media(lg) {
+        grid-area: email;
+      }
+    }
+
+    &-message {
+      @include media(lg) {
+        grid-area: message;
+      }
+    }
+
     &-submit {
       max-width: 80px;
       background: transparent;
@@ -233,6 +268,10 @@ header {
       color: $black;
       padding: .5rem .25rem .25rem;
       cursor: pointer;
+
+      @include media (lg) {
+        grid-area: submit;
+      }
 
       &::after {
         content: "";
@@ -246,10 +285,17 @@ header {
   }
 
   .contact-form {
-    margin: 5rem auto;
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
+
+    @include media(lg) {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "message message"
+        "submit submit";
+    }
   }
 
   .mailbox {
@@ -257,6 +303,16 @@ header {
 
     @include media(xl) {
       display: block;
+      flex: 0 1 100%;
+    }
+  }
+
+  .contact-split {
+    @include media(xl) {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1rem;
+      margin: 5rem auto;
     }
   }
 }

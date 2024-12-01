@@ -215,13 +215,6 @@ section {
   margin: 0 0 5rem;
 }
 
-@media (min-width: 1440px) {
-  header,
-  .contact-us {
-    margin: 0 0 5rem 25rem;
-  }
-}
-
 p,
 strong,
 span {
@@ -293,6 +286,24 @@ footer .social-icons a {
 header {
   scroll-margin: 5rem 0 0;
 }
+@media (min-width: 769px) {
+  header {
+    margin: 5rem 0 0;
+  }
+}
+
+@media (min-width: 769px) {
+  main {
+    margin: 0 0 0 320px;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 1440px) {
+  header, section {
+    margin: 5rem auto;
+  }
+}
 
 .projects {
   display: flex;
@@ -314,13 +325,18 @@ header {
 @media (min-width: 1440px) {
   .projects {
     align-items: stretch;
-    margin: 2rem 1rem 5rem 25rem;
+    margin: 5rem auto;
   }
 }
 
 .project {
   flex: 1 0 auto;
   scroll-snap-align: start;
+}
+@media (min-width: 1440px) {
+  .project {
+    margin: 0 1rem;
+  }
 }
 .project.ds .bg-container {
   background-image: url("../../../2024/images/hp-dsbg-m.png");
@@ -436,16 +452,11 @@ header {
   z-index: 10;
   scroll-margin: 3rem 0 0;
 }
-@media (min-width: 1440px) {
-  .about {
-    max-width: 100%;
-  }
-}
 @media (min-width: 769px) {
   .about::before {
     content: "";
     background: #F0AE46;
-    width: 100%;
+    width: 300%;
     height: 100%;
     left: -95%;
     top: 0;
@@ -478,11 +489,6 @@ header {
   display: block;
   max-width: 100%;
 }
-@media (min-width: 1440px) {
-  .about-wrapper .img-container img {
-    margin: 0 5rem 0 auto;
-  }
-}
 @media (min-width: 541px) {
   .about-wrapper .about-me {
     flex: 1 0 45%;
@@ -492,6 +498,14 @@ header {
   color: #3B3F61;
 }
 
+.contact-us {
+  scroll-margin: 6rem;
+}
+@media (min-width: 1200px) {
+  .contact-us .form {
+    flex: 0 1 100%;
+  }
+}
 .contact-us .form-copy {
   font-family: "Work Sans", sans-serif;
 }
@@ -500,6 +514,21 @@ header {
   padding: 0.5rem;
   color: #737373;
   font-size: 1.25em;
+}
+@media (min-width: 1024px) {
+  .contact-us .form-name {
+    grid-area: name;
+  }
+}
+@media (min-width: 1024px) {
+  .contact-us .form-email {
+    grid-area: email;
+  }
+}
+@media (min-width: 1024px) {
+  .contact-us .form-message {
+    grid-area: message;
+  }
 }
 .contact-us .form-submit {
   max-width: 80px;
@@ -510,6 +539,11 @@ header {
   padding: 0.5rem 0.25rem 0.25rem;
   cursor: pointer;
 }
+@media (min-width: 1024px) {
+  .contact-us .form-submit {
+    grid-area: submit;
+  }
+}
 .contact-us .form-submit::after {
   content: "";
   width: 100%;
@@ -519,10 +553,15 @@ header {
   left: 0;
 }
 .contact-us .contact-form {
-  margin: 5rem auto;
   display: flex;
   flex-flow: column wrap;
   gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .contact-us .contact-form {
+    display: grid;
+    grid-template-areas: "name email" "message message" "submit submit";
+  }
 }
 .contact-us .mailbox {
   display: none;
@@ -530,5 +569,14 @@ header {
 @media (min-width: 1200px) {
   .contact-us .mailbox {
     display: block;
+    flex: 0 1 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-us .contact-split {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 5rem auto;
   }
 }/*# sourceMappingURL=home.css.map */

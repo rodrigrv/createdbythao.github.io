@@ -39,13 +39,6 @@ section {
   margin: 0 0 5rem;
 }
 
-header,
-.contact-us {
-  @include media(xxl) {
-    margin: 0 0 5rem 25rem;
-  }
-}
-
 p,
 strong,
 span {
