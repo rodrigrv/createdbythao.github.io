@@ -300,7 +300,8 @@ header {
 }
 
 @media (min-width: 1440px) {
-  header, section {
+  header,
+  section {
     margin: 5rem auto;
   }
 }
@@ -417,10 +418,22 @@ header {
   font-weight: bold;
   margin: 1rem auto 2rem;
   position: relative;
+  transition: background-color 0.3s 0.3s ease-in-out;
 }
 @media (min-width: 1200px) {
   .project .text-container h2 {
     font-size: clamp(1.56em, 2.5vw, 3.1em);
+  }
+}
+.project .text-container h2:hover {
+  background-color: #F0AE46;
+}
+.project .text-container h2:hover::after {
+  bottom: 1.5rem;
+}
+@media (min-width: 1200px) {
+  .project .text-container h2:hover::after {
+    bottom: clamp(1em, 2vw, 2em);
   }
 }
 .project .text-container h2::after {
@@ -428,9 +441,10 @@ header {
   width: 100%;
   position: absolute;
   border-bottom: 8px solid #F0AE46;
-  bottom: -5px;
+  border-radius: 3px;
+  bottom: -7px;
   left: 0;
-  transition: all 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
 }
 .project .text-container p {
   margin: 0 0.75rem 0.75rem 0;
@@ -503,6 +517,25 @@ header {
   scroll-margin: 6rem;
 }
 @media (min-width: 1200px) {
+  .contact-us .contact-split {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 5rem auto;
+  }
+}
+.contact-us .contact-form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .contact-us .contact-form {
+    display: grid;
+    grid-template-areas: "name email" "message message" "submit submit";
+  }
+}
+@media (min-width: 1200px) {
   .contact-us .form {
     flex: 0 1 100%;
   }
@@ -561,6 +594,7 @@ header {
   padding: 0.5rem 0.25rem 0.25rem;
   outline: 0;
   cursor: pointer;
+  transition: background-color 0.3s 0.3s ease-in-out;
 }
 @media (min-width: 1024px) {
   .contact-us .form-submit {
@@ -572,25 +606,17 @@ header {
   width: 100%;
   position: absolute;
   border-bottom: 8px solid #F0AE46;
+  border-radius: 3px;
   bottom: -5px;
   left: 0;
-  transition: all 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
+}
+.contact-us .form-submit:hover {
+  background-color: #F0AE46;
 }
 .contact-us .form-submit:hover::after {
-  top: 0;
-  background: #F0AE46;
+  bottom: 1.5rem;
   z-index: -1;
-}
-.contact-us .contact-form {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 1rem;
-}
-@media (min-width: 1024px) {
-  .contact-us .contact-form {
-    display: grid;
-    grid-template-areas: "name email" "message message" "submit submit";
-  }
 }
 .contact-us .mailbox {
   display: none;
@@ -599,13 +625,5 @@ header {
   .contact-us .mailbox {
     display: block;
     flex: 0 1 100%;
-  }
-}
-@media (min-width: 1200px) {
-  .contact-us .contact-split {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 1rem;
-    margin: 5rem auto;
   }
 }/*# sourceMappingURL=home.css.map */

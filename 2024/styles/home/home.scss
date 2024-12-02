@@ -3,6 +3,7 @@
 
 header {
   scroll-margin: 5rem 0 0;
+
   @include media(md) {
     margin: 5rem 0 0;
   }
@@ -15,7 +16,8 @@ main {
   }
 }
 
-header, section {
+header,
+section {
   @include media(xxl) {
     margin: 5rem auto;
   }
@@ -46,6 +48,7 @@ header, section {
 .project {
   flex: 1 0 auto;
   scroll-snap-align: start;
+
   @include media(xxl) {
     margin: 0 1rem;
   }
@@ -133,13 +136,25 @@ header, section {
       font-weight: $font-bold;
       margin: 1rem auto 2rem;
       position: relative;
+      transition: background-color .3s .3s ease-in-out;
 
       @include media(xl) {
         font-size: clamp(1.56em, 2.5vw, 3.1em);
       }
 
+      &:hover {
+        background-color: $gold;
+
+        &::after {
+          bottom: 1.5rem;
+          @include media(xl) {
+            bottom: clamp(1em, 2vw, 2em);
+          }
+        }
+      }
+
       &::after {
-        @include underline;
+        @include underline(-7px);
       }
     }
 
@@ -220,6 +235,29 @@ header, section {
 .contact-us {
   scroll-margin: 6rem;
 
+  .contact-split {
+    @include media(xl) {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1rem;
+      margin: 5rem auto;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+
+    @include media(lg) {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "message message"
+        "submit submit";
+    }
+  }
+
   .form {
     @include media(xl) {
       flex: 0 1 100%;
@@ -261,20 +299,20 @@ header, section {
       }
     }
 
-    &-name:not(:placeholder-shown):valid, 
-    &-email:not(:placeholder-shown):valid, 
+    &-name:not(:placeholder-shown):valid,
+    &-email:not(:placeholder-shown):valid,
     &-message:not(:placeholder-shown):valid {
       outline-color: $success;
     }
-    
-    &-name:not(:placeholder-shown):invalid, 
-    &-email:not(:placeholder-shown):invalid, 
+
+    &-name:not(:placeholder-shown):invalid,
+    &-email:not(:placeholder-shown):invalid,
     &-message:not(:placeholder-shown):invalid {
       outline-color: $error;
     }
-    
-    &-name:focus:invalid, 
-    &-email:focus:invalid, 
+
+    &-name:focus:invalid,
+    &-email:focus:invalid,
     &-message:focus:invalid {
       outline-color: $gold;
     }
@@ -288,36 +326,24 @@ header, section {
       padding: .5rem .25rem .25rem;
       outline: 0;
       cursor: pointer;
+      transition: background-color .3s .3s ease-in-out;
 
       @include media (lg) {
         grid-area: submit;
       }
 
       &::after {
-        @include underline;
+        @include underline(-5px);
       }
 
       &:hover {
+        background-color: $gold;
+
         &::after {
-          top: 0;
-          background: $gold;
+          bottom: 1.5rem;
           z-index: -1;
         }
       }
-    }
-  }
-
-  .contact-form {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-
-    @include media(lg) {
-      display: grid;
-      grid-template-areas:
-        "name email"
-        "message message"
-        "submit submit";
     }
   }
 
@@ -327,15 +353,6 @@ header, section {
     @include media(xl) {
       display: block;
       flex: 0 1 100%;
-    }
-  }
-
-  .contact-split {
-    @include media(xl) {
-      display: flex;
-      justify-content: space-evenly;
-      gap: 1rem;
-      margin: 5rem auto;
     }
   }
 }
