@@ -418,33 +418,28 @@ header {
   font-weight: bold;
   margin: 1rem auto 2rem;
   position: relative;
-  transition: background-color 0.3s 0.3s ease-in-out;
+  isolation: isolate;
+  z-index: 5;
 }
 @media (min-width: 1200px) {
   .project .text-container h2 {
     font-size: clamp(1.56em, 2.5vw, 3.1em);
   }
 }
-.project .text-container h2:hover {
-  background-color: #F0AE46;
-}
-.project .text-container h2:hover::after {
-  bottom: 1.5rem;
-}
-@media (min-width: 1200px) {
-  .project .text-container h2:hover::after {
-    bottom: clamp(1em, 2vw, 2em);
-  }
-}
 .project .text-container h2::after {
   content: "";
   width: 100%;
   position: absolute;
-  border-bottom: 8px solid #F0AE46;
+  background-color: #F0AE46;
+  height: 8px;
   border-radius: 3px;
-  bottom: -7px;
+  bottom: -5px;
   left: 0;
-  transition: bottom 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.project .text-container h2:hover::after {
+  height: 130%;
 }
 .project .text-container p {
   margin: 0 0.75rem 0.75rem 0;
@@ -594,7 +589,9 @@ header {
   padding: 0.5rem 0.25rem 0.25rem;
   outline: 0;
   cursor: pointer;
-  transition: background-color 0.3s 0.3s ease-in-out;
+  position: relative;
+  z-index: 5;
+  font-weight: bold;
 }
 @media (min-width: 1024px) {
   .contact-us .form-submit {
@@ -605,18 +602,16 @@ header {
   content: "";
   width: 100%;
   position: absolute;
-  border-bottom: 8px solid #F0AE46;
+  background-color: #F0AE46;
+  height: 8px;
   border-radius: 3px;
   bottom: -5px;
   left: 0;
-  transition: bottom 0.3s ease-in-out;
-}
-.contact-us .form-submit:hover {
-  background-color: #F0AE46;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
 }
 .contact-us .form-submit:hover::after {
-  bottom: 1.5rem;
-  z-index: -1;
+  height: 110%;
 }
 .contact-us .mailbox {
   display: none;

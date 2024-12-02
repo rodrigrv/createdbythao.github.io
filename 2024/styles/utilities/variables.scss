@@ -46,15 +46,17 @@ $heading-title: 2.5em;
   flex: 1 0 auto;
 }
 
-@mixin underline($bottom) {
+@mixin underline {
   content: "";
     width: 100%;
     position: absolute;
-    border-bottom: 8px solid $gold;
+    background-color: $gold;
+    height: 8px;
     border-radius: 3px;
-    bottom: $bottom;
+    bottom: -5px;
     left: 0;
-    transition: bottom .3s ease-in-out;
+    transition: all .5s ease-in-out;
+    z-index: -1;
 }
 
 // Breakpoints
