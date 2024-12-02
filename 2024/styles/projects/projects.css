@@ -315,13 +315,19 @@ img {
 }
 
 h3 {
-  font-size: 1.25em;
+  font-size: 1.55em;
   font-family: "Hepta Slab", serif;
   color: #D75A28;
 }
 
 p {
   line-height: 1.2;
+}
+p a {
+  color: #3B3F61;
+}
+p a:visited {
+  color: #3B3F61;
 }
 
 @media (min-width: 1200px) {
@@ -457,6 +463,7 @@ p {
   overflow-y: scroll;
   background-color: #BBD3DD;
   max-height: 40vh;
+  margin: 0 0 2.5rem;
 }
 @media (min-width: 1440px) {
   .img-scroll.scroll-y {

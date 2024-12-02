@@ -29,13 +29,21 @@ img {
 }
 
 h3 {
-  font-size: $nav-project;
+  font-size: $heading3;
   font-family: $serif;
   color: $orange;
 }
 
 p {
   line-height: 1.2;
+
+  a {
+    color: $dark-blue;
+
+    &:visited {
+      color: $dark-blue;
+    }
+  }
 }
 
 .intro {
@@ -181,6 +189,7 @@ p {
     overflow-y: scroll;
     background-color: $off-blue;
     max-height: 40vh;
+    margin: 0 0 2.5rem;
     @include media(xxl) {
       flex-basis: 450%;
     }
