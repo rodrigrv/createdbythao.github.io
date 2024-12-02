@@ -435,7 +435,7 @@ header {
   border-radius: 3px;
   bottom: -5px;
   left: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: -1;
 }
 .project .text-container h2:hover::after {
@@ -607,7 +607,7 @@ header {
   border-radius: 3px;
   bottom: -5px;
   left: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: -1;
 }
 .contact-us .form-submit:hover::after {
