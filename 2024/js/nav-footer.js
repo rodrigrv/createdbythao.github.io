@@ -3,7 +3,7 @@ const aside =
   <div class="nav-container">
     <div class="logo-wrapper">
       <div class="img-container">
-        <a href="/index.html">
+        <a href="/2024/index.html">
           <img src="https://res.cloudinary.com/thaos-images/image/upload/v1732400447/th-logo-orange_hdhkoy.svg" alt="Created By Thao" />
         </a>
       </div>
@@ -19,8 +19,8 @@ const aside =
           <li><a href="/2024/projects/annual-report.html">Annual Report</a></li>
           <li><a href="/2024/projects/gigis-party-decor">Gigi's Party Decor</a></li>
         </ul>
-        <li><a href="/index.html#about">About</a></li>
-        <li><a href="/index.html#contact">Contact</a></li>
+        <li><a href="/2024/index.html#about">About</a></li>
+        <li><a href="/2024/index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
