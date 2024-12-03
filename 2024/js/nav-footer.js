@@ -12,7 +12,7 @@ const aside =
     <nav>
       <button class="close">Close<span>&times;</span></button>
       <ul class="main-nav">
-        <li><a href="/index.html#projects">Projects</a></li>
+        <li><a href="/2024/index.html#projects">Projects</a></li>
         <ul class="subnav">
           <li><a href="/2024/projects/destination-success.html">Destination Success</a></li>
           <li><a href="/2024/projects/texas-extra-credit.html">Texas Extra Credit</a></li>
