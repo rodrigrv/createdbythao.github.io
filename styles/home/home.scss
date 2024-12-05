@@ -1,0 +1,353 @@
+@import '../nav/navigation.scss';
+@import '../global/global.scss';
+
+header {
+  scroll-margin: 5rem 0 0;
+
+  @include media(md) {
+    margin: 5rem 0 0;
+  }
+}
+
+main {
+  @include media(md) {
+    margin: 0 0 0 320px;
+    overflow-x: hidden;
+  }
+}
+
+header,
+section {
+  @include media(xxl) {
+    margin: 5rem auto;
+  }
+}
+
+.projects {
+  display: flex;
+  overflow: scroll;
+  margin: 2rem 0 2rem 1rem;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding: 0 0 1.5rem;
+
+  @include media(xl) {
+    flex-flow: column wrap;
+    margin: 2rem 2rem 5rem 1rem;
+    gap: 7rem;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  @include media(xxl) {
+    align-items: stretch;
+    margin: 5rem auto;
+  }
+}
+
+.project {
+  flex: 1 0 auto;
+  scroll-snap-align: start;
+
+  @include media(xxl) {
+    margin: 0 1rem;
+  }
+
+  &.ds {
+    .bg-container {
+      background-image: url("../../../2024/images/hp-dsbg-m.png");
+
+      @include media(xl) {
+        background-image: url("../../../2024/images/hp-dsbg-d.png");
+      }
+    }
+  }
+
+  &.tec {
+    .bg-container {
+      background-image: url("../../../2024/images/hp-tecbg-m.png");
+
+      @include media(xl) {
+        background-image: url("../../../2024/images/hp-tecbg-d.png");
+      }
+    }
+  }
+
+  &.ar {
+    .bg-container {
+      background-image: url("../../../2024/images/hp-reportbg-m.png");
+
+      @include media(xl) {
+        background-image: url("../../../2024/images/hp-reportbg-d.png");
+      }
+
+    }
+  }
+
+  &.gigi {
+    .bg-container {
+      background-image: url("../../../2024/images/hp-gigibg-m.png");
+
+      @include media(xl) {
+        background-image: url("../../../2024/images/hp-gigibg-d.png");
+      }
+    }
+  }
+
+  .bg-container {
+    padding: 1rem 1rem 0;
+    border-radius: 6px;
+    @include hp-bg-images;
+
+    @include media(xl) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      max-width: fit-content;
+
+      @include media(xl) {
+        max-width: 26vw;
+      }
+    }
+  }
+
+  .text-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    position: relative;
+
+    @include media(xl) {
+      position: static;
+    }
+
+    h2 {
+      color: $black;
+      justify-content: center;
+      font-family: $sans;
+      font-size: $nav-heading;
+      font-weight: $font-bold;
+      margin: 1rem auto 2rem;
+      position: relative;
+      isolation: isolate;
+      z-index: 5;
+
+      @include media(xl) {
+        font-size: clamp(1.56em, 2.5vw, 3.1em);
+      }
+
+      &::after {
+        @include underline;
+      }
+
+      &:hover {
+        &::after {
+          height: 130%;
+        }
+      }
+    }
+
+    p {
+      margin: 0 .75rem .75rem 0;
+      text-align: right;
+      font-family: $sans;
+
+      @include media(xl) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0 2rem 1.3vw 0;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+.about {
+  background: $gold;
+  position: relative;
+  z-index: 10;
+  scroll-margin: 3rem 0 0;
+
+  &::before {
+    @include media(md) {
+      content: "";
+      background: #F0AE46;
+      width: 300%;
+      height: 100%;
+      left: -95%;
+      top: 0;
+      display: block;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  &-wrapper {
+    padding: 2rem 1rem;
+
+    @include media(sm) {
+      display: flex;
+      gap: 1rem;
+    }
+
+    @include media(xxl) {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 5rem 1rem;
+    }
+
+    .img-container {
+      margin: 2rem auto 3rem;
+
+      img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+    }
+
+    .about-me {
+      @include media(sm) {
+        flex: 1 0 45%;
+      }
+    }
+  }
+
+  .about-copy {
+    h3 {
+      color: $dark-blue;
+    }
+  }
+}
+
+.contact-us {
+  scroll-margin: 6rem;
+
+  .contact-split {
+    @include media(xl) {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1rem;
+      margin: 5rem auto;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+
+    @include media(lg) {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "message message"
+        "submit submit";
+    }
+  }
+
+  .form {
+    @include media(xl) {
+      flex: 0 1 100%;
+    }
+
+    &-copy {
+      font-family: $sans;
+    }
+
+    &-item {
+      font-family: $sans;
+      padding: .5rem;
+      color: $gray;
+      font-size: $nav-project;
+      border: 0;
+      border-radius: 3px;
+      outline: 1.5px solid $gray;
+
+      &:focus {
+        outline: 1.5px solid $gold;
+      }
+    }
+
+    &-name {
+      @include media(lg) {
+        grid-area: name;
+      }
+    }
+
+    &-email {
+      @include media(lg) {
+        grid-area: email;
+      }
+    }
+
+    &-message {
+      @include media(lg) {
+        grid-area: message;
+      }
+    }
+
+    &-name:not(:placeholder-shown):valid,
+    &-email:not(:placeholder-shown):valid,
+    &-message:not(:placeholder-shown):valid {
+      outline-color: $success;
+    }
+
+    &-name:not(:placeholder-shown):invalid,
+    &-email:not(:placeholder-shown):invalid,
+    &-message:not(:placeholder-shown):invalid {
+      outline-color: $error;
+    }
+
+    &-name:focus:invalid,
+    &-email:focus:invalid,
+    &-message:focus:invalid {
+      outline-color: $gold;
+    }
+
+    &-submit {
+      max-width: 80px;
+      background: transparent;
+      border: 0px;
+      position: relative;
+      color: $black;
+      padding: .5rem .25rem .25rem;
+      outline: 0;
+      cursor: pointer;
+      position: relative;
+      z-index: 5;
+      font-weight: $font-bold;
+
+      @include media (lg) {
+        grid-area: submit;
+      }
+
+      &::after {
+        @include underline;
+      }
+
+      &:hover {
+        &::after {
+          height: 110%;
+        }
+      }
+    }
+  }
+
+  .mailbox {
+    display: none;
+
+    @include media(xl) {
+      display: block;
+      flex: 0 1 100%;
+    }
+  }
+}

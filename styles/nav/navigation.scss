@@ -1,0 +1,187 @@
+@import '../utilities/variables.scss';
+
+body {
+  position: relative;
+}
+
+.nav-close {
+  overflow-y: scroll;
+}
+
+.nav-open {
+  overflow-y: hidden;
+}
+
+aside {
+  background: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: $off-white 0px 3px 6px;
+  z-index: 100;
+
+  @include media(md) {
+    width: 320px;
+    height: 100vh;
+    max-height: 100%;
+  }
+}
+
+.nav-container {
+  position: relative;
+  margin: 0;
+  padding: .7rem 1.5rem;
+
+  @include media(md) {
+    padding: 5rem 1.5rem 1rem;
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    max-width: 30px;
+    margin: 0;
+    display: block;
+    width: 100%;
+
+    @include media(md) {
+      margin: 0 0 0 1rem;
+      max-width: 120px;
+    }
+  }
+
+  .menu {
+    color: $orange;
+    font-family: $serif;
+    font-weight: $font-bold;
+    padding: 0 2rem 0 0;
+    position: relative;
+    cursor: pointer;
+    padding-block: 0;
+    border: 0;
+    background: white;
+
+    @include media(md) {
+      display: none;
+    }
+
+    span {
+      @include nav-burger(6px, 15px);
+      margin: 0 0 0 0.5rem;
+
+      &::before,
+      &::after {
+        @include nav-burger(-8px, 20px);
+        content: "";
+      }
+
+      &::after {
+        top: 5px;
+      }
+    }
+  }
+}
+
+nav {
+  background: $gold;
+  display: flex;
+  flex-flow: column;
+  font-family: $sans;
+  padding: 1.5rem 2rem 3rem 1.5rem;
+  position: absolute;
+  top: 0;
+  right: -100vw;
+  text-align: right;
+  height: 100vh;
+  transition: .5s right ease-in-out;
+  box-shadow: $dark-blue -5px 0px 15px;
+  z-index: 100;
+
+  @include media(md) {
+    right: 0;
+    position: relative;
+    background: white;
+    text-align: left;
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    font-weight: $font-bold;
+    font-size: $nav-heading;
+    margin: 0 0 1.5rem;
+  }
+
+  a {
+    color: $dark-blue;
+    text-decoration: none;
+  }
+
+  .main-nav {
+    margin: 2rem 0 0;
+  }
+
+  .subnav {
+    margin: 0 0 2rem;
+
+    li {
+      font-size: $nav-project;
+      font-weight: normal;
+      margin: 0 0 1rem 1rem;
+    }
+  }
+
+  // .social-icons {
+  //   position: absolute;
+  //   bottom: 20vh;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   width: min(80%, 30rem);
+  //   gap: 1rem;
+
+  //   @include media(md) {
+  //     bottom: 25vh;
+  //     justify-content: flex-start;
+  //     width: 0;
+  //   }
+  // }
+}
+
+.close {
+  cursor: pointer;
+  color: $dark-blue;
+  font-family: $serif;
+  font-weight: $font-bold;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-block: 0;
+  background: initial;
+  border: 0;
+  padding-inline: 0;
+
+  @include media(md) {
+    display: none;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 0 0 0.75rem;
+    color: $off-white;
+    font-size: 2.5em;
+    font-weight: $font-normal;
+    line-height: 0.5;
+  }
+}

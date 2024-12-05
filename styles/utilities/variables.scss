@@ -1,0 +1,113 @@
+// Colors
+$gold: #F0AE46;
+$off-white: #E7E5EA;
+$black: #272626;
+$dark-blue: #3B3F61;
+$orange: #D75A28;
+$white: #FFFFFF;
+$off-blue: #BBD3DD;
+$gray: #737373;
+$error: #BB2528;
+$success: #165B33;
+
+// Fonts
+$sans: 'Work Sans', sans-serif;
+$serif: 'Hepta Slab', serif;
+
+// Weights
+$font-bold: bold;
+$font-normal: normal;
+$font-light: lighter;
+
+// Sizes
+$nav-heading: 1.56em;
+$nav-project: 1.25em;
+$heading3: 1.55em;
+$heading-title: 2.5em;
+
+// Mixins
+@mixin nav-burger($top, $width) {
+  position: absolute;
+  border-top: 2px solid $gold;
+  right: 0;
+  top: $top;
+  width: $width;
+  cursor: pointer;
+}
+
+@mixin hp-bg-images {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center;
+}
+
+@mixin image-scroller($width) {
+  width: $width;
+  flex: 1 0 auto;
+}
+
+@mixin underline {
+  content: "";
+    width: 100%;
+    position: absolute;
+    background-color: $gold;
+    height: 8px;
+    border-radius: 3px;
+    bottom: -5px;
+    left: 0;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+// Breakpoints
+$bp-xsm: 0px;
+$bp-sm: 541px;
+$bp-md: 769px;
+$bp-lg: 1024px;
+$bp-xl: 1200px;
+$bp-xxl: 1440px;
+
+@mixin media ($point) {
+  @if $point ==xsm {
+    @media (min-width: $bp-xsm) {
+      @content;
+    }
+  }
+
+  @else if $point ==sm {
+    @media (min-width: $bp-sm) {
+      @content;
+    }
+  }
+
+  @else if $point ==md {
+    @media (min-width: $bp-md) {
+      @content;
+    }
+  }
+
+  @else if $point ==lg {
+    @media (min-width: $bp-lg) {
+      @content;
+    }
+  }
+
+  @else if $point ==xl {
+    @media (min-width: $bp-xl) {
+      @content;
+    }
+  }
+
+  @else if $point ==xxl {
+    @media (min-width: $bp-xxl) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: '#{$point}') {
+      @content;
+    }
+  }
+}

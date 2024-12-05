@@ -1,0 +1,288 @@
+@import '../nav/navigation.scss';
+@import '../global/global.scss';
+
+main {
+  @include media(xxl) {
+    margin: 5rem 0 0 320px;
+  }
+}
+
+header,
+section {
+  margin: 2.5rem 0;
+
+  @include media(xxl) {
+    margin: 2.5rem auto;
+    max-width: 1350px;
+  }
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+
+  @include media(xl) {
+    max-width: fit-content;
+  }
+}
+
+h3 {
+  font-size: $heading3;
+  font-family: $serif;
+  color: $orange;
+}
+
+p {
+  line-height: 1.2;
+
+  a {
+    color: $dark-blue;
+
+    &:visited {
+      color: $dark-blue;
+    }
+  }
+}
+
+.intro {
+  @include media(xl) {
+    display: grid;
+    grid-template-areas:
+      "attributes . . image"
+      "about . . image"
+      ". . . image";
+    gap: 1rem;
+  }
+
+  &-description {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 1rem;
+    column-gap: 2rem;
+
+    @include media(xl) {
+      grid-area: attributes;
+    }
+  }
+
+  &-title {
+    span {
+      font-weight: $font-bold;
+      text-transform: uppercase;
+      font-size: .93em;
+    }
+
+    h2 {
+      color: $orange;
+      font-size: $nav-heading;
+      font-family: $serif;
+      margin: 0;
+      line-height: 1.5;
+      font-weight: $font-normal;
+    }
+  }
+
+  .img-container {
+    margin: 1rem 0;
+
+    @include media(xl) {
+      grid-area: image;
+    }
+  }
+
+  .about {
+    @include media(xl) {
+      grid-area: about;
+    }
+  }
+}
+
+.strategy-1 {
+  @include media(xl) {
+    display: flex;
+    column-gap: 1.5rem;
+  }
+
+  h3 {
+    flex: 1 0 23%;
+  }
+}
+
+.strategy-2 {
+  @include media (xxl) {
+    display: flex;
+    gap: 1.5rem;
+
+    &.h-flip {
+      flex-direction: row-reverse;
+      align-items: flex-end;
+    }
+  }
+
+  .copy-block {
+    max-width: auto;
+    text-align: left;
+
+    @include media(xxl) {
+      flex: 0 1 100%;
+    }
+
+    &.f-basis-58 {
+      @include media(xxl) {
+        flex: 0 1 58%;
+      }
+    }
+  }
+}
+
+.img-scroll {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+
+  @include media(xl) {
+    overflow: hidden;
+  }
+
+  &.scroll-1 {
+    .img-container {
+      @include image-scroller(250%);
+
+      @include media(xl) {
+        flex: 0 1 auto;
+      }
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+
+  &.scroll-2 {
+    .img-container {
+      @include image-scroller(85%);
+
+      @include media(sm) {
+        flex: 0 1 auto;
+      }
+
+      @include media(md) {
+        flex: 1 0 auto;
+      }
+
+      @include media(lg) {
+        flex: 0 1 auto;
+      }
+
+      img {
+        margin: 0 0 1rem;
+      }
+    }
+  }
+
+  &.scroll-y {
+    overflow-x: auto;
+    overflow-y: scroll;
+    background-color: $off-blue;
+    max-height: 40vh;
+    margin: 0 0 2.5rem;
+    @include media(xxl) {
+      flex-basis: 450%;
+    }
+
+    .img-container {
+      @include media(sm) {
+        flex: 1 0 auto;
+      }
+
+      img {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1.5rem 0;
+      }
+    }
+  }
+}
+
+.img-gallery {
+  &.gallery-1,
+  &.gallery-3 {
+    @include media(sm) {
+      display: flex;
+      gap: 1rem;
+    }
+
+    @include media(md) {
+      display: block;
+    }
+
+    @include media(lg) {
+      display: flex;
+    }
+
+    @include media(xxl) {
+      justify-content: space-between;
+    }
+  }
+
+  .img-container {
+    margin: 0 0 2.5rem;
+  }
+}
+
+.copy-block {
+  @include media(xl) {
+    max-width: 110ch;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+
+.social-images {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin-bottom: 5rem;
+
+  .img-container {
+    flex: 1 0 45%;
+
+    @include media(xl) {
+      flex: 1 0 22%;
+    }
+  }
+}
+
+.other-projects {
+  padding: 0;
+}
+
+.prev-next-wrapper {
+  margin: 5rem .5rem;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    position: relative;
+    color: $black;
+    font-family: $sans;
+    font-weight: $font-bold;
+    font-size: clamp(1.25em, 2vw, 1.8em);
+    display: block;
+    padding: 0 0 .25rem;
+
+    &::after {
+      @include underline;
+    }
+
+    &:hover {
+        &::after {
+          height: 150%;
+        }
+      }
+  }
+}
