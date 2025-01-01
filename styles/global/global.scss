@@ -52,6 +52,14 @@ img {
   max-width: 100%;
 }
 
+ol {
+  li {
+    font-family: $sans;
+    color: $black;
+    margin-bottom: .5rem;
+  }
+}
+
 .heading {
   &-lockup {
     span {

@@ -228,6 +228,12 @@ img {
   max-width: 100%;
 }
 
+ol li {
+  font-family: "Work Sans", sans-serif;
+  color: #272626;
+  margin-bottom: 0.5rem;
+}
+
 .heading-lockup span {
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
@@ -339,6 +345,14 @@ header {
     margin: 0 1rem;
   }
 }
+.project.poubu .bg-container {
+  background-image: url("https://res.cloudinary.com/thaos-images/image/upload/v1735596900/hp-poububg-m.png");
+}
+@media (min-width: 1200px) {
+  .project.poubu .bg-container {
+    background-image: url("https://res.cloudinary.com/thaos-images/image/upload/v1735596900/hp-poububg-d.png");
+  }
+}
 .project.ds .bg-container {
   background-image: url("../../../2024/images/hp-dsbg-m.png");
 }
@@ -420,6 +434,7 @@ header {
   position: relative;
   isolation: isolate;
   z-index: 5;
+  padding-inline: 0.25rem;
 }
 @media (min-width: 1200px) {
   .project .text-container h2 {
@@ -432,7 +447,6 @@ header {
   position: absolute;
   background-color: #F0AE46;
   height: 8px;
-  border-radius: 3px;
   bottom: -5px;
   left: 0;
   transition: all 0.3s ease-in-out;
@@ -604,7 +618,6 @@ header {
   position: absolute;
   background-color: #F0AE46;
   height: 8px;
-  border-radius: 3px;
   bottom: -5px;
   left: 0;
   transition: all 0.3s ease-in-out;

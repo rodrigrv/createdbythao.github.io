@@ -14,10 +14,11 @@ const aside =
       <ul class="main-nav">
         <li><a href="/index.html#projects">Projects</a></li>
         <ul class="subnav">
+          <li><a href="/projects/pieces-of-us-by-us.html">Pieces of Us By Us</a></li>
           <li><a href="/projects/destination-success.html">Destination Success</a></li>
           <li><a href="/projects/texas-extra-credit.html">Texas Extra Credit</a></li>
           <li><a href="/projects/annual-report.html">Annual Report</a></li>
-          <li><a href="/projects/gigis-party-decor">Gigi's Party Decor</a></li>
+          <li><a href="/projects/gigis-party-decor.html">Gigi's Party Decor</a></li>
         </ul>
         <li><a href="/index.html#about">About</a></li>
         <li><a href="/index.html#contact">Contact</a></li>

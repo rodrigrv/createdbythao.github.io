@@ -228,6 +228,12 @@ img {
   max-width: 100%;
 }
 
+ol li {
+  font-family: "Work Sans", sans-serif;
+  color: #272626;
+  margin-bottom: 0.5rem;
+}
+
 .heading-lockup span {
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
@@ -385,6 +391,9 @@ p a:visited {
 }
 .strategy-1 h3 {
   flex: 1 0 23%;
+}
+.strategy-1 div {
+  flex-basis: 180rem;
 }
 
 @media (min-width: 1440px) {
@@ -545,7 +554,7 @@ p a:visited {
   font-weight: bold;
   font-size: clamp(1.25em, 2vw, 1.8em);
   display: block;
-  padding: 0 0 0.25rem;
+  padding: 0 0.25rem 0.25rem;
 }
 .prev-next-wrapper a::after {
   content: "";
@@ -553,7 +562,6 @@ p a:visited {
   position: absolute;
   background-color: #F0AE46;
   height: 8px;
-  border-radius: 3px;
   bottom: -5px;
   left: 0;
   transition: all 0.3s ease-in-out;
